@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алина Степанова](https://up.htmlacademy.ru/adaptive/6/user/128861).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Буевич](https://up.htmlacademy.ru/adaptive/6/user/25272).
 
 ---
 
