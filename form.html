@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Academy: Пинк</title>
+    </head>
+    <body>
+        <!-- begin page-header -->
+        <header class="page-header">
+            <div class="container">
+                <div class="page-header__mini">
+                    <a class="page-header__logo" href="index.html">
+                        <img src="http://placehold.it/75x22" alt="Мобильное приложение Pink" width="75" height="22">
+                    </a>
+                    <div class="page-header__hamburger"></div>
+                </div>
+            </div>
+            <nav class="page-nav">
+                <ul class="page-nav__list">
+                    <li class="page-nav__item">
+                        <a href="index.html">Главная</a>
+                    </li>
+                    <li class="page-nav__item">
+                        <a href="photo.html">Фотографии</a>
+                    </li>
+                    <li class="page-nav__item  page-nav__item--active">
+                        <a href="form.html">Конкурс</a>
+                    </li>
+                    <li class="page-nav__item">
+                        <a href="https://htmlacademy.ru/">HTML academy</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- end page-header -->
+
+        <!-- begin intro -->
+        <section class="intro">
+            <div class="container">
+                <h1 class="intro__title">Конкурс на&nbsp;самое безбашеное путешествие с&nbsp;Пинк</h1>
+            </div>
+        </section>
+        <!-- end intro -->
+
+        <!-- begin form -->
+        <section class="form">
+            <p class="form__text">
+                                    Поделитесь своей историей и&nbsp;получите шанс выиграть ценный
+                                    приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную карту!
+                                    Пожалуйста, заполните форму ниже:
+            </p>
+            <form action="https://htmlacademy.ru/echo" method="post">
+                <fieldset class="form-filter">
+                    <div class="container">
+                        <label class="form-filter__title" for="first-name">Имя:</label>
+                        <input class="form-filter__text" type="text" name="first-name" placeholder="Введите ваше имя" id="first-name" required>
+                        <label class="form-filter__title" for="last-name">Фамилия:</label>
+                        <input class="form-filter__text" type="text" name="last-name" placeholder="Укажите фамилию" id="last-name">
+                        <label class="form-filter__title" for="patronymic">Отчество:</label>
+                        <input class="form-filter__text" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic">
+                    </div>
+                </fieldset>
+                <fieldset class="form-filter">
+                    <legend class="form-filter__title  form-filter__title--center">Ваши безбашенные достижения в&nbsp;путешествии</legend>
+                    <div class="container">
+                        <input class="form-filter__checkbox" type="checkbox" name="shark" id="shark" checked>
+                        <label class="form-filter__item" for="shark">Сделал селфи с&nbsp;акулой</label>
+                        <input class="form-filter__checkbox" type="checkbox" name="burned" id="burned" checked>
+                        <label class="form-filter__item" for="burned">Обгорел на&nbsp;пляже</label>
+                        <input class="form-filter__checkbox" type="checkbox" name="norris" id="norris">
+                        <label class="form-filter__item" for="norris">Видел Чака Норриса</label>
+                        <input class="form-filter__checkbox" type="checkbox" name="souvenirs" id="souvenirs">
+                        <label class="form-filter__item" for="souvenirs">Накупил сувениров</label>
+                        <input class="form-filter__checkbox" type="checkbox" name="tower" id="tower" checked>
+                        <label class="form-filter__item" for="tower">Удержал башню</label>
+                        <input class="form-filter__checkbox" type="checkbox" name="destroy" id="destroy">
+                        <label class="form-filter__item" for="destroy">Разгромил отель</label>
+                    </div>
+                </fieldset>
+                <fieldset class="form-filter">
+                    <div class="container">
+                        <label class="form-filter__title" for="tel">Номер телефончика:</label>
+                        <input class="form-filter__text" type="tel" name="tel" placeholder="Номер, пожалуйста" pattern="[0-9]{1}-[0-9]{3}-[0-9]{4}" id="tel">
+                        <label class="form-filter__title" for="email">Адресок почты:</label>
+                        <input class="form-filter__text" type="email" name="email" placeholder="E-mail, пожалуйста" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" required>
+                    </div>
+                </fieldset>
+                <fieldset class="form-filter">
+                    <legend class="form-filter__title  form-filter__title--center">С&nbsp;каким приложением путешествовали?</legend>
+                    <div class="container">
+                        <input class="form-filter__radio" type="radio" name="app--ios" id="app--ios" checked>
+                        <label class="form-filter__item" for="app--ios">Pink для iOS</label>
+                        <input class="form-filter__radio" type="radio" name="app--android" id="app--android">
+                        <label class="form-filter__item" for="app--android">Pink на Android</label>
+                        <input class="form-filter__radio" type="radio" name="app--windows" id="app--windows">
+                        <label class="form-filter__item" for="app--windows">Windows Phone</label>
+                    </div>
+                </fieldset>
+                <div class="form-filter">
+                    <label for="review" class="form-filter__title  form-filter__title--center">Опишите свои эмоции</label>
+                    <div class="container">
+                        <textarea class="form-filte__text  form-filte__text--textarea" id="review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                    </div>
+                </div>
+                <input class="btn  btn--submit-form" type="submit" value="Отправить форму">
+                <div class="form-filter__hint">
+                    <sup>*</sup> - обязательные поля
+                </div>
+            </form>
+        </section>
+        <!-- end form -->
+
+        <!-- begin page-footer -->
+        <footer class="page-footer  page-footer--hidden">
+            <a class="page-footer__logo" href="index.html">
+                <img src="http://placehold.it/147x40" alt="Мобильное приложение Pink" width="147" height="40">
+            </a>
+            <div class="page-footer__social">
+                <a class="social-link  social-link--twitter" href="#">Twitter</a>
+                <a class="social-link  social-link--fb" href="#">Facebook</a>
+                <a class="social-link  social-link--youtube" href="#">Youtube</a>
+            </div>
+            <a class="page-footer__copyright" href="https://htmlacademy.ru/">
+                <span class="page-footer__dev">Разработано</span>
+                <img class="page-footer__logo" src="http://placehold.it/27x34" alt="htmlacademy" width="27" height="34">
+            </a>
+        </footer>
+        <!-- end page-footer -->
+
+        <!-- scripts -->
+    </body>
+</html>
