@@ -15,8 +15,8 @@ indent_size = 4
 end_of_line = lf
 trim_trailing_whitespace = true
 insert_final_newline = true
-max_line_length = 120
+max_line_length = 200
 
-[{package.json,.travis.yml,*.md}]
+[{package.json,.travis.yml,*.md,gulpfile.js}]
 indent_style = space
 indent_size = 2
