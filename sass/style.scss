@@ -1,0 +1,32 @@
+// base
+@import "global/normalize";
+@import "global/fonts";
+
+@import "variables";
+@import "mixins";
+
+@import "global/type";
+@import "global/scaffolding";
+@import "global/animation";
+
+// repeating blocks
+@import "components/page-header";
+@import "components/page-nav";
+@import "components/intro";
+@import "components/page-footer";
+@import "components/buttons";
+
+// index.html
+@import "components/download";
+@import "components/features";
+@import "components/reviews";
+@import "components/price";
+@import "components/contacts";
+
+// form.html
+@import "components/form";
+
+// photos.html
+@import "components/photos";
+@import "components/post";
+@import "components/editor";
