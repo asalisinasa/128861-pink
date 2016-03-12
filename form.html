@@ -8,7 +8,7 @@
     <body>
         <!-- begin page-header -->
         <header class="page-header">
-            <div class="container">
+            <div class="page-header__container">
                 <div class="page-header__mini">
                     <a class="page-header__logo" href="index.html">
                         <img src="http://placehold.it/75x22" alt="Мобильное приложение Pink" width="75" height="22">
@@ -37,7 +37,7 @@
 
         <!-- begin intro -->
         <section class="intro">
-            <div class="container">
+            <div class="intro__container">
                 <h1 class="intro__title">Конкурс на&nbsp;самое безбашеное путешествие с&nbsp;Пинк</h1>
             </div>
         </section>
@@ -46,7 +46,7 @@
         <main>
             <!-- begin form -->
             <section class="form">
-                <div class="container">
+                <div class="form__container">
                     <p class="form__text">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
                     <form action="https://htmlacademy.ru/echo" method="post">
                         <fieldset class="form-filter">
@@ -88,13 +88,13 @@
                             <input class="form-filter__radio" type="radio" name="app-windows" id="app-windows">
                             <label class="form-filter__item" for="app-windows">Windows Phone</label>
                         </fieldset>
-                        <div class="form-filter">
+                        <fieldset class="form-filter">
                             <label class="form-filter__title  form-filter__title--center" for="review">Опишите свои эмоции</label>
                             <textarea class="form-filter__text  form-filte__text--textarea" id="review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-                        </div>
-                        <button class="btn  btn--submit-form" type="submit">Отправить форму</button>
+                        </fieldset>
+                        <button class="btn  btn--submit" type="submit">Отправить форму</button>
                         <div class="form-filter__hint">
-                            <sup>*</sup> - обязательные поля
+                            <sup class="form-filter__hint-highlight">*</sup> - обязательные <span class="form-filter__hint-hide">для заполнения</span> поля
                         </div>
                     </form>
                 </div>
@@ -104,20 +104,41 @@
 
         <!-- begin page-footer -->
         <footer class="page-footer  page-footer--hidden">
-            <a class="page-footer__logo" href="index.html">
-                <img src="http://placehold.it/147x40" alt="Мобильное приложение Pink" width="147" height="40">
-            </a>
-            <div class="page-footer__social">
-                <a class="social-link  social-link--twitter" href="#">Twitter</a>
-                <a class="social-link  social-link--fb" href="#">Facebook</a>
-                <a class="social-link  social-link--youtube" href="#">Youtube</a>
+            <div class="page-footer__container">
+                <a class="page-footer__logo" href="index.html">
+                    <img src="http://placehold.it/147x40" alt="Мобильное приложение Pink" width="147" height="40">
+                </a>
+                <div class="page-footer__social">
+                    <a class="social-link  social-link--twitter" href="#">Twitter</a>
+                    <a class="social-link  social-link--fb" href="#">Facebook</a>
+                    <a class="social-link  social-link--youtube" href="#">Youtube</a>
+                </div>
+                <a class="page-footer__copyright" href="https://htmlacademy.ru/">
+                    <span class="page-footer__dev">Разработано</span>
+                    <img class="page-footer__logo" src="http://placehold.it/27x34" alt="htmlacademy" width="27" height="34">
+                </a>
             </div>
-            <a class="page-footer__copyright" href="https://htmlacademy.ru/">
-                <span class="page-footer__dev">Разработано</span>
-                <img class="page-footer__logo" src="http://placehold.it/27x34" alt="htmlacademy" width="27" height="34">
-            </a>
         </footer>
         <!-- end page-footer -->
+
+        <!-- begin popups -->
+        <div class="popup">
+            <p class="popup__title">Что-то пошло не&nbsp;так!</p>
+            <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли
+                                    их&nbsp;заполнить
+            </p>
+            <button class="btn  btn--submit" type="button">Закрыть окно</button>
+        </div>
+        <div class="popup">
+            <p class="popup__title">Ваша заявка отправлена</p>
+            <p class="popup__text">Спасибо за&nbsp;ваше участие, ваша заявка уже поступила к&nbsp;нам.
+                                    В&nbsp;ближайшее время мы&nbsp;рассмотрим ее&nbsp;и&nbsp;оповестим вас.
+            </p>
+            <div class="popup__wrap">
+                <button class="btn  btn--submit" type="button">Ок</button>
+            </div>
+        </div>
+        <!-- end popups -->
 
         <!-- scripts -->
     </body>

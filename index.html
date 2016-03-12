@@ -8,7 +8,7 @@
     <body>
         <!-- begin page-header -->
         <header class="page-header">
-            <div class="container">
+            <div class="page-header__container">
                 <div class="page-header__mini">
                     <a class="page-header__logo" href="index.html">
                         <img src="http://placehold.it/75x22" alt="Мобильное приложение Pink" width="75" height="22">
@@ -22,10 +22,10 @@
                         <a href="#">Информация</a>
                     </li>
                     <li class="page-nav__item">
-                        <a href="#">Возможности</a>
+                        <a href="form.html">Возможности</a>
                     </li>
                     <li class="page-nav__item">
-                        <a href="#">Отзывы</a>
+                        <a href="photo.html">Отзывы</a>
                     </li>
                     <li class="page-nav__item">
                         <a href="#">Стоимость</a>
@@ -37,7 +37,7 @@
 
         <!-- begin intro -->
         <section class="intro  intro--main-page">
-            <div class="container">
+            <div class="intro__container">
                 <h1 class="intro__title">Взгляните на&nbsp;жизнь иначе!</h1>
             </div>
         </section>
@@ -55,10 +55,10 @@
         </section>
         <!-- end download panel -->
 
-        <main>
+        <main class="main-content">
             <!-- begin features -->
             <section class="features">
-                <div class="container">
+                <div class="features__container">
                     <div class="features__heading">
                         <p class="features__title">Устали от&nbsp;серости мегаполиса?</p>
                         <p class="features__title">Нам есть, что вам предложить!</p>
@@ -85,17 +85,28 @@
             </section>
             <!-- end features -->
 
+            <!-- begin research -->
+            <section class="research">
+                <div class="research__container">
+                    <p class="research__title">Эффект на&nbsp;24&nbsp;часа!</p>
+                    <p class="research__text">Британские ученые провели исследования и&nbsp;доказали, что положительный
+                                            эффект от&nbsp;использования приложения длится целые сутки!</p>
+                    <a class="research__link" href="#">Узнать больше об исследовании</a>
+                </div>
+            </section>
+            <!-- end research -->
+
             <!-- begin reviews -->
             <section class="reviews">
-                <div class="container">
-                    <input class="reviews__toggle" type="radio" name="reviews" id="review--1" checked>
-                    <input class="reviews__toggle" type="radio" name="reviews" id="review--2">
-                    <input class="reviews__toggle" type="radio" name="reviews" id="review--3">
+                <div class="reviews__container">
+                    <input class="reviews__toggle" type="radio" name="reviews" id="review-1" checked>
+                    <input class="reviews__toggle" type="radio" name="reviews" id="review-2">
+                    <input class="reviews__toggle" type="radio" name="reviews" id="review-3">
 
                     <div class="reviews__controls">
-                        <label class="reviews__control" for="review--1"></label>
-                        <label class="reviews__control" for="review--2"></label>
-                        <label class="reviews__control" for="review--3"></label>
+                        <label class="reviews__control" for="review-1"></label>
+                        <label class="reviews__control" for="review-2"></label>
+                        <label class="reviews__control" for="review-3"></label>
                     </div>
 
                     <div class="reviews__slides">
@@ -127,59 +138,63 @@
                             </blockquote>
                         </div>
                     </div>
+                    <button class="reviews__btn-next" type="button"></button>
+                    <button class="reviews__btn-prev" type="button"></button>
                 </div>
             </section>
             <!-- end reviews -->
 
             <!-- begin price -->
             <section class="price">
-                <input class="price__toggle" type="radio" name="price" id="price--1">
-                <input class="price__toggle" type="radio" name="price" id="price--2" checked>
-                <input class="price__toggle" type="radio" name="price" id="price--3">
-                <div class="price__controls">
-                    <label class="price__control" for="price--1"></label>
-                    <label class="price__control" for="price--2"></label>
-                    <label class="price__control" for="price--3"></label>
+                <div class="price__container">
+                    <input class="price__toggle" type="radio" name="price" id="price-1">
+                    <input class="price__toggle" type="radio" name="price" id="price-2" checked>
+                    <input class="price__toggle" type="radio" name="price" id="price-3">
+                    <div class="price__controls">
+                        <label class="price__control" for="price-1"></label>
+                        <label class="price__control" for="price-2"></label>
+                        <label class="price__control" for="price-3"></label>
+                    </div>
+                    <table class="price-table">
+                        <tbody>
+                            <tr class="price-table__row">
+                                <th class="price-table__heading">
+                                    <p class="price-table__title">База</p>
+                                    <p class="price-table__price">1,99 USD</p>
+                                </th>
+                                <th class="price-table__heading price-table__heading--hit">
+                                    <p class="price-table__title">Стандарт</p>
+                                    <p class="price-table__price">3,99 USD</p>
+                                </th>
+                                <th class="price-table__heading">
+                                    <p class="price-table__title">Анлим</p>
+                                    <p class="price-table__price">9,99 USD</p>
+                                </th>
+                            </tr>
+                            <tr class="price-table__row">
+                                <td class="price-table__cell price-table__cell--yes">Розовый фильтр</td>
+                                <td class="price-table__cell">Розовый фильтр</td>
+                                <td class="price-table__cell">Розовый фильтр</td>
+                            </tr>
+                            <tr class="price-table__row">
+                                <td class="price-table__cell">Смайлики</td>
+                                <td class="price-table__cell">Смайлики</td>
+                                <td class="price-table__cell">Смайлики</td>
+                            </tr>
+                            <tr class="price-table__row">
+                                <td class="price-table__cell">Комментарии</td>
+                                <td class="price-table__cell">Комментарии</td>
+                                <td class="price-table__cell">Комментарии</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <table class="price-table">
-                    <tbody>
-                        <tr class="price-table__row">
-                            <th class="price-table__heading">
-                                <p class="price-table__title">База</p>
-                                <p class="price-table__price">1,99 USD</p>
-                            </th>
-                            <th class="price-table__heading price-table__heading--hit">
-                                <p class="price-table__title">Стандарт</p>
-                                <p class="price-table__price">3,99 USD</p>
-                            </th>
-                            <th class="price-table__heading">
-                                <p class="price-table__title">Анлим</p>
-                                <p class="price-table__price">9,99 USD</p>
-                            </th>
-                        </tr>
-                        <tr class="price-table__row">
-                            <td class="price-table__cell price-table__cell--yes">Розовый фильтр</td>
-                            <td class="price-table__cell">Розовый фильтр</td>
-                            <td class="price-table__cell">Розовый фильтр</td>
-                        </tr>
-                        <tr class="price-table__row">
-                            <td class="price-table__cell">Смайлики</td>
-                            <td class="price-table__cell">Смайлики</td>
-                            <td class="price-table__cell">Смайлики</td>
-                        </tr>
-                        <tr class="price-table__row">
-                            <td class="price-table__cell">Комментарии</td>
-                            <td class="price-table__cell">Комментарии</td>
-                            <td class="price-table__cell">Комментарии</td>
-                        </tr>
-                    </tbody>
-                </table>
             </section>
             <!-- end price -->
 
             <!-- begin contacts -->
             <section class="contacts">
-                <div class="container">
+                <div class="contacts__container">
                     <p class="contacts__title">Остались вопросы? Свяжитесь с&nbsp;нами!</p>
                     <div class="contacts__items">
                         <div class="contacts__coordinate">
@@ -208,18 +223,20 @@
 
         <!-- begin page-footer -->
         <footer class="page-footer  page-footer--hidden">
-            <a class="page-footer__logo" href="index.html">
-                <img src="http://placehold.it/147x40" alt="Мобильное приложение Pink" width="147" height="40">
-            </a>
-            <div class="page-footer__social">
-                <a class="social-link  social-link--twitter" href="#">Twitter</a>
-                <a class="social-link  social-link--fb" href="#">Facebook</a>
-                <a class="social-link  social-link--youtube" href="#">Youtube</a>
+            <div class="page-footer__container">
+                <a class="page-footer__logo" href="index.html">
+                    <img src="http://placehold.it/147x40" alt="Мобильное приложение Pink" width="147" height="40">
+                </a>
+                <div class="page-footer__social">
+                    <a class="social-link  social-link--twitter" href="#">Twitter</a>
+                    <a class="social-link  social-link--fb" href="#">Facebook</a>
+                    <a class="social-link  social-link--youtube" href="#">Youtube</a>
+                </div>
+                <a class="page-footer__copyright" href="https://htmlacademy.ru/">
+                    <span class="page-footer__dev">Разработано</span>
+                    <img class="page-footer__logo" src="http://placehold.it/27x34" alt="htmlacademy" width="27" height="34">
+                </a>
             </div>
-            <a class="page-footer__copyright" href="https://htmlacademy.ru/">
-                <span class="page-footer__dev">Разработано</span>
-                <img class="page-footer__logo" src="http://placehold.it/27x34" alt="htmlacademy" width="27" height="34">
-            </a>
         </footer>
         <!-- end page-footer -->
 
