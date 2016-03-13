@@ -19,9 +19,10 @@
 }
 
 .price-table {
-    width: 960px;
+    width: 400%;
     margin: 0 auto;
-    &__row { width: 300%;}
+    transform: translateX(-45%);
+    &__row { width: 400%;}
     &__cell,
     &__heading {
         // для оформления сетки
