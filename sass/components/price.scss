@@ -1,4 +1,40 @@
 .price {
+    overflow: hidden;
+
+    &__container {
+        width: 300%;
+        @include container;
+    }
+
+    @media #{$tablet-width} {
+        &__container {min-height: 380px;} // для оформления сетки
+    }
+
+    @media #{$desktop-width} {
+        &__container {min-height: 530px;} // для оформления сетки
+    }
+
+    // для оформления сетки
     outline: 2px solid red;
-    background-color: rgba(red, 0.2);
+}
+
+.price-table {
+    width: 960px;
+    margin: 0 auto;
+    &__row { width: 300%;}
+    &__cell,
+    &__heading {
+        // для оформления сетки
+        outline: 2px solid yellow;
+    }
+
+    @media #{$tablet-width} {
+        width: auto;
+        margin: 0 auto;
+        transform: translateX(0);
+    }
+
+    @media #{$desktop-width} {
+        &__container {min-height: 530px;} // для оформления сетки
+    }
 }

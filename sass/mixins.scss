@@ -1,0 +1,47 @@
+////////////////////// Most useful
+
+@mixin container {
+    width: 100%;
+    margin: 0 auto;
+
+    @media #{$tablet-width} {
+        width: 88.57142857142857%; // 940/1200
+    }
+
+    @media #{$desktop-width} {
+        width: 78.33333333333333%; // 620/700
+    }
+
+    // для оформления сетки
+    outline: 2px solid $blue;
+    background-color: rgba($blue, 0.2);
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+
+        display: table;
+        clear: both;
+    }
+}
+
+////////////////////// Resets
+
+@mixin ul-reset {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    list-style: none;
+}
+
+@mixin link-reset {
+    color: inherit;
+    text-decoration: none;
+}
+
+@mixin indent-reset {
+    margin: 0;
+    padding: 0;
+}

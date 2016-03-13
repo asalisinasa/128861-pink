@@ -1,0 +1,21 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: black;
+
+    // для оформления сетки
+    background: $blue url("../_design/pink-photo-mobile.jpg") no-repeat center 0;
+    
+    @media #{$tablet-width} {
+        background: $blue url("../_design/pink-photo-tablet.jpg") no-repeat center 0;
+    }
+    
+    @media #{$desktop-width} {
+        background: $blue url("../_design/pink-photo-desktop.jpg") no-repeat center 0;
+    }
+}
+
+////////////////////// z-index

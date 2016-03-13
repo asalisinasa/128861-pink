@@ -1,4 +1,19 @@
 .download {
+    text-align: center;
+
+    @media #{$tablet-width} {
+        position: absolute;
+        top: 380px;
+        left: 10.2%;
+        width: 300px;
+    }
+
+    @media #{$desktop-width} {
+        top: 440px;
+        left: 15.35%;
+    }
+
+    // для оформления сетки
     outline: 2px solid red;
     background-color: rgba(red, 0.2);
 }

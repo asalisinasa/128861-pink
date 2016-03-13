@@ -1,0 +1,17 @@
+h1 {
+    font-family: $open-sans;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    @media #{$tablet-width} {
+        font-size: 50px;
+    }
+}
+
+p {
+    font-family: $open-sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}

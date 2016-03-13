@@ -1,4 +1,31 @@
 .contacts {
+    text-align: center;
+
+    &__container {
+        @include container;
+    }
+    &__title {
+        @include indent-reset;
+    }
+
+    @media #{$tablet-width} {
+        &__coordinate {
+            display: inline-block;
+            vertical-align: top;
+            width: 45%;
+        }
+
+        &__container {min-height: 770px;} // для оформления сетки
+    }
+
+    @media #{$desktop-width} {
+        &__coordinate {
+            width: 33%;
+        }
+
+        &__container {min-height: 860px;} // для оформления сетки
+    }
+
+    // для оформления сетки
     outline: 2px solid red;
-    background-color: rgba(red, 0.2);
 }

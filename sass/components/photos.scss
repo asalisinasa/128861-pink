@@ -1,4 +1,16 @@
 .photos {
+    &__container {
+        @include container;
+    }
+
+    @media #{$tablet-width} {
+        
+    }
+
+    @media #{$desktop-width} {
+        
+    }
+
+    // для оформления сетки
     outline: 2px solid red;
-    background-color: rgba(red, 0.2);
 }

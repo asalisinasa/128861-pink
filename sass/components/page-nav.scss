@@ -1,3 +1,34 @@
 .page-nav {
+    position: absolute;
+    width: 100%;
+
+    &__list {
+        @include ul-reset;
+    }
+    &__item {
+        text-align: center;
+        a {
+            @include link-reset;
+        }
+    }
+
+    @media #{$tablet-width} {
+        top: 110px;
+    }
+
+    @media #{$desktop-width} {
+        position: absolute;
+        left: 40%;
+        top: 0;
+        width: 49%; // 620/880
+
+        &__item {
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+        }
+    }
+
+    // для оформления сетки
     outline: 2px solid blue;
 }

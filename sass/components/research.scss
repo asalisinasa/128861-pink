@@ -1,0 +1,41 @@
+.research {
+    display: none;
+
+    &__container {
+        @include container;
+        @include clearfix;
+    }
+
+    @media #{$tablet-width} {
+        display: block;
+        &__img,
+        &__content {
+            width: 50%;
+        }
+        &__img {
+            float: left;
+        }
+        &__content {
+            float: right;
+        }
+
+        &__container {min-height: 400px;} // для оформления сетки
+    }
+
+    @media #{$desktop-width} {
+        display: block;
+        &__img {
+            float: left;
+            width: 39.362%; // 370/940
+        }
+        &__content {
+            float: right;
+            width: 60.638%; // 570/940
+        }
+
+        &__container {min-height: 430px;} // для оформления сетки
+    }
+
+    // для оформления сетки
+    outline: 2px solid red;
+}

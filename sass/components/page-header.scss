@@ -1,4 +1,23 @@
 .page-header {
+    position: fixed;
+    width: 100%;
+    min-height: 65px;
+
+    &__container {
+        @include container;
+        min-height: 65px; // для оформления сетки
+    }
+
+    @media #{$tablet-width} {
+        min-height: 110px;
+        &__container {min-height: 110px;} // для оформления сетки
+    }
+
+    @media #{$desktop-width} {
+        position: static;
+    }
+
+    // для оформления сетки
     outline: 2px solid green;
     background-color: rgba(green, 0.2);
 }
