@@ -1,23 +1,64 @@
 .page-header {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    min-height: 65px;
+    min-width: 320px;
+    background-color: rgba(29, 38, 50, 0.3);
+    color: white;
 
     &__container {
         @include container;
-        min-height: 65px; // для оформления сетки
+        @include clearfix;
+        margin-bottom: 20px;
     }
+    &__mini {}
+    &__logo {
+        float: left;
+        width: 75px;
+        height: 23px;
+        margin-top: 20px;
+        outline: 2px solid yellow; // для оформления сетки
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__hamburger {
+        float: right;
+        width: 50px;
+        height: 25px;
+        margin-top: 20px;
+        outline: 2px solid yellow; // для оформления сетки
+    }
+    
 
     @media #{$tablet-width} {
-        min-height: 110px;
-        &__container {min-height: 110px;} // для оформления сетки
+        &__container {
+            padding-bottom: 40px;
+        }
+        &__mini {}
+        &__logo {
+            width: 150px;
+            height: 40px;
+            margin-top: 25px;
+
+            img {
+            width: 100%;
+            height: auto;
+            }
+        }
+        &__hamburger {
+            
+        }
+    
     }
 
     @media #{$desktop-width} {
-        position: static;
+        &__hamburger {
+            display: none;
+        }
+
     }
 
     // для оформления сетки
     outline: 2px solid green;
-    background-color: rgba(green, 0.2);
 }

@@ -1,38 +1,73 @@
 .price {
     overflow: hidden;
+    background-color: $gray;
 
     &__container {
-        width: 300%;
+        position: relative;
         @include container;
+        padding-top: 65px;
+        padding-bottom: 100px;
+    }
+    &__toggle {
+        display: none;
+    }
+    &__controls {
+        position: absolute;
+        left: 50%;
+        bottom: 45px;
+        width: 65px;
+        height: 15px;
+        margin-left: -32px;
+        outline: 2px solid green; // для оформления сетки
     }
 
     @media #{$tablet-width} {
-        &__container {min-height: 380px;} // для оформления сетки
+        &__container {
+            padding-top: 35px;
+            padding-bottom: 68px;
+        }
+        &__controls {
+            display: none;
+        }
     }
 
     @media #{$desktop-width} {
-        &__container {min-height: 530px;} // для оформления сетки
+        &__container {
+            padding-top: 65px;
+            padding-bottom: 95px;
+        }
     }
 
     // для оформления сетки
     outline: 2px solid red;
 }
 
+
+
 .price-table {
-    width: 400%;
-    margin: 0 auto;
-    transform: translateX(-45%);
-    &__row { width: 400%;}
+    width: 262.5%; // 87.5% * 4
+    transform: translateX(-31%);
+    &__row {
+        width: 400%;
+    }
     &__cell,
     &__heading {
-        // для оформления сетки
-        outline: 2px solid yellow;
+        &:first-child {
+            display: none;
+        }
+        outline: 2px solid yellow; // для оформления сетки
     }
 
     @media #{$tablet-width} {
-        width: auto;
-        margin: 0 auto;
+        width: 100%;
         transform: translateX(0);
+        
+        &__cell,
+        &__heading {
+            &:first-child {
+                display: block;
+            }
+        }
     }
 
     @media #{$desktop-width} {

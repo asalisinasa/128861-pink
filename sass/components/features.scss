@@ -1,48 +1,80 @@
 .features {
     text-align: center;
+    background-color: $gray;
 
     &__container {
         @include container;
         @include clearfix;
     }
+    &__heading {
+        padding-top: 45px;
+        padding-bottom: 30px;
+        background-color: white;
+    }
     &__title {
         @include indent-reset;
-        text-align: center;
+        width: 71%;
+        margin: 0 auto;
+        text-align: center;  
+        outline: 2px solid blue; // для оформления сетки
+    }
+    &__img {
+        height: 280px;
+    }
+    &__content {
+        margin-bottom: 45px;
+        outline: 2px solid green; // для оформления сетки
+    }
+    &__item {
+        outline: 2px solid blue; // для оформления сетки
     }
 
     @media #{$tablet-width} {
         text-align: left;
 
+        &__heading {
+            padding-top: 55px;
+            padding-bottom: 45px;
+        }
+        &__title {
+            width: 77%; 
+        }
         &__img,
         &__content {
             width: 50%;
+            outline: 2px solid green; // для оформления сетки
         }
         &__img {
             float: left;
+            height: 480px;
         }
         &__content {
             float: right;
         }
-
-        &__container {min-height: 730px;} // для оформления сетки
     }
 
     @media #{$desktop-width} {
+        &__heading {
+            padding-top: 75px;
+            padding-bottom: 80px;
+        }
+        &__title {
+            width: $desktop-width;
+        }
         &__img {
             display: none;
         }
         &__content {
             width: 100%;
+            margin-bottom: 35px;
         }
         &__item {
             display: inline-block;
             vertical-align: top;
             width: 33%;
-            margin-top: 350px;
+            padding-top: 360px;
             text-align: center;
         }
-
-        &__container {min-height: 935px;} // для оформления сетки
     }
 
     // для оформления сетки

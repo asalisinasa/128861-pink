@@ -1,19 +1,30 @@
 .download {
+    padding: 30px 0;
     text-align: center;
+    color: white;
+    background-color: $blue;
+    
+    &__text {
+        @include indent-reset;
+    }
 
     @media #{$tablet-width} {
         position: absolute;
         top: 380px;
-        left: 10.2%;
-        width: 300px;
+        left: 5.6%;
+        width: 42.9%;
+        padding-left: 8.7%;
+        padding-right: 8.7%;
+        background-color: transparent;
     }
 
     @media #{$desktop-width} {
-        top: 440px;
-        left: 15.35%;
+        top: 450px;
+        left: 10.8%;
+        width: 24.4%;
+        padding: 0;
     }
 
     // для оформления сетки
-    outline: 2px solid red;
-    background-color: rgba(red, 0.2);
+    outline: 2px solid yellow;
 }

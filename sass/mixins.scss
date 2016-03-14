@@ -13,8 +13,8 @@
     }
 
     // для оформления сетки
-    outline: 2px solid $blue;
-    background-color: rgba($blue, 0.2);
+    outline: 2px solid red;
+    // background-color: rgba($blue, 0.2);
 }
 
 @mixin clearfix {

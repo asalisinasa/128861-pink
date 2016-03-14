@@ -2,7 +2,10 @@
     text-align: center;
 
     &__container {
+        position: relative;
         @include container;
+        padding-top: 42px;
+        padding-bottom: 90px;
     }
     &__slide {
         &:nth-child(2),
@@ -10,11 +13,40 @@
             display: none;
         }
     }
+    &__controls {
+        position: absolute;
+        left: 50%;
+        bottom: 45px;
+        width: 65px;
+        height: 15px;
+        margin-left: -32px;
+        outline: 2px solid green; // для оформления сетки
+    }
+    &__quote {
+        @include indent-reset;
+    }
+    &__author {
+        outline: 2px solid blue; // для оформления сетки
+    }
+    &__text {
+        outline: 2px solid blue; // для оформления сетки
+    }
     &__author-info {
+        display: none;
+    }
+    &__toggle,
+    &__arrow {
         display: none;
     }
 
     @media #{$tablet-width} {
+        &__container {
+        padding-top: 50px;
+        padding-bottom: 70px;
+        }
+        &__controls {
+            bottom: 20px;
+        }
         &__quote {
             display: flex;
             flex-wrap: wrap-reverse;
@@ -25,12 +57,26 @@
         &__author-info {
             display: block;
         }
-
-        &__container {min-height: 300px;} // для оформления сетки
     }
 
     @media #{$desktop-width} {
-        &__container {min-height: 410px;} // для оформления сетки
+        &__container {
+        padding-top: 190px;
+        padding-bottom: 40px;
+        }
+        &__arrow {
+            display: block;
+            position: absolute;
+            top: 205px;
+            width: 30px;
+            height: 45px;
+        }
+        &__controls {
+            display: none;
+        }
+        &__arrow--next {
+            right: 0;
+        }
     }
 
     // для оформления сетки

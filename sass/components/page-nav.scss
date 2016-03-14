@@ -1,6 +1,8 @@
 .page-nav {
     position: absolute;
+    top: 70px;
     width: 100%;
+    min-width: 320px;
 
     &__list {
         @include ul-reset;
@@ -13,21 +15,21 @@
     }
 
     @media #{$tablet-width} {
-        top: 110px;
+        top: 130px;
     }
 
     @media #{$desktop-width} {
-        position: absolute;
-        left: 40%;
-        top: 0;
-        width: 49%; // 620/880
-
-        &__item {
+            top: 45px;
+            right: 10.8885%;
+            width: auto;
+            margin-left: 10%;
+            &__item {
             display: inline-block;
             vertical-align: top;
             text-align: left;
         }
     }
+
 
     // для оформления сетки
     outline: 2px solid blue;

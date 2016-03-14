@@ -8,29 +8,35 @@
 
     @media #{$tablet-width} {
         display: block;
+        background-color: white;
+        
+        &__container {
+            padding-top: 55px;
+            padding-bottom: 30px;
+        }
         &__img,
         &__content {
             width: 50%;
         }
         &__img {
             float: left;
+            height: 300px;
+            outline: 2px solid green; // для оформления сетки
         }
         &__content {
             float: right;
+            outline: 2px solid green; // для оформления сетки
         }
 
         &__container {min-height: 400px;} // для оформления сетки
     }
 
     @media #{$desktop-width} {
-        display: block;
-        &__img {
-            float: left;
-            width: 39.362%; // 370/940
-        }
+        background-color: $gray;
+
+        &__img {}
         &__content {
             float: right;
-            width: 60.638%; // 570/940
         }
 
         &__container {min-height: 430px;} // для оформления сетки

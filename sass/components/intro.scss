@@ -1,64 +1,68 @@
 .intro {
-    min-height: 235px;
+    background-color: $blue;
+    font-size: 24px;
+    
+    &--main-page {
+        min-height: 450px;
+    }
 
     &__container {
         @include container;
     }
     &__title {
+        width: 285px;
         @include indent-reset;
-        margin-top: 95px;
-        padding: 0 17.1875%;
+        margin: 0 auto;
+        padding-top: 95px;
+        padding-bottom: 40px;
+        
         text-align: center;
         color: white;
+        
+        &--main-page {
+            display: none;
+        }
 
         outline: 2px solid yellow; // для оформления сетки
-    }
-    &--main-page {
-        min-height: 460px;
-
-        &__title {
-            display: none;
-            width: 300px;
-            padding: 0 27.66%;
-
-            outline: 2px solid yellow; // для оформления сетки
-        }
     }
 
     @media #{$tablet-width} {
         &--main-page {
             min-height: 730px;
+        }
+        &__title { 
+            width: 585px;
+            padding-top: 180px;
+            padding-bottom: 75px;
 
-            &__title {
-                position: absolute;
-                top: 210px;
+            &--main-page {
                 display: block;
-                margin-top: 0;
-                margin-left: 4.5%; //54/1200
-                font-size: 40px;
+                width: 48.4%;
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: 8.7%;
+                padding-right: 8.7%;
             }
         }
     }
 
     @media #{$desktop-width} {
-        min-height: 390px;
-
-        &__title {
-            margin-top: 310px;
-        }
+        
         &--main-page {
             min-height: 850px;
+        }
+        &__title {
+            padding-top: 170px;
+            padding-bottom: 100px;
 
-            &__title {
-                position: absolute;
-                top: 230px;
-                display: block;
-                margin-top: 0;
+            &--main-page {
+                width: 31%;
+                padding-left: 3%;
+                padding-right: 3%;
             }
         }
     }
 
     // для оформления сетки
     outline: 2px solid green;
-    background-color: rgba(green, 0.2);
 }
