@@ -12,19 +12,35 @@
         padding-bottom: 37px;
         text-align: center;
     }
+    &__filters {
+        display: flex;
+        flex-direction: column;
+    }
     &__filter {
         @include indent-reset;
         border: none;
-        padding-left: 20px;
+        margin-bottom: 52px;
         padding-top: 34px;
-        padding-right: 20px;
         padding-bottom: 40px;
         &:nth-of-type(2n) {
             background-color: $gray;
         }
     }
+    &__filter-legend {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: $norm;
+        text-align: center;
+        text-transform: uppercase;
+        color: $pink;
+    }
+    &__filter:nth-of-type(3) &__filter-legend {
+        display: none;
+    }
     &__filter-title {
-        display: block;
+        display: inline-block;
         padding: 0 23px;
         margin-bottom: 15px;
         font-size: 14px;
@@ -36,7 +52,6 @@
     &__filter-title--center {
         display: block;
         width: 100%;
-        text-align: center;
     }
     &__filter-text {
         width: 100%;
@@ -68,7 +83,7 @@
         &::before {
             content: "";
             position: absolute;
-            left: 20px;
+            left: 0;
             width: 39px;
             height: 39px;
             background-color: white;
@@ -84,20 +99,44 @@
 
     @media #{$tablet-width} {
         &__filter {
-            @include indent-reset;
-            border: 2px solid #e5e5e5;
-            padding-left: 20px;
+            padding-left: 60px;
             padding-top: 34px;
-            padding-right: 20px;
+            padding-right: 60px;
             padding-bottom: 40px;
+            border: 2px solid #e5e5e5;
+            border-radius: 2px;
             &:nth-of-type(2n) {
                 background-color: white;
             }
+        }
+        &__filter:first-child {
+            display: flex;
+            padding-left: 0;
+            padding-right: 0;
+            border: none;
+            .form__filter-title {
+                display: inline;
+            }
+            .form__filter-text {
+                width: auto;
+            }
+        }
+        &__filter:nth-of-type(1) {
+            order: -3;
+        }
+        &__filter:nth-of-type(4) {
+            order: -2;
+        }
+        &__filter:nth-of-type(3) {
+            order: -1;
         }
         &__text {
             width: 80.65%;
             padding-top: 160px;
             padding-bottom: 75px;
+        }
+        &__filter-title {
+            
         }
     }
 
