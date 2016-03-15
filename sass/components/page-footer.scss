@@ -1,7 +1,7 @@
 .page-footer {
     color: $blue;
     background-color: white;
-    
+
     &--hidden {
         display: none;
     }
@@ -12,18 +12,18 @@
         width: 150px;
         display: block;
         margin: 0 auto;
-        outline: 2px solid green;
+        outline: 2px solid green; // для оформления сетки
     }
     &__social {
         margin: 0 auto;
         text-align: center;
-        outline: 2px solid green;
+        outline: 2px solid green; // для оформления сетки
     }
     &__copyright {
         width: 150px;
         display: block;
         margin: 0 auto;
-        outline: 2px solid green;
+        outline: 2px solid green; // для оформления сетки
     }
 
     @media #{$tablet-width} {
@@ -42,7 +42,6 @@
             min-height: 200px;
         }
     }
-
 
     // для оформления сетки
     outline: 2px solid red;

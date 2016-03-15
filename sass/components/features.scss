@@ -15,7 +15,7 @@
         @include indent-reset;
         width: 71%;
         margin: 0 auto;
-        text-align: center;  
+        text-align: center;
         outline: 2px solid blue; // для оформления сетки
     }
     &__img {
@@ -37,7 +37,7 @@
             padding-bottom: 45px;
         }
         &__title {
-            width: 77%; 
+            width: 77%;
         }
         &__img,
         &__content {

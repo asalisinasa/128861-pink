@@ -42,8 +42,7 @@
     outline: 2px solid red;
 }
 
-
-
+// в отдельный файл положить?
 .price-table {
     width: 262.5%; // 87.5% * 4
     transform: translateX(-31%);
@@ -70,7 +69,5 @@
         }
     }
 
-    @media #{$desktop-width} {
-        &__container {min-height: 530px;} // для оформления сетки
-    }
+    @media #{$desktop-width} {}
 }

@@ -1,5 +1,4 @@
 .editor {
-    
     &__container {
         @include container;
     }
@@ -34,10 +33,10 @@
         padding-right: 7.2%;
         outline: 2px solid green;
     }
-    // тут надо еще переделать разметку, работал выбор editor__tool-btn. или же реализовать это другим способом, без помощи input:checked~
+    // тут надо еще переделать разметку, чтобы работал выбор editor__tool-btn. или же реализовать это другим способом, без помощи input:checked~  ?
     &__tool {
         display: inline-block;
-        outline: 2px solid yellow;
+        outline: 2px solid yellow; // для оформления сетки
     }
     &__tool-range {
         display: none;
@@ -53,7 +52,7 @@
         }
         &__column {
             width: 50%;
-            outline: 2px solid blue;
+            outline: 2px solid blue; // для оформления сетки
         }
         &__toolbar {
             flex-direction: column;

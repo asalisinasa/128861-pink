@@ -1,11 +1,10 @@
 .intro {
     background-color: $blue;
     font-size: 24px;
-    
+
     &--main-page {
         min-height: 450px;
     }
-
     &__container {
         @include container;
     }
@@ -15,10 +14,10 @@
         margin: 0 auto;
         padding-top: 95px;
         padding-bottom: 40px;
-        
+
         text-align: center;
         color: white;
-        
+
         &--main-page {
             display: none;
         }
@@ -47,7 +46,6 @@
     }
 
     @media #{$desktop-width} {
-        
         &--main-page {
             min-height: 850px;
         }

@@ -9,7 +9,7 @@
     @media #{$tablet-width} {
         display: block;
         background-color: white;
-        
+
         &__container {
             padding-top: 55px;
             padding-bottom: 30px;
@@ -27,8 +27,6 @@
             float: right;
             outline: 2px solid green; // для оформления сетки
         }
-
-        &__container {min-height: 400px;} // для оформления сетки
     }
 
     @media #{$desktop-width} {
@@ -38,8 +36,6 @@
         &__content {
             float: right;
         }
-
-        &__container {min-height: 430px;} // для оформления сетки
     }
 
     // для оформления сетки

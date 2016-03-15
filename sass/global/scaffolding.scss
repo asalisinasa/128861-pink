@@ -10,20 +10,7 @@ html {
 body {
     min-width: 320px;
     background-color: white;
-    color: black;
-
-    // для оформления сетки
-    // background: $blue url("../_design/pink-photo-mobile.jpg") no-repeat center 0;
-    
-    // @media #{$tablet-width} {
-    //     background: $blue url("../_design/pink-photo-tablet.jpg") no-repeat center 0;
-    // }
-    
-    // @media #{$desktop-width} {
-    //     background: $blue url("../_design/pink-photo-desktop.jpg") no-repeat center 0;
-    // }
+    color: $blue;
 }
 
-
-
-////////////////////// z-index
+// что еще можно положить в этот файл?

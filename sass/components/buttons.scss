@@ -1,7 +1,8 @@
 .btn {
     &--submit {
-        width: 100%;
+        width: 280px;
         height: 60px;
+        margin: 0 auto;
         margin-bottom: 45px;
     }
     &--post,
@@ -10,7 +11,12 @@
         width: 280px;
         margin: 0 auto;
     }
+
     @media #{$tablet-width} {
+        &--submit {
+            width: 300px;
+            margin: 0;
+        }
         &--post,
         &--cancel {
             width: 260px;
