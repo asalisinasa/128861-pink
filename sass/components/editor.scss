@@ -1,14 +1,82 @@
 .editor {
+    
     &__container {
         @include container;
     }
-    
+    &__text {
+        @include indent-reset;
+        padding-left: 6.6%;
+        padding-top: 46px;
+        padding-right: 6.6%;
+        padding-bottom: 54px;
+        text-align: center;
+        outline: 2px solid blue;
+    }
+    &__load-btn {
+        display: none;
+    }
+    &__photo {
+        display: block;
+        width: 280px;
+        height: 375px;
+        margin: 0 auto;
+        padding-top: 20px;
+        outline: 2px solid green;
+    }
+    &__toolbar {
+        position: relative;
+        display: flex;
+        width: 280px;
+        margin: 0 auto;
+        padding-top: 40px;
+        padding-left: 7.2%;
+        padding-bottom: 25px;
+        padding-right: 7.2%;
+        outline: 2px solid green;
+    }
+    // тут надо еще переделать разметку, работал выбор editor__tool-btn. или же реализовать это другим способом, без помощи input:checked~
+    &__tool {
+        display: inline-block;
+        outline: 2px solid yellow;
+    }
+    &__tool-range {
+        display: none;
+        position: absolute;
+    }
+    &__tool-btn:checked ~ &__tool-range {
+        display: block;
+    }
+
     @media #{$tablet-width} {
-        
+        &__form {
+            display: flex;
+        }
+        &__column {
+            width: 50%;
+            outline: 2px solid blue;
+        }
+        &__toolbar {
+            flex-direction: column;
+        }
+        &__tool {
+            display: block;
+            width: 100%;
+            height: 70px;
+            border: 1px solid #dddfe0;
+        }
+        &__tool-btn {
+            display: inline-block;
+        }
+        &__tool-range {
+            display: inline-block;;
+            position: static;
+        }
     }
 
     @media #{$desktop-width} {
-        
+        &__form {
+            padding: 0 8.5%;
+        }
     }
 
     // для оформления сетки

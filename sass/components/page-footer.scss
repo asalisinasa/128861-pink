@@ -7,20 +7,22 @@
     }
     &__container {
         @include container;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
     &__logo {
         width: 150px;
+        display: block;
+        margin: 0 auto;
         outline: 2px solid green;
-   }
+    }
     &__social {
+        margin: 0 auto;
         text-align: center;
         outline: 2px solid green;
     }
     &__copyright {
         width: 150px;
+        display: block;
+        margin: 0 auto;
         outline: 2px solid green;
     }
 
@@ -29,6 +31,9 @@
             display: block;
         }
         &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             min-height: 125px;
         }
     }

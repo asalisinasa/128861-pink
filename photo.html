@@ -53,10 +53,10 @@
                                             Видите, как не&nbsp;хватает ваших?</p>
                 </div>
                 <article class="post  post--favourite">
-                    <a class="post__photo" href="#">
-                        <img src="http://placehold.it/320x137" alt="Панорама">
+                    <a class="post__photo  post__photo--favourite" href="#">
+                        <img src="http://placehold.it/1200x510" alt="Панорама">
                     </a>
-                    <div class="post__favourite">Панорама дня</div>
+                    <div class="post__hint">Панорама дня</div>
                     <div class="post__container">
                         <div class="post__descript">
                             <div class="post__inform">
@@ -194,29 +194,35 @@
                 <div class="editor__container">
                     <p class="editor__text">Затмите их&nbsp;всех! Выкладывайте все, что накопилось в&nbsp;телефоне!</p>
                     <form action="https://htmlacademy.ru/echo" method="post" enctype="multipart/form-data">
-                        <input class="editor__load-photo" type="file" name="load">
-                        <div class="editor__photo">
-                            <img src="http://placehold.it/280x180" alt="Заснеженная дорога">
+                        <div class="editor__form">
+                            <div class="editor__column">
+                                <input class="editor__load-btn" type="file" name="load" id="load">
+                                <label class="editor__photo" for="load">
+                                    <img src="http://placehold.it/280x180" alt="Заснеженная дорога">
+                                </label>
+                            </div>
+                            <div class="editor__column">
+                                <div class="editor__toolbar">
+                                    <div class="editor__tool  editor__tool--crop  editor__tool--active">
+                                        <input class="editor__tool-btn" type="radio" name="crop" id="crop" checked>
+                                        <label class="editor__tool-icon" for="crop"></label>
+                                        <input class="editor__tool-range" type="range" min="1" max="10">
+                                    </div>
+                                    <div class="editor__tool  editor__tool--color">
+                                        <input class="editor__tool-btn" type="radio" name="color" id="color">
+                                        <label class="editor__tool-icon" for="color"></label>
+                                        <input class="editor__tool-range" type="range" min="1" max="10">
+                                    </div>
+                                    <div class="editor__tool  editor__tool--contrast">
+                                        <input class="editor__tool-btn" type="radio" name="contrast" id="contrast">
+                                        <label class="editor__tool-icon" for="contrast"></label>
+                                        <input class="editor__tool-range" type="range" min="1" max="10">
+                                    </div>
+                                </div>
+                                <button class="btn btn--post" type="submit">Запостить</button>
+                                <button class="btn btn--cancel" type="reset" disabled>Отмена</button>
+                            </div>
                         </div>
-                        <div class="editor__toolbar">
-                            <div class="editor__tool  editor__tool--crop  editor__tool--active">
-                                <input class="editor__tool-btn" type="checkbox" name="crop" id="crop">
-                                <label class="editor__tool-icon" for="crop"></label>
-                                <input class="editor__tool-range" type="range" min="1" max="10">
-                            </div>
-                            <div class="editor__tool  editor__tool--color">
-                                <input class="editor__tool-btn" type="checkbox" name="color" id="color">
-                                <label class="editor__tool-icon" for="color"></label>
-                                <input class="editor__tool-range" type="range" min="1" max="10">
-                            </div>
-                            <div class="editor__tool  editor__tool--contrast">
-                                <input class="editor__tool-btn" type="checkbox" name="contrast" id="contrast">
-                                <label class="editor__tool-icon" for="contrast"></label>
-                                <input class="editor__tool-range" type="range" min="1" max="10">
-                            </div>
-                        </div>
-                        <button class="btn btn--post" type="submit">Запостить</button>
-                        <button class="btn btn--cancel" type="reset" disabled>Отмена</button>
                     </form>
                 </div>
             </section>

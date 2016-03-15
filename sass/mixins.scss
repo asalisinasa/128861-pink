@@ -1,7 +1,7 @@
 ////////////////////// Most useful
 
 @mixin container {
-    width: 100%;
+    width: 87.5%;
     margin: 0 auto;
 
     @media #{$tablet-width} {
@@ -10,11 +10,11 @@
 
     @media #{$desktop-width} {
         width: 78.33333333333333%; // 620/700
+        max-width: 1150px;
     }
 
     // для оформления сетки
     outline: 2px solid red;
-    // background-color: rgba($blue, 0.2);
 }
 
 @mixin clearfix {
