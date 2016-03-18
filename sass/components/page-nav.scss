@@ -1,36 +1,42 @@
 .page-nav {
-    position: absolute;
-    top: 70px;
-    width: 100%;
-    min-width: 320px;
-
+    
     &__list {
-        @include ul-reset;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
     }
+
     &__item {
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: $bold;
+        text-transform: uppercase;
         text-align: center;
+        
         a {
             @include link-reset;
         }
     }
 
-    @media #{$tablet-width} {
-        top: 130px;
-    }
-
     @media #{$desktop-width} {
-            top: 45px;
-            // на больших ширинах, когда контейнер перестает растягиваться, навигация начинает уезжать правее, чем хотелось бы. тоже самое с остальными абсолютно-спозиционированными элементами, не лежащими в контейнере. как бы это решить?
-            right: 10.8885%;
-            width: auto;
-            margin-left: 10%;
-            &__item {
-            display: inline-block;
-            vertical-align: top;
-            text-align: left;
+        width: 68%;
+        
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 110px;
+        }
+
+        &__item {
+            line-height: 18px;
+            font-weight: $norm;
+            text-transform: none;
         }
     }
-
 
     // для оформления сетки
     outline: 2px solid blue;

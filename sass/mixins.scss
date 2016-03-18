@@ -1,17 +1,17 @@
 ////////////////////// Most useful
 
 @mixin container {
-    width: 87.5%;
     margin: 0 auto;
+    padding: 0 6.3%;
 
     @media #{$tablet-width} {
-        width: 88.57142857142857%; // 940/1200
+        width: 88.6%; // 940/1200
+        padding: 0;
     }
 
     @media #{$desktop-width} {
-        width: 78.33333333333333%; // 620/700
-        // какую максимальную ширину лучше задать?
-        max-width: 1150px;
+        width: 78.3%; // 620/700
+        max-width: 1200px;
     }
 
     // для оформления сетки
@@ -27,13 +27,6 @@
 }
 
 ////////////////////// Resets
-
-@mixin ul-reset {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-}
 
 @mixin link-reset {
     color: inherit;

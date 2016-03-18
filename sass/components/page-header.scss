@@ -2,61 +2,78 @@
     position: absolute;
     width: 100%;
     min-width: 320px;
+    min-height: 65px;
     background-color: rgba(29, 38, 50, 0.3);
     color: white;
 
     &__container {
-        @include container;
-        @include clearfix;
-        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto 20px;
     }
-    &__mini {}
+    
+    &__mini {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        min-height: 65px;
+        padding: 0 6.3%;
+    }
+
     &__logo {
-        float: left;
         width: 75px;
         height: 23px;
-        margin-top: 20px;
         outline: 2px solid yellow; // для оформления сетки
+        
         img {
             width: 100%;
             height: auto;
         }
     }
+
     &__hamburger {
-        float: right;
         width: 50px;
         height: 25px;
-        margin-top: 20px;
         outline: 2px solid yellow; // для оформления сетки
     }
     
 
     @media #{$tablet-width} {
-        &__container {
-            padding-bottom: 40px;
+        min-height: 110px;
+
+        &__mini {
+        padding: 0 5.8%;
         }
-        &__mini {}
+
         &__logo {
             width: 150px;
             height: 40px;
-            margin-top: 25px;
 
             img {
             width: 100%;
             height: auto;
             }
         }
-        &__hamburger {
-            
-        }
-    
     }
 
     @media #{$desktop-width} {
+
+        &__container {
+            flex-direction: row;
+            @include container;
+        }
+        
+        &__mini {
+            width: 150px;
+            margin-right: 10%;
+            padding: 0;
+        }
+
         &__hamburger {
             display: none;
         }
-
     }
 
     // для оформления сетки

@@ -6,11 +6,12 @@
         @include container;
         @include clearfix;
     }
+
     &__heading {
-        padding-top: 45px;
-        padding-bottom: 30px;
+        padding: 75px 0 80px;
         background-color: white;
     }
+
     &__title {
         @include indent-reset;
         width: 71%;
@@ -18,13 +19,16 @@
         text-align: center;
         outline: 2px solid blue; // для оформления сетки
     }
+
     &__img {
         height: 280px;
     }
+
     &__content {
         margin-bottom: 45px;
         outline: 2px solid green; // для оформления сетки
     }
+
     &__item {
         outline: 2px solid blue; // для оформления сетки
     }
@@ -33,41 +37,48 @@
         text-align: left;
 
         &__heading {
-            padding-top: 55px;
-            padding-bottom: 45px;
+            padding: 55px 0 45px;
         }
+
         &__title {
             width: 77%;
         }
+
         &__img,
         &__content {
             width: 50%;
             outline: 2px solid green; // для оформления сетки
         }
+
         &__img {
             float: left;
             height: 480px;
         }
+
         &__content {
             float: right;
         }
     }
 
     @media #{$desktop-width} {
+
         &__heading {
-            padding-top: 75px;
-            padding-bottom: 80px;
+            padding: 75px 0 80px;
         }
+
         &__title {
             width: $desktop-width;
         }
+
         &__img {
             display: none;
         }
+
         &__content {
             width: 100%;
             margin-bottom: 35px;
         }
+
         &__item {
             display: inline-block;
             vertical-align: top;

@@ -1,10 +1,15 @@
 .btn {
+    
+    &--download {
+        
+    }
+
     &--submit {
         width: 280px;
         height: 60px;
-        margin: 0 auto;
-        margin-bottom: 45px;
+        margin: 0 auto 45px;
     }
+
     &--post,
     &--cancel {
         display: block;
@@ -13,18 +18,24 @@
     }
 
     @media #{$tablet-width} {
+
+        &--download {
+            width: 100%;
+        }
+
         &--submit {
             width: 300px;
             margin: 0;
         }
+
         &--post,
         &--cancel {
             width: 260px;
-            margin: 0 auto;
         }
     }
 
     @media #{$desktop-width} {
+
         &--post,
         &--cancel {
             display: inline-block;

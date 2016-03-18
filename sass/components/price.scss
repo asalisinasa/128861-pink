@@ -5,12 +5,13 @@
     &__container {
         position: relative;
         @include container;
-        padding-top: 65px;
-        padding-bottom: 100px;
+        padding: 65px 6.3% 100px;
     }
+
     &__toggle {
         display: none;
     }
+
     &__controls {
         position: absolute;
         left: 50%;
@@ -22,19 +23,20 @@
     }
 
     @media #{$tablet-width} {
+
         &__container {
-            padding-top: 35px;
-            padding-bottom: 68px;
+            padding: 35px 0 68px;
         }
+
         &__controls {
             display: none;
         }
     }
 
     @media #{$desktop-width} {
+
         &__container {
-            padding-top: 65px;
-            padding-bottom: 95px;
+            padding: 65px 0 95px;
         }
     }
 
@@ -46,11 +48,14 @@
 .price-table {
     width: 262.5%; // 87.5% * 4
     transform: translateX(-31%);
+    
     &__row {
         width: 400%;
     }
+
     &__cell,
     &__heading {
+
         &:first-child {
             display: none;
         }
@@ -63,11 +68,10 @@
         
         &__cell,
         &__heading {
+
             &:first-child {
                 display: block;
             }
         }
     }
-
-    @media #{$desktop-width} {}
 }

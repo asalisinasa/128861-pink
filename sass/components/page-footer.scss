@@ -5,39 +5,51 @@
     &--hidden {
         display: none;
     }
+
     &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
         @include container;
+        min-height: 300px;
     }
+
     &__logo {
         width: 150px;
-        display: block;
-        margin: 0 auto;
         outline: 2px solid green; // для оформления сетки
     }
+
     &__social {
-        margin: 0 auto;
         text-align: center;
         outline: 2px solid green; // для оформления сетки
     }
+
     &__copyright {
         width: 150px;
-        display: block;
-        margin: 0 auto;
         outline: 2px solid green; // для оформления сетки
     }
 
     @media #{$tablet-width} {
+
         &--hidden {
             display: block;
         }
+
         &__container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: row;
             min-height: 125px;
         }
+
+        &__logo,
+        &__social,
+        &__copyright {
+            margin: 0;
+        }
     }
+
     @media #{$desktop-width} {
+
         &__container {
             min-height: 200px;
         }
