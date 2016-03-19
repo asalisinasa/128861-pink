@@ -2,7 +2,9 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HTML Academy: Пинк</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
@@ -15,23 +17,23 @@
                     </a>
                     <div class="page-header__hamburger"></div>
                 </div>
+                <nav class="page-nav">
+                    <ul class="page-nav__list">
+                        <li class="page-nav__item">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="page-nav__item">
+                            <a href="photo.html">Фотографии</a>
+                        </li>
+                        <li class="page-nav__item  page-nav__item--active">
+                            <a>Конкурс</a>
+                        </li>
+                        <li class="page-nav__item">
+                            <a href="https://htmlacademy.ru/">HTML academy</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="page-nav">
-                <ul class="page-nav__list">
-                    <li class="page-nav__item">
-                        <a href="index.html">Главная</a>
-                    </li>
-                    <li class="page-nav__item">
-                        <a href="photo.html">Фотографии</a>
-                    </li>
-                    <li class="page-nav__item  page-nav__item--active">
-                        <a href="form.html">Конкурс</a>
-                    </li>
-                    <li class="page-nav__item">
-                        <a href="https://htmlacademy.ru/">HTML academy</a>
-                    </li>
-                </ul>
-            </nav>
         </header>
         <!-- end page-header -->
 
@@ -43,58 +45,70 @@
         </section>
         <!-- end intro -->
 
-        <main>
+        <main class="main-content">
             <!-- begin form -->
             <section class="form">
                 <div class="form__container">
                     <p class="form__text">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
                     <form action="https://htmlacademy.ru/echo" method="post">
-                        <fieldset class="form-filter">
-                            <label class="form-filter__title" for="first-name">Имя:</label>
-                            <input class="form-filter__text" type="text" name="first-name" placeholder="Введите ваше имя" id="first-name" required>
-                            <label class="form-filter__title" for="last-name">Фамилия:</label>
-                            <input class="form-filter__text" type="text" name="last-name" placeholder="Укажите фамилию" id="last-name">
-                            <label class="form-filter__title" for="patronymic">Отчество:</label>
-                            <input class="form-filter__text" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic">
-                        </fieldset>
-                        <fieldset class="form-filter">
-                            <legend class="form-filter__title  form-filter__title--center">Ваши безбашенные достижения
-                                                                                            в&nbsp;путешествии</legend>
-                            <input class="form-filter__checkbox" type="checkbox" name="shark" id="shark" checked>
-                            <label class="form-filter__item" for="shark">Сделал селфи с&nbsp;акулой</label>
-                            <input class="form-filter__checkbox" type="checkbox" name="burned" id="burned" checked>
-                            <label class="form-filter__item" for="burned">Обгорел на&nbsp;пляже</label>
-                            <input class="form-filter__checkbox" type="checkbox" name="norris" id="norris">
-                            <label class="form-filter__item" for="norris">Видел Чака Норриса</label>
-                            <input class="form-filter__checkbox" type="checkbox" name="souvenirs" id="souvenirs">
-                            <label class="form-filter__item" for="souvenirs">Накупил сувениров</label>
-                            <input class="form-filter__checkbox" type="checkbox" name="tower" id="tower" checked>
-                            <label class="form-filter__item" for="tower">Удержал башню</label>
-                            <input class="form-filter__checkbox" type="checkbox" name="destroy" id="destroy">
-                            <label class="form-filter__item" for="destroy">Разгромил отель</label>
-                        </fieldset>
-                        <fieldset class="form-filter">
-                            <label class="form-filter__title" for="tel">Номер телефончика:</label>
-                            <input class="form-filter__text" type="tel" name="tel" placeholder="Номер, пожалуйста" pattern="[0-9]{1}-[0-9]{3}-[0-9]{4}" id="tel">
-                            <label class="form-filter__title" for="email">Адресок почты:</label>
-                            <input class="form-filter__text" type="email" name="email" placeholder="E-mail, пожалуйста" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" required>
-                        </fieldset>
-                        <fieldset class="form-filter">
-                            <legend class="form-filter__title  form-filter__title--center">С&nbsp;каким приложением путешествовали?</legend>
-                            <input class="form-filter__radio" type="radio" name="app-ios" id="app-ios" checked>
-                            <label class="form-filter__item" for="app-ios">Pink для iOS</label>
-                            <input class="form-filter__radio" type="radio" name="app-android" id="app-android">
-                            <label class="form-filter__item" for="app-android">Pink на Android</label>
-                            <input class="form-filter__radio" type="radio" name="app-windows" id="app-windows">
-                            <label class="form-filter__item" for="app-windows">Windows Phone</label>
-                        </fieldset>
-                        <fieldset class="form-filter">
-                            <label class="form-filter__title  form-filter__title--center" for="review">Опишите свои эмоции</label>
-                            <textarea class="form-filter__text  form-filte__text--textarea" id="review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-                        </fieldset>
-                        <button class="btn  btn--submit" type="submit">Отправить форму</button>
-                        <div class="form-filter__hint">
-                            <sup class="form-filter__hint-highlight">*</sup> - обязательные <span class="form-filter__hint-hide">для заполнения</span> поля
+                        <div class="form__filters">
+                            <div class="form__filter-wrap">
+                                <fieldset class="form__filter">
+                                    <label class="form__filter-title" for="first-name">Имя:</label>
+                                    <input class="form__filter-text" type="text" name="first-name" placeholder="Введите ваше имя" id="first-name" required>
+                                    <label class="form__filter-title" for="last-name">Фамилия:</label>
+                                    <input class="form__filter-text" type="text" name="last-name" placeholder="Укажите фамилию" id="last-name">
+                                    <label class="form__filter-title" for="patronymic">Отчество:</label>
+                                    <input class="form__filter-text" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic">
+                                </fieldset>
+                            </div>
+                            <div class="form__filter-wrap">
+                                <fieldset class="form__filter">
+                                    <legend class="form__filter-legend">Ваши безбашенные достижения в&nbsp;путешествии</legend>
+                                    <input class="form__filter-checkbox" type="checkbox" name="shark" id="shark" checked>
+                                    <label class="form__filter-item" for="shark">Сделал селфи с&nbsp;акулой</label>
+                                    <input class="form__filter-checkbox" type="checkbox" name="burned" id="burned" checked>
+                                    <label class="form__filter-item" for="burned">Обгорел на&nbsp;пляже</label>
+                                    <input class="form__filter-checkbox" type="checkbox" name="norris" id="norris">
+                                    <label class="form__filter-item" for="norris">Видел Чака Норриса</label>
+                                    <input class="form__filter-checkbox" type="checkbox" name="souvenirs" id="souvenirs">
+                                    <label class="form__filter-item" for="souvenirs">Накупил сувениров</label>
+                                    <input class="form__filter-checkbox" type="checkbox" name="tower" id="tower" checked>
+                                    <label class="form__filter-item" for="tower">Удержал башню</label>
+                                    <input class="form__filter-checkbox" type="checkbox" name="destroy" id="destroy">
+                                    <label class="form__filter-item" for="destroy">Разгромил отель</label>
+                                </fieldset>
+                            </div>
+                            <div class="form__filter-wrap">
+                                <fieldset class="form__filter">
+                                    <legend class="form__filter-legend">Контактная информация</legend>
+                                    <label class="form__filter-title" for="tel">Номер телефончика:</label>
+                                    <input class="form__filter-text" type="tel" name="tel" placeholder="Номер, пожалуйста" pattern="[0-9]{1}-[0-9]{3}-[0-9]{4}" id="tel">
+                                    <label class="form__filter-title" for="email">Адресок почты:</label>
+                                    <input class="form__filter-text" type="email" name="email" placeholder="E-mail, пожалуйста" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" required>
+                                </fieldset>
+                            </div>
+                            <div class="form__filter-wrap">
+                                <fieldset class="form__filter">
+                                    <legend class="form__filter-legend  form__filter-legend--center">С&nbsp;каким приложением путешествовали?</legend>
+                                    <input class="form__filter-radio" type="radio" name="app-ios" id="app-ios" checked>
+                                    <label class="form__filter-item  form__filter-item--radio" for="app-ios">Pink для iOS</label>
+                                    <input class="form__filter-radio" type="radio" name="app-android" id="app-android">
+                                    <label class="form__filter-item  form__filter-item--radio" for="app-android">Pink на Android</label>
+                                    <input class="form__filter-radio" type="radio" name="app-windows" id="app-windows">
+                                    <label class="form__filter-item  form__filter-item--radio" for="app-windows">Windows Phone</label>
+                                </fieldset>
+                            </div>
+                            <div class="form__filter-wrap">
+                                <fieldset class="form__filter">
+                                    <legend class="form__filter-legend">Опишите свои эмоции</legend>
+                                    <textarea class="form__filter-text  form-filter__text--textarea" id="review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                                </fieldset>
+                            </div>
+                            <button class="btn  btn--submit" type="submit">Отправить форму</button>
+                            <div class="form__filter-hint">
+                                <sup class="form__filter-hint-highlight">*</sup> - обязательные <span class="form__filter-hint-hide">для заполнения</span> поля
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -103,7 +117,7 @@
         </main>
 
         <!-- begin page-footer -->
-        <footer class="page-footer  page-footer--hidden">
+        <footer class="page-footer">
             <div class="page-footer__container">
                 <a class="page-footer__logo" href="index.html">
                     <img src="http://placehold.it/147x40" alt="Мобильное приложение Pink" width="147" height="40">
@@ -127,7 +141,7 @@
             <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли
                                     их&nbsp;заполнить
             </p>
-            <button class="btn  btn--submit" type="button">Закрыть окно</button>
+            <button class="btn  btn--popup" type="button">Закрыть окно</button>
         </div>
         <div class="popup">
             <p class="popup__title">Ваша заявка отправлена</p>
@@ -135,7 +149,7 @@
                                     В&nbsp;ближайшее время мы&nbsp;рассмотрим ее&nbsp;и&nbsp;оповестим вас.
             </p>
             <div class="popup__wrap">
-                <button class="btn  btn--submit" type="button">Ок</button>
+                <button class="btn  btn--popup" type="button">Ок</button>
             </div>
         </div>
         <!-- end popups -->

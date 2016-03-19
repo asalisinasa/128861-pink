@@ -1,0 +1,42 @@
+.research {
+    display: none;
+
+    @media #{$tablet-width} {
+        display: block;
+        background-color: white;
+
+        &__container {
+            @include clearfix;
+            @include container;
+            padding: 55px 6.3% 30px;
+        }
+
+        &__img,
+        &__content {
+            width: 50%;
+        }
+
+        &__img {
+            float: left;
+            height: 300px;
+            outline: 2px solid green; // для оформления сетки
+        }
+        
+        &__content {
+            float: right;
+            outline: 2px solid green; // для оформления сетки
+        }
+    }
+
+    @media #{$desktop-width} {
+        background-color: $gray;
+
+        &__img {}
+        &__content {
+            float: right;
+        }
+    }
+
+    // для оформления сетки
+    outline: 2px solid red;
+}

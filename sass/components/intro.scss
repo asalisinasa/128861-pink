@@ -1,4 +1,65 @@
 .intro {
+    background-color: $blue;
+    font-size: 24px;
+
+    &--main-page {
+        min-height: 450px;
+    }
+
+    &__container {
+        @include container;
+    }
+
+    &__title {
+        width: 285px;
+        margin: 0 auto;
+        padding: 95px 0 40px;
+        text-align: center;
+        color: white;
+
+        &--main-page {
+            display: none;
+        }
+
+        outline: 2px solid yellow; // для оформления сетки
+    }
+
+    @media #{$tablet-width} {
+
+        &--main-page {
+            min-height: 730px;
+        }
+
+        &__title {
+            width: 585px;
+            padding: 180px 0 75px;
+
+            &--main-page {
+                display: block;
+                width: 48.4%;
+                margin-left: 0;
+                padding: 180px 8.7% 75px;
+            }
+        }
+    }
+
+    @media #{$desktop-width} {
+
+        &--main-page {
+            min-height: 850px;
+        }
+
+        &__title {
+            padding-top: 170px;
+            padding: 170px 8.7% 100px;
+
+            &--main-page {
+                width: 32.5%;
+                padding: 180px 3% 75px;
+            }
+        }
+    }
+
+    // для оформления сетки
     outline: 2px solid green;
-    background-color: rgba(green, 0.2);
 }

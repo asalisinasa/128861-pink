@@ -1,4 +1,54 @@
 .contacts {
+    text-align: center;
+
+    &__container {
+        @include container;
+        padding-top: 45px;
+    }
+
+    &__title {
+        @include indent-reset;
+        outline: 2px solid blue; // для оформления сетки
+    }
+
+    &__map {
+        height: 200px;
+        background-color: rgba(yellow, 0.2);
+    }
+
+    @media #{$tablet-width} {
+
+        &__container {
+            padding-top: 55px;
+        }
+
+        &__coordinate {
+            display: inline-block;
+            vertical-align: top;
+            width: 45%;
+            outline: 2px solid green; // для оформления сетки
+        }
+
+        &__map {
+            height: 375px;
+        }
+    }
+
+    @media #{$desktop-width} {
+
+        &__container {
+            padding-top: 75px;
+        }
+
+        &__coordinate {
+            width: 33%;
+        }
+        
+        &__map {
+            height: 510px;
+        }
+    }
+
+    // для оформления сетки
     outline: 2px solid red;
-    background-color: rgba(red, 0.2);
 }

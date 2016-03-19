@@ -1,4 +1,77 @@
 .price {
+    overflow: hidden;
+    background-color: $gray;
+
+    &__container {
+        position: relative;
+        @include container;
+        padding: 65px 6.3% 100px;
+    }
+
+    &__toggle {
+        display: none;
+    }
+
+    &__controls {
+        position: absolute;
+        left: 50%;
+        bottom: 45px;
+        width: 65px;
+        height: 15px;
+        margin-left: -32px;
+        outline: 2px solid green; // для оформления сетки
+    }
+
+    @media #{$tablet-width} {
+
+        &__container {
+            padding: 35px 0 68px;
+        }
+
+        &__controls {
+            display: none;
+        }
+    }
+
+    @media #{$desktop-width} {
+
+        &__container {
+            padding: 65px 0 95px;
+        }
+    }
+
+    // для оформления сетки
     outline: 2px solid red;
-    background-color: rgba(red, 0.2);
+}
+
+// в отдельный файл положить?
+.price-table {
+    width: 262.5%; // 87.5% * 4
+    transform: translateX(-31%);
+    
+    &__row {
+        width: 400%;
+    }
+
+    &__cell,
+    &__heading {
+
+        &:first-child {
+            display: none;
+        }
+        outline: 2px solid yellow; // для оформления сетки
+    }
+
+    @media #{$tablet-width} {
+        width: 100%;
+        transform: translateX(0);
+        
+        &__cell,
+        &__heading {
+
+            &:first-child {
+                display: block;
+            }
+        }
+    }
 }

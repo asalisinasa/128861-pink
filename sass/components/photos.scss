@@ -1,4 +1,29 @@
 .photos {
+
+    &__container {
+        @include container;
+    }
+
+    &__text {
+        margin: 0;
+        padding: 46px 6.6% 54px;
+        text-align: center;
+        outline: 2px solid blue; // для оформления сетки
+    }
+
+    @media #{$tablet-width} {
+
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        &__text {
+            padding: 97px 14.7% 80px;
+        }
+    }
+
+    // для оформления сетки
     outline: 2px solid red;
-    background-color: rgba(red, 0.2);
 }

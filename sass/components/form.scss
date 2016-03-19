@@ -1,4 +1,238 @@
 .form {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @include container;
+    }
+
+    &__text {
+        @include container;
+        padding: 0 37px;
+        text-align: center;
+    }
+
+    &__filters {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__filter-wrap {
+        flex-basis: 100%;
+        margin-bottom: 52px;
+    }
+
+    &__filter {
+        border: none;
+        padding: 34px 0 40px;
+    }
+
+    &__filter-legend {
+        padding: 0 30px;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: $norm;
+        text-align: center;
+        text-transform: uppercase;
+        color: $pink;
+    }
+
+    &__filter:nth-of-type(3) &__filter-legend {
+        display: none;
+    }
+
+    &__filter-title {
+        display: inline-block;
+        padding: 0 23px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: $norm;
+        text-transform: uppercase;
+        color: $pink;
+    }
+
+    &__filter-title--center {
+        display: block;
+        width: 100%;
+    }
+
+    &__filter-text {
+        width: 100%;
+        padding: 17px 22px;
+        margin-bottom: 21px;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: $norm;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__filter-checkbox,
+    &__filter-radio {
+        display: none;
+    }
+
+    &__filter-item {
+        position: relative;
+        display: block;
+        padding-left: 70px;
+        margin-bottom: 34px;
+        font-size: 18px;
+        line-height: 39px;
+        font-weight: $norm;
+        color: $blue;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 39px;
+            height: 39px;
+            background-color: white;
+            border: 2px solid #e5e5e5;
+        }
+
+        &--radio::before {
+            border-radius: 50%;
+        }
+    }
+
+    &__filter-hint {
+        flex-basis: 100%;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__filter-hint-hide {
+        display: none;
+    }
+
+    &__filter-hint-highlight {
+        color: $pink;
+    }
+
+    @media #{$mobile-width} {
+
+        &__container {
+            width: auto;
+            margin: 0;
+        }
+        &__filter-wrap {
+
+            &:nth-of-type(2n) {
+                background-color: $gray;
+            }
+        }
+
+        &__filter {
+            @include container;
+        }
+    }
+
+    @media #{$tablet-width} {
+
+        &__filter-wrap {
+            width: auto;
+            margin: 0;
+            padding: 34px 0 40px;
+        }
+
+        &__filter-wrap:first-child {
+
+            .form__filter {
+                // не получается расположить  внутренние элементы как на макете
+                display: flex;
+                padding: 34px 0 40px;
+                border: none;
+            }
+
+            .form__filter-text {
+                flex-basis: 0;
+            }
+        }
+
+        &__filter-wrap:nth-of-type(1) {
+            order: -3;
+        }
+
+        &__filter-wrap:nth-of-type(4) {
+            order: -2;
+        }
+
+        &__filter-wrap:nth-of-type(3) {
+            order: -1;
+        }
+
+        &__filter {
+            padding: 34px 60px 40px;
+            border: 2px solid #e5e5e5;
+            border-radius: 2px;
+            
+            &:nth-of-type(2n) {
+                background-color: white;
+            }
+        }
+
+        &__text {
+            width: 80.65%;
+            padding: 160px 37px 75px;
+        }
+
+        &__filter-hint {
+            max-width: 50%;
+            text-align: right;
+        }
+    }
+
+    @media #{$desktop-width} {
+
+        &__text {
+            width: 79.8%;
+            padding: 90px 37px 70px;
+        }
+
+        &__filter-wrap {
+            &:nth-of-type(1),
+            &:nth-of-type(4) {
+                max-width: 50%;
+            }
+
+            &:nth-of-type(4) .form__filter {
+                border: none;
+            }
+
+            &:nth-of-type(3) &-legend {
+                display: block;
+            }
+        }
+
+        &__filter-wrap:nth-of-type(3) &__filter{
+            //  и тут тоже не получается расположить  внутренние элементы( наверное флексами лучше всего, но это уже в следующем задании
+        }
+
+        &__filter {
+
+            &:nth-of-type(4) {
+                border: none;
+            }
+        }
+
+        &__filter-hint-hide {
+            display: inline;
+        }
+    }
+
+    // для оформления сетки
     outline: 2px solid red;
-    background-color: rgba(red, 0.2);
 }

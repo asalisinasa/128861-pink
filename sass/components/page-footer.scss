@@ -1,4 +1,60 @@
 .page-footer {
-    outline: 2px solid green;
-    background-color: rgba(green, 0.2);
+    color: $blue;
+    background-color: white;
+
+    &--hidden {
+        display: none;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        @include container;
+        min-height: 300px;
+    }
+
+    &__logo {
+        width: 150px;
+        outline: 2px solid green; // для оформления сетки
+    }
+
+    &__social {
+        text-align: center;
+        outline: 2px solid green; // для оформления сетки
+    }
+
+    &__copyright {
+        width: 150px;
+        outline: 2px solid green; // для оформления сетки
+    }
+
+    @media #{$tablet-width} {
+
+        &--hidden {
+            display: block;
+        }
+
+        &__container {
+            flex-direction: row;
+            min-height: 125px;
+        }
+
+        &__logo,
+        &__social,
+        &__copyright {
+            margin: 0;
+        }
+    }
+
+    @media #{$desktop-width} {
+
+        &__container {
+            min-height: 200px;
+        }
+    }
+
+    // для оформления сетки
+    outline: 2px solid red;
 }

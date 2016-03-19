@@ -1,0 +1,39 @@
+////////////////////// Most useful
+
+@mixin container {
+    margin: 0 auto;
+    padding: 0 6.3%;
+
+    @media #{$tablet-width} {
+        width: 88.6%; // 940/1200
+        padding: 0;
+    }
+
+    @media #{$desktop-width} {
+        width: 78.3%; // 620/700
+        max-width: 1200px;
+    }
+
+    // для оформления сетки
+    outline: 2px solid red;
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+////////////////////// Resets
+
+@mixin link-reset {
+    color: inherit;
+    text-decoration: none;
+}
+
+@mixin indent-reset {
+    margin: 0;
+    padding: 0;
+}

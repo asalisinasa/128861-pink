@@ -1,4 +1,97 @@
 .editor {
+    
+    &__container {
+        @include container;
+    }
+
+    &__text {
+        @include indent-reset;
+        padding: 46px 6.6% 54px;
+        text-align: center;
+        outline: 2px solid blue;
+    }
+
+    &__load-btn {
+        display: none;
+    }
+
+    &__photo {
+        display: block;
+        width: 100%;
+        height: 375px;
+        margin: 0 auto;
+        padding-top: 20px;
+        overflow: hidden;
+        outline: 2px solid green;
+        
+        img {
+           width: 100%; 
+        }
+    }
+
+    &__toolbar {
+        position: relative;
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px 7.2% 25px;
+        outline: 2px solid green;
+    }
+    
+    // тут надо еще переделать разметку, чтобы работал выбор editor__tool-btn. или же реализовать это другим способом, без помощи input:checked~  ?
+    &__tool {
+        display: inline-block;
+        outline: 2px solid yellow; // для оформления сетки
+    }
+
+    &__tool-range {
+        display: none;
+        position: absolute;
+    }
+
+    &__tool-btn:checked ~ &__tool-range {
+        display: block;
+    }
+
+    @media #{$tablet-width} {
+
+        &__form {
+            display: flex;
+        }
+
+        &__column {
+            width: 50%;
+            outline: 2px solid blue; // для оформления сетки
+        }
+
+        &__toolbar {
+            flex-direction: column;
+        }
+
+        &__tool {
+            display: block;
+            width: 100%;
+            height: 70px;
+            border: 1px solid #dddfe0;
+        }
+
+        &__tool-btn {
+            display: inline-block;
+        }
+
+        &__tool-range {
+            display: inline-block;
+            position: static;
+        }
+    }
+
+    @media #{$desktop-width} {
+
+        &__form {
+            padding: 0 8.5%;
+        }
+    }
+
+    // для оформления сетки
     outline: 2px solid red;
-    background-color: rgba(red, 0.2);
 }

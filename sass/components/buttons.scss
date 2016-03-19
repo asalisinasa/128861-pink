@@ -1,4 +1,45 @@
 .btn {
-    outline: 2px solid yellow;
-    background-color: rgba(yellow, 0.2);
+    
+    &--download {
+        
+    }
+
+    &--submit {
+        width: 280px;
+        height: 60px;
+        margin: 0 auto 45px;
+    }
+
+    &--post,
+    &--cancel {
+        display: block;
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    @media #{$tablet-width} {
+
+        &--download {
+            width: 100%;
+        }
+
+        &--submit {
+            width: 300px;
+            margin: 0;
+        }
+
+        &--post,
+        &--cancel {
+            width: 260px;
+        }
+    }
+
+    @media #{$desktop-width} {
+
+        &--post,
+        &--cancel {
+            display: inline-block;
+            width: 183px;
+        }
+    }
 }
