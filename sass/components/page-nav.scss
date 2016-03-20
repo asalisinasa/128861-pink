@@ -1,4 +1,9 @@
 .page-nav {
+    background-color: $blue;
+    
+    &--closed {
+        display: none;
+    }
     
     &__list {
         display: flex;
@@ -9,19 +14,29 @@
     }
 
     &__item {
+        height: 64px;
         font-size: 18px;
         line-height: 32px;
         font-weight: $bold;
         text-transform: uppercase;
         text-align: center;
+        border-top: 1px solid rgba(white, 0.15);
+        border-bottom: 1px solid black;
         
         a {
+            display: block;
+            padding: 18px 0;
             @include link-reset;
         }
     }
 
     @media #{$desktop-width} {
         width: 68%;
+        background-color: transparent;
+        
+        &--closed {
+            display: block;
+        }
         
         &__list {
             flex-direction: row;
@@ -32,12 +47,10 @@
         }
 
         &__item {
+            border: none;
             line-height: 18px;
             font-weight: $norm;
             text-transform: none;
         }
     }
-
-    // для оформления сетки
-    outline: 2px solid blue;
 }

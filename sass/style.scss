@@ -14,6 +14,7 @@
 @import "components/page-nav";
 @import "components/intro";
 @import "components/page-footer";
+@import "components/social-link";
 @import "components/buttons";
 
 // index.html
@@ -22,13 +23,14 @@
 @import "components/research";
 @import "components/reviews";
 @import "components/price";
+@import "components/price-table";
 @import "components/contacts";
 
 // form.html
 @import "components/form";
 @import "components/popup";
 
-// photos.html
+// photo.html
 @import "components/photos";
 @import "components/post";
 @import "components/editor";

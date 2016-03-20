@@ -10,6 +10,10 @@ html {
 
 body {
     min-width: 320px;
-    background-color: white;
+    font-family: $open-sans;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: $norm;
     color: $blue;
+    background-color: white;
 }

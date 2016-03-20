@@ -1,7 +1,20 @@
 .btn {
     
     &--download {
-        
+        display: block;
+        width: 280px;
+        height: 55px;
+        margin: 0 auto 32px;
+        color: white;
+        border: 3px solid white;
+        border-radius: 30px;
+
+        a {
+            line-height: 49px;
+            @include link-reset;
+            font-size: 18px;
+            font-weight: $bold;
+        }
     }
 
     &--submit {
@@ -20,7 +33,8 @@
     @media #{$tablet-width} {
 
         &--download {
-            width: 100%;
+            width: 300px;
+            margin: 0 auto 46px;
         }
 
         &--submit {
@@ -35,6 +49,14 @@
     }
 
     @media #{$desktop-width} {
+        
+        &--download {
+            margin-bottom: 68px;
+            
+            a {
+                font-size: 21px; 
+            }
+        }
 
         &--post,
         &--cancel {

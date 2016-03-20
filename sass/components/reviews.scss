@@ -4,76 +4,180 @@
     &__container {
         position: relative;
         @include container;
-        padding-top: 42px;
-        padding-bottom: 90px;
+        padding-top: 50px;
+        padding-bottom: 70px;
     }
+    
+    &__slides-wrap {
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    &__slides {
+        display: flex;
+        width: 300%;
+        margin-bottom: 30px;
+        transition: transform 0.4s ease-in-out;
+    }
+
     &__slide {
-        &:nth-child(2),
-        &:nth-child(3) {
-            display: none;
-        }
+        display: inline-block;
+        width: 33.3%;
     }
+
     &__controls {
-        position: absolute;
-        left: 50%;
-        bottom: 45px;
         width: 65px;
         height: 15px;
-        margin-left: -32px;
-        outline: 2px solid green; // для оформления сетки
+        margin: 0 auto;
+        font-size: 0;
     }
+
+    &__control {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-color: $dark-gray;
+        border: 3px solid white;
+        border-radius: 50%;
+        
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+    }
+
     &__quote {
         @include indent-reset;
     }
-    &__author {
-        outline: 2px solid blue; // для оформления сетки
+
+    &__author-name {
+        @include indent-reset;
+        margin-bottom: 22px;
+        font-size: 18px;
+        line-height: 10px;
+        font-weight: $bold;
+        color: black;
     }
-    &__text {
-        outline: 2px solid blue; // для оформления сетки
-    }
+
     &__author-info {
         display: none;
     }
+
+    &__text {
+        font-size: 14px;
+        line-height: 30px;
+    }
+
     &__toggle,
     &__arrow {
         display: none;
     }
 
+    &__toggle[id="review-1"]:checked ~ &__controls &__control[for~="review-1"] {
+        background-color: transparent;
+        border: 3px solid #283645;
+    }
+    &__toggle[id="review-2"]:checked ~ &__controls &__control[for~="review-2"] {
+        background-color: transparent;
+        border: 3px solid #283645;
+    }
+    &__toggle[id="review-3"]:checked ~ &__controls &__control[for~="review-3"] {
+        background-color: transparent;
+        border: 3px solid #283645;
+    }
+
+    &__toggle[id="review-1"]:checked ~ &__slides-wrap &__slides {
+        transform: translateX(0);
+    }
+    &__toggle[id="review-2"]:checked ~ &__slides-wrap &__slides {
+        transform: translateX(-33%);
+    }
+    &__toggle[id="review-3"]:checked ~ &__slides-wrap &__slides {
+        transform: translateX(-67%);
+    }
+
     @media #{$tablet-width} {
+
         &__container {
         padding-top: 50px;
         padding-bottom: 70px;
         }
+
+        &__slides-wrap {
+            width: 70%;
+        }
+
         &__controls {
             bottom: 20px;
         }
+
         &__quote {
             display: flex;
             flex-wrap: wrap-reverse;
         }
+
         &__author {
             width: 100%;
         }
+
+        &__author-name {
+            margin-bottom: 2px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
         &__author-info {
             display: block;
+            @include indent-reset;
+            font-size: 14px;
+            line-height: 30px;
+        }
+
+        &__text {
+            font-size: 18px;
+            margin-bottom: 35px;
         }
     }
 
     @media #{$desktop-width} {
+
         &__container {
-        padding-top: 190px;
-        padding-bottom: 40px;
+            padding-top: 163px;
+            padding-bottom: 95px;
         }
-        &__arrow {
-            display: block;
-            position: absolute;
-            top: 205px;
-            width: 30px;
-            height: 45px;
+        
+        &__quote {
+            width: 720px;
+            margin: 0 auto;
         }
+        
+        &__author-name {
+            font-size: 24px;
+        }
+        
+        &__author-info {
+            font-size: 18px;
+        }
+
         &__controls {
             display: none;
         }
+
+        &__arrows {
+            position: relative; // привязать к обертке слайдов
+        }
+
+        &__arrow {
+            display: block;
+            position: absolute;
+            top: -189px;
+            width: 22px;
+            height: 41px;
+            padding: 0;
+        // background-color: transparent;
+        // border: none;
+        // outline: none;
+        }
+
         &__arrow--next {
             right: 0;
         }

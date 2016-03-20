@@ -1,27 +1,33 @@
 .intro {
     background-color: $blue;
+    background-image: url("../../img/iphone-hand-mobile.png"), url("../../img/bg-back-mobile.jpg");
+    background-position: 0 173px, center 0;
+    background-repeat: no-repeat;
     font-size: 24px;
 
     &--main-page {
-        min-height: 450px;
+        min-height: 717px;
     }
 
     &__container {
         @include container;
+        
+        &--main-page {
+        }
     }
+
+    &__container
 
     &__title {
         width: 285px;
         margin: 0 auto;
-        padding: 95px 0 40px;
+        padding: 97px 0 40px;
         text-align: center;
         color: white;
 
         &--main-page {
             display: none;
         }
-
-        outline: 2px solid yellow; // для оформления сетки
     }
 
     @media #{$tablet-width} {
@@ -33,12 +39,13 @@
         &__title {
             width: 585px;
             padding: 180px 0 75px;
+            font-size: 40px;
 
             &--main-page {
                 display: block;
                 width: 48.4%;
                 margin-left: 0;
-                padding: 180px 8.7% 75px;
+                padding: 203px 7.7% 3px;
             }
         }
     }
@@ -46,20 +53,17 @@
     @media #{$desktop-width} {
 
         &--main-page {
-            min-height: 850px;
+            min-height: 852px;
         }
 
         &__title {
-            padding-top: 170px;
             padding: 170px 8.7% 100px;
+            font-size: 50px;
 
             &--main-page {
                 width: 32.5%;
-                padding: 180px 3% 75px;
+                padding: 218px 0 24px;
             }
         }
     }
-
-    // для оформления сетки
-    outline: 2px solid green;
 }

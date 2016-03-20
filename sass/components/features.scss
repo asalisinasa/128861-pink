@@ -3,12 +3,13 @@
     background-color: $gray;
 
     &__container {
-        @include container;
         @include clearfix;
+        @include container;
+        padding-top: 55px;
     }
 
     &__heading {
-        padding: 75px 0 80px;
+        padding: 44px 0 65px;
         background-color: white;
     }
 
@@ -16,58 +17,104 @@
         @include indent-reset;
         width: 71%;
         margin: 0 auto;
+        font-size: 24px;
+        font-weight: $light;
+        line-height: 29px;
         text-align: center;
-        outline: 2px solid blue; // для оформления сетки
+
+        &:nth-of-type(1) {
+            margin-bottom: 28px;
+        }
     }
 
     &__img {
+        width: 159px;
+        margin: 0 auto;
         height: 280px;
+        background: url("../../img/iphone-screen-mobile.png") no-repeat;
     }
 
     &__content {
-        margin-bottom: 45px;
-        outline: 2px solid green; // для оформления сетки
+        margin-bottom: 38px;
     }
 
     &__item {
-        outline: 2px solid blue; // для оформления сетки
+        margin-bottom: 37px;
+    }
+    
+    &__item-title {
+        @include indent-reset;
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 10px;
+        font-weight: $bold;
+        color: black;
+    }
+    
+    &__item-text {
+        font-size: 14px;
+        line-height: 24px;
     }
 
     @media #{$tablet-width} {
         text-align: left;
 
         &__heading {
-            padding: 55px 0 45px;
+            padding: 48px 0 100px;
         }
 
         &__title {
-            width: 77%;
+            width: 85%;
+            font-size: 40px;
+            line-height: 48px;
+            
+            &:nth-of-type(1) {
+                margin-bottom: 0;
+            }
+
+            &:nth-of-type(2) {
+                width: 60%;
+            }
         }
 
         &__img,
         &__content {
             width: 50%;
-            outline: 2px solid green; // для оформления сетки
         }
 
         &__img {
             float: left;
-            height: 480px;
+            width: 270px;
+            height: 430px;
         }
 
         &__content {
             float: right;
+            margin-bottom: 0;
+        }
+
+        &__item {
+            margin-bottom: 40px;
+        }
+
+        &__item-title {
+            margin-top: 28px;
         }
     }
 
     @media #{$desktop-width} {
 
         &__heading {
-            padding: 75px 0 80px;
+            padding: 68px 0 172px;
         }
 
         &__title {
-            width: $desktop-width;
+            font-size: 50px;
+            line-height: 60px;
+            
+            &__title {
+            width: 65%;
+            }
         }
 
         &__img {
@@ -76,18 +123,41 @@
 
         &__content {
             width: 100%;
-            margin-bottom: 35px;
         }
 
         &__item {
+            position: relative;
             display: inline-block;
             vertical-align: top;
             width: 33%;
-            padding-top: 360px;
+            margin-bottom: 0;
+            padding: 234px 0 20px;
             text-align: center;
+            
+            &:before {
+                content: "";
+                position: absolute;
+                top: -95px;
+                left: 50%;
+                transform: translate(-50%);
+                width: 185px;
+                height: 300px;
+                background: url("../../img/iphone-screen-mobile.png") no-repeat;
+            }
+        }
+
+        &__item-title {
+            padding: 0 12%;
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+        &__item-text {
+            margin-top: 0px;
+            margin-bottom: 24px;
+            padding: 0 10%;
+            font-size: 18px;
+            line-height: 30px;
         }
     }
-
-    // для оформления сетки
-    outline: 2px solid red;
 }

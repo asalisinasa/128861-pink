@@ -11,13 +11,15 @@
         <!-- begin page-header -->
         <header class="page-header">
             <div class="page-header__container">
-                <div class="page-header__mini">
+                <div class="page-header__mini  page-header__mini--closed">
                     <a class="page-header__logo">
                         <img src="http://placehold.it/75x22" alt="Мобильное приложение Pink" width="75" height="22">
                     </a>
-                    <div class="page-header__hamburger"></div>
+                    <div class="page-header__hamburger">
+                        <div class="page-header__hamburger-lines"></div>
+                    </div>
                 </div>
-                <nav class="page-nav">
+                <nav class="page-nav  page-nav--closed">
                     <ul class="page-nav__list">
                         <li class="page-nav__item  page-nav__item--active">
                             <a>Главная</a>
@@ -41,32 +43,24 @@
         <section class="intro  intro--main-page">
             <div class="intro__container  intro__container--main-page">
                 <h1 class="intro__title  intro__title--main-page">Взгляните на&nbsp;жизнь иначе!</h1>
-                <section class="download">
-                    <a class="btn  btn--download" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Скачать приложение</a>
-                    <div class="download__options">
-                        <a class="download__option  download__option--ios" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">IOS</a>
-                        <a class="download__option  download__option--andriod" href="https://play.google.com/store/apps">Andriod</a>
-                        <a class="download__option  download__option--windows" href="https://www.microsoft.com/en-us/store/apps/windows">Windows</a>
-                    </div>
-                    <p class="download__text">Доступно для iPhone, iPad, Android, Windows&nbsp;phone, OS&nbsp;X, Windows&nbsp;8</p>
-                </section>
             </div>
+            <section class="download">
+                <div class="download__container">
+                    <div class="download__inner">
+                        <div class="btn  btn--download">
+                            <a href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Скачать приложение</a>
+                        </div>
+                        <div class="download__options">
+                            <a class="download__option  download__option--ios" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">IOS</a>
+                            <a class="download__option  download__option--andriod" href="https://play.google.com/store/apps">Andriod</a>
+                            <a class="download__option  download__option--windows" href="https://www.microsoft.com/en-us/store/apps/windows">Windows</a>
+                        </div>
+                        <p class="download__text">Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8</p>
+                    </div>
+                </div>
+            </section>
         </section>
         <!-- end intro -->
-
-        <!-- begin download panel -->
-        <!-- <section class="download">
-            <div class="download__container">
-                <a class="btn  btn--download" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Скачать приложение</a>
-                <div class="download__options">
-                    <a class="download__option  download__option--ios" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">IOS</a>
-                    <a class="download__option  download__option--andriod" href="https://play.google.com/store/apps">Andriod</a>
-                    <a class="download__option  download__option--windows" href="https://www.microsoft.com/en-us/store/apps/windows">Windows</a>
-                </div>
-                <p class="download__text">Доступно для iPhone, iPad, Android, Windows&nbsp;phone, OS&nbsp;X, Windows&nbsp;8</p>
-            </div>
-        </section> -->
-        <!-- end download panel -->
 
         <main class="main-content">
             <!-- begin features -->
@@ -118,56 +112,58 @@
                     <input class="reviews__toggle" type="radio" name="reviews" id="review-1" checked>
                     <input class="reviews__toggle" type="radio" name="reviews" id="review-2">
                     <input class="reviews__toggle" type="radio" name="reviews" id="review-3">
-
+                    <div class="reviews__slides-wrap">
+                        <div class="reviews__slides">
+                            <div class="reviews__slide">
+                                <blockquote class="reviews__quote">
+                                    <div class="reviews__author">
+                                        <p class="reviews__author-name">Николай Петров</p>
+                                        <p class="reviews__author-info">25 лет, водитель трамвая</p>
+                                    </div>
+                                    <p class="reviews__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило
+                                                            по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще
+                                                            я&nbsp;познакомился со&nbsp;своей будущей женой
+                                                            в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;
+                                    </p>
+                                </blockquote>
+                            </div>
+                            <div class="reviews__slide">
+                                <blockquote class="reviews__quote">
+                                    <div class="reviews__author">
+                                        <p class="reviews__author-name">Николай Петров</p>
+                                        <p class="reviews__author-info">25 лет, водитель трамвая</p>
+                                    </div>
+                                    <p class="reviews__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило
+                                                            по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще
+                                                            я&nbsp;познакомился со&nbsp;своей будущей женой
+                                                            в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;
+                                    </p>
+                                </blockquote>
+                            </div>
+                            <div class="reviews__slide">
+                                <blockquote class="reviews__quote">
+                                    <div class="reviews__author">
+                                        <p class="reviews__author-name">Николай Петров</p>
+                                        <p class="reviews__author-info">25 лет, водитель трамвая</p>
+                                    </div>
+                                    <p class="reviews__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило
+                                                            по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще
+                                                            я&nbsp;познакомился со&nbsp;своей будущей женой
+                                                            в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;
+                                    </p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
                     <div class="reviews__controls">
                         <label class="reviews__control" for="review-1"></label>
                         <label class="reviews__control" for="review-2"></label>
                         <label class="reviews__control" for="review-3"></label>
                     </div>
-
-                    <div class="reviews__slides">
-                        <div class="reviews__slide">
-                            <blockquote class="reviews__quote">
-                                <div class="reviews__author">
-                                    <p class="reviews__author-name">Николай Петров</p>
-                                    <p class="reviews__author-info">25 лет, водитель трамвая</p>
-                                </div>
-                                <p class="reviews__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило
-                                                        по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще
-                                                        я&nbsp;познакомился со&nbsp;своей будущей женой
-                                                        в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;
-                                </p>
-                            </blockquote>
-                        </div>
-                        <div class="reviews__slide">
-                            <blockquote class="reviews__quote">
-                                <div class="reviews__author">
-                                    <p class="reviews__author-name">Николай Петров</p>
-                                    <p class="reviews__author-info">25 лет, водитель трамвая</p>
-                                </div>
-                                <p class="reviews__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило
-                                                        по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще
-                                                        я&nbsp;познакомился со&nbsp;своей будущей женой
-                                                        в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;
-                                </p>
-                            </blockquote>
-                        </div>
-                        <div class="reviews__slide">
-                            <blockquote class="reviews__quote">
-                                <div class="reviews__author">
-                                    <p class="reviews__author-name">Николай Петров</p>
-                                    <p class="reviews__author-info">25 лет, водитель трамвая</p>
-                                </div>
-                                <p class="reviews__text">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило
-                                                        по-новому взглянуть на&nbsp;привычные серые вещи! А&nbsp;еще
-                                                        я&nbsp;познакомился со&nbsp;своей будущей женой
-                                                        в&nbsp;комментариях к&nbsp;выложенной фотографии!&raquo;
-                                </p>
-                            </blockquote>
-                        </div>
+                    <div class="reviews__arrows">
+                        <button class="reviews__arrow  reviews__arrow--next" type="button"></button>
+                        <button class="reviews__arrow  reviews__arrow--prev" type="button"></button>
                     </div>
-                    <button class="reviews__arrow  reviews__arrow--next" type="button"></button>
-                    <button class="reviews__arrow  reviews__arrow--prev" type="button"></button>
                 </div>
             </section>
             <!-- end reviews -->
@@ -232,7 +228,7 @@
                         <div class="contacts__coordinate">
                             <p class="contacts__text">Звоните:</p>
                             <p class="contacts__contact">
-                                <a class="contacts__link" href="tel:+78125556666">+7(812) 555-66-66</a>
+                                <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
                             </p>
                         </div>
                         <div class="contacts__coordinate">
