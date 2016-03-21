@@ -5,12 +5,12 @@
     padding: 0 6.3%;
 
     @media #{$tablet-width} {
-        width: 88.6%; // 940/1200
+        width: 88.6%;
         padding: 0;
     }
 
     @media #{$desktop-width} {
-        width: 78.3%; // 620/700
+        width: 78.3%;
         max-width: 1200px;
     }
 

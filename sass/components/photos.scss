@@ -6,7 +6,7 @@
 
     &__text {
         margin: 0;
-        padding: 46px 6.6% 54px;
+        padding: 46px 6.6% 50px;
         text-align: center;
         outline: 2px solid blue; // для оформления сетки
     }
@@ -16,11 +16,18 @@
         &__container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-between;
         }
         
         &__text {
-            padding: 97px 14.7% 80px;
+            padding: 92px 14.7% 76px;
+        }
+    }
+
+    @media #{$desktop-width} {
+        
+        &__text {
+            padding: 96px 17.7% 88px;
         }
     }
 

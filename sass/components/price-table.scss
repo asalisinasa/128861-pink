@@ -66,6 +66,7 @@
     @media #{$tablet-width} {
         width: 100%;
         transform: translateX(0);
+        transition: none;
         
         &__cell,
         &__heading {

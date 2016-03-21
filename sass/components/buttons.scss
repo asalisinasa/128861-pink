@@ -1,4 +1,9 @@
 .btn {
+
+    &:disabled {
+        color: #e3e4e4;
+        border-color: #e3e4e4;
+    }
     
     &--download {
         display: block;
@@ -27,7 +32,19 @@
     &--cancel {
         display: block;
         width: 280px;
+        height: 55px;
         margin: 0 auto;
+        font-size: 18px;
+        line-height: 47px;
+        font-weight: $bold;
+        color: $pink;
+        background-color: transparent;
+        border: 3px solid $pink;
+        border-radius: 25px;
+    }
+
+    &--post {
+        margin-bottom: 12px;
     }
 
     @media #{$tablet-width} {
@@ -46,6 +63,14 @@
         &--cancel {
             width: 260px;
         }
+
+        &--post {
+            margin-bottom: 26px;
+        }
+
+        &--cancel {
+            margin-bottom: 19px;
+        }
     }
 
     @media #{$desktop-width} {
@@ -60,8 +85,8 @@
 
         &--post,
         &--cancel {
-            display: inline-block;
             width: 183px;
+            margin: 0;
         }
     }
 }

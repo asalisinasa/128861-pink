@@ -1,94 +1,176 @@
 .editor {
-    
+
     &__container {
         @include container;
     }
 
     &__text {
         @include indent-reset;
-        padding: 46px 6.6% 54px;
+        padding: 44px 4% 40px;
         text-align: center;
         outline: 2px solid blue;
     }
 
-    &__load-btn {
+    &__load-btn,
+    &__tool-btn {
         display: none;
     }
 
     &__photo {
-        display: block;
         width: 100%;
-        height: 375px;
-        margin: 0 auto;
-        padding-top: 20px;
+        height: auto;
+        min-height: 375px;
         overflow: hidden;
-        outline: 2px solid green;
         
         img {
            width: 100%; 
         }
     }
 
+    &__form-wrap {
+        background-color: $gray;
+    }
+
+    &__form {
+        @include container;
+        padding: 20px 6.3% 40px;
+    }
+
     &__toolbar {
-        position: relative;
         display: flex;
         width: 100%;
-        margin: 0 auto;
-        padding: 40px 7.2% 25px;
-        outline: 2px solid green;
+        padding: 40px 7.5% 38px;
     }
-    
-    // тут надо еще переделать разметку, чтобы работал выбор editor__tool-btn. или же реализовать это другим способом, без помощи input:checked~  ?
+
     &__tool {
-        display: inline-block;
-        outline: 2px solid yellow; // для оформления сетки
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 121px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #dddfe0;
     }
 
-    &__tool-range {
-        display: none;
-        position: absolute;
+
+    &__tool-icon {
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        outline: 2px solid $pink;
     }
 
-    &__tool-btn:checked ~ &__tool-range {
-        display: block;
+    @media #{$mobile-width} {
+        
+        &__tool-icon {
+            margin: 0 auto;
+        }
+
+        &__tool-range {
+            display: none;
+            width: 300%;
+            margin-top: auto;
+
+            &--color {
+                transform: translateX(-33.3%);
+            }
+
+            &--contrast {
+                transform: translateX(-66.6%);
+            }
+        }
+
+        &__tool-btn:checked ~ &__tool-range {
+            display: block;
+        }
     }
 
     @media #{$tablet-width} {
+        
+        &__text {
+            padding-bottom: 70px;
+        }
 
         &__form {
             display: flex;
+            justify-content: space-between;
+            padding: 58px 0 40px;
         }
 
         &__column {
-            width: 50%;
-            outline: 2px solid blue; // для оформления сетки
+            display: flex;
+            flex-direction: column;
+            width: 44.4%;
+            min-width: 275px;
+            min-height: 400px;
+            
+            &:nth-child(1) {
+                width: 48.4%;
+                min-width: 300px;
+            }
+        }
+
+        &__photo {
+            min-height: 400px;
         }
 
         &__toolbar {
             flex-direction: column;
+            height: 210px;
+            margin-top: -10px;
+            margin-bottom: auto;
+            padding: 0;
         }
 
         &__tool {
-            display: block;
-            width: 100%;
-            height: 70px;
-            border: 1px solid #dddfe0;
+            flex-direction: row;
+            align-items: center;
+            height: 69px;
+            padding: 0;
         }
 
-        &__tool-btn {
-            display: inline-block;
+        &__tool-icon {
+            width: 22px;
+            height: 22px;
+            margin: 0;
+            margin-right: 25px;
         }
 
         &__tool-range {
-            display: inline-block;
-            position: static;
+            flex-grow: 1;
+            width: auto;
+            margin-right: 18px;
         }
     }
 
     @media #{$desktop-width} {
+        
+        &__text {
+            padding-top: 3px;
+        }
 
         &__form {
-            padding: 0 8.5%;
+            justify-content: space-around;
+            padding: 53px 5%;
+        }
+
+        &__column {
+            width: 410px;
+            
+            &:nth-child(1) {
+                width: 300px;
+                margin-right: 20px;
+            }
+        }
+
+        &__tool-icon {
+            width: 44px;
+            height: 44px;
+            margin-right: 48px;
+        }
+
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
         }
     }
 
