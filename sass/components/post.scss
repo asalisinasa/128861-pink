@@ -13,7 +13,7 @@
 
     &__hint {
         position: absolute;
-        top: -135px;
+        top: -138px;
         right: 6.5%;
         width: 140px;
         height: 35px;
@@ -34,13 +34,13 @@
     &__photo {
         display: block;
         width: 100%;
-        height: auto;
-        min-height: 180px;
+        height: 180px;
         overflow: hidden;
     }
 
     &__photo--favourite {
         height: 137px;
+        min-height: auto;
     }
 
     &__photo img {
@@ -87,7 +87,7 @@
     }
 
     &__likes-btn {
-        // display: none;
+        display: none;
     }
 
     &__likes-icon {

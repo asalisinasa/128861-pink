@@ -11,21 +11,21 @@
         <!-- begin page-header -->
         <header class="page-header">
             <div class="page-header__container">
-                <div class="page-header__mini  page-header__mini--closed">
+                <div class="page-header__mini  page-header__mini--active">
                     <a class="page-header__logo">
                         <img src="http://placehold.it/75x22" alt="Мобильное приложение Pink" width="75" height="22">
                     </a>
                     <div class="page-header__hamburger">
-                        <div class="page-header__hamburger-lines"></div>
+                        <div class="page-header__hamburger-lines  page-header__hamburger-lines--cross"></div>
                     </div>
                 </div>
                 <nav class="page-nav  page-nav--closed">
                     <ul class="page-nav__list">
-                        <li class="page-nav__item  page-nav__item--active">
-                            <a>Главная</a>
-                        </li>
                         <li class="page-nav__item">
-                            <a href="photo.html">Фотографии</a>
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="page-nav__item  page-nav__item--current">
+                            <a>Фотографии</a>
                         </li>
                         <li class="page-nav__item">
                             <a href="form.html">Конкурс</a>
@@ -225,7 +225,7 @@
                                 </div>
                                 <div class="editor__buttons">
                                     <button class="btn btn--post" type="submit">Запостить</button>
-                                    <button class="btn btn--cancel" type="reset" disabled>Отмена</button>
+                                    <button class="btn btn--cancel" type="reset">Отмена</button>
                                 </div>  
                             </div>
                         </div>
@@ -255,5 +255,6 @@
         <!-- end page-footer -->
 
         <!-- scripts -->
+        <script src="js/script.js"></script>
     </body>
 </html>

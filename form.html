@@ -11,11 +11,13 @@
         <!-- begin page-header -->
         <header class="page-header">
             <div class="page-header__container">
-                <div class="page-header__mini">
+                <div class="page-header__mini  page-header__mini--active">
                     <a class="page-header__logo" href="index.html">
                         <img src="http://placehold.it/75x22" alt="Мобильное приложение Pink" width="75" height="22">
                     </a>
-                    <div class="page-header__hamburger"></div>
+                    <div class="page-header__hamburger">
+                        <div class="page-header__hamburger-lines  page-header__hamburger-lines--cross"></div>
+                    </div>
                 </div>
                 <nav class="page-nav">
                     <ul class="page-nav__list">
@@ -25,7 +27,7 @@
                         <li class="page-nav__item">
                             <a href="photo.html">Фотографии</a>
                         </li>
-                        <li class="page-nav__item  page-nav__item--active">
+                        <li class="page-nav__item  page-nav__item--current">
                             <a>Конкурс</a>
                         </li>
                         <li class="page-nav__item">
@@ -40,7 +42,7 @@
         <!-- begin intro -->
         <section class="intro">
             <div class="intro__container">
-                <h1 class="intro__title">Конкурс на&nbsp;самое безбашеное путешествие с&nbsp;Пинк</h1>
+                <h1 class="intro__title  intro__title--form">Конкурс на&nbsp;самое безбашенное путешествие с&nbsp;Пинк</h1>
             </div>
         </section>
         <!-- end intro -->
@@ -49,65 +51,82 @@
             <!-- begin form -->
             <section class="form">
                 <div class="form__container">
-                    <p class="form__text">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
-                    <form action="https://htmlacademy.ru/echo" method="post">
+                    <div class="form__descript">
+                        <p class="form__text">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз 1000 миль на вашу бонусную карту!</p>
+                        <p class="form__text  form__text--hidden">Пожалуйста, заполните форму ниже:</p>
+                    </div>
+                    <form class="form__fields" action="https://echo.htmlacademy.ru" method="post">
                         <div class="form__filters">
-                            <div class="form__filter-wrap">
-                                <fieldset class="form__filter">
-                                    <label class="form__filter-title" for="first-name">Имя:</label>
-                                    <input class="form__filter-text" type="text" name="first-name" placeholder="Введите ваше имя" id="first-name" required>
-                                    <label class="form__filter-title" for="last-name">Фамилия:</label>
-                                    <input class="form__filter-text" type="text" name="last-name" placeholder="Укажите фамилию" id="last-name">
-                                    <label class="form__filter-title" for="patronymic">Отчество:</label>
-                                    <input class="form__filter-text" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic">
+                            <div class="form__filter-wrap  form__filter-wrap--name">
+                                <fieldset class="form__filter  form__filter--name">
+                                    <div class="form__filter-item">
+                                        <label class="form__filter-title" for="first-name">Имя:</label>
+                                        <input class="form__filter-textfield  form__filter--required" type="text" name="first-name" placeholder="Введите ваше имя" id="first-name" required>
+                                    </div>
+                                    <div class="form__filter-item">
+                                        <label class="form__filter-title" for="last-name">Фамилия:</label>
+                                        <input class="form__filter-textfield" type="text" name="last-name" placeholder="Укажите фамилию" id="last-name">
+                                    </div>
+                                    <div class="form__filter-item">
+                                        <label class="form__filter-title" for="patronymic">Отчество:</label>
+                                        <input class="form__filter-textfield" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic">
+                                    </div>
                                 </fieldset>
                             </div>
-                            <div class="form__filter-wrap">
-                                <fieldset class="form__filter">
-                                    <legend class="form__filter-legend">Ваши безбашенные достижения в&nbsp;путешествии</legend>
-                                    <input class="form__filter-checkbox" type="checkbox" name="shark" id="shark" checked>
-                                    <label class="form__filter-item" for="shark">Сделал селфи с&nbsp;акулой</label>
-                                    <input class="form__filter-checkbox" type="checkbox" name="burned" id="burned" checked>
-                                    <label class="form__filter-item" for="burned">Обгорел на&nbsp;пляже</label>
-                                    <input class="form__filter-checkbox" type="checkbox" name="norris" id="norris">
-                                    <label class="form__filter-item" for="norris">Видел Чака Норриса</label>
-                                    <input class="form__filter-checkbox" type="checkbox" name="souvenirs" id="souvenirs">
-                                    <label class="form__filter-item" for="souvenirs">Накупил сувениров</label>
-                                    <input class="form__filter-checkbox" type="checkbox" name="tower" id="tower" checked>
-                                    <label class="form__filter-item" for="tower">Удержал башню</label>
-                                    <input class="form__filter-checkbox" type="checkbox" name="destroy" id="destroy">
-                                    <label class="form__filter-item" for="destroy">Разгромил отель</label>
+                            <div class="form__filter-wrap  form__filter-wrap--progress">
+                                <fieldset class="form__filter  form__filter--progress">
+                                    <legend class="form__filter-legend  form__filter-legend--progress">Ваши безбашенные достижения в&nbsp;путешествии</legend>
+                                    <div class="form__filter-items-wrap">
+                                        <input class="form__filter-checkbox" type="checkbox" name="shark" id="shark" checked>
+                                        <label class="form__filter-label  form__filter-label--checkbox" for="shark">Сделал селфи с&nbsp;акулой</label>
+                                        <input class="form__filter-checkbox" type="checkbox" name="burned" id="burned" checked>
+                                        <label class="form__filter-label  form__filter-label--checkbox" for="burned">Обгорел на&nbsp;пляже</label>
+                                        <input class="form__filter-checkbox" type="checkbox" name="norris" id="norris">
+                                        <label class="form__filter-label  form__filter-label--checkbox" for="norris">Видел Чака Норриса</label>
+                                        <input class="form__filter-checkbox" type="checkbox" name="souvenirs" id="souvenirs">
+                                        <label class="form__filter-label  form__filter-label--checkbox" for="souvenirs">Накупил сувениров</label>
+                                        <input class="form__filter-checkbox" type="checkbox" name="tower" id="tower" checked>
+                                        <label class="form__filter-label  form__filter-label--checkbox" for="tower">Удержал башню</label>
+                                        <input class="form__filter-checkbox" type="checkbox" name="destroy" id="destroy">
+                                        <label class="form__filter-label  form__filter-label--checkbox" for="destroy">Разгромил отель</label>
+                                    </div>
                                 </fieldset>
                             </div>
-                            <div class="form__filter-wrap">
-                                <fieldset class="form__filter">
-                                    <legend class="form__filter-legend">Контактная информация</legend>
-                                    <label class="form__filter-title" for="tel">Номер телефончика:</label>
-                                    <input class="form__filter-text" type="tel" name="tel" placeholder="Номер, пожалуйста" pattern="[0-9]{1}-[0-9]{3}-[0-9]{4}" id="tel">
-                                    <label class="form__filter-title" for="email">Адресок почты:</label>
-                                    <input class="form__filter-text" type="email" name="email" placeholder="E-mail, пожалуйста" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" required>
+                            <div class="form__filter-wrap  form__filter-wrap--contacts">
+                                <fieldset class="form__filter  form__filter--contacts">
+                                    <legend class="form__filter-legend  form__filter-legend--contacts">Контактная информация</legend>
+                                    <div class="form__filter-items-wrap">
+                                        <div class="form__filter-inner">
+                                            <label class="form__filter-title  form__filter-title--contacts" for="tel">Номер телефончика:</label>
+                                            <input class="form__filter-textfield  form__filter-textfield--contacts" type="tel" name="tel" placeholder="Номер, пожалуйста" pattern="[0-9]{1}-[0-9]{3}-[0-9]{4}" id="tel">
+                                        </div>
+                                        <div class="form__filter-inner">
+                                            <label class="form__filter-title  form__filter-title--contacts" for="email">Адресок почты:</label>
+                                            <input class="form__filter-textfield  form__filter-textfield--contacts  form__filter--required" type="email" name="email" placeholder="E-mail, пожалуйста" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" required>
+                                        </div>
+                                    </div>
                                 </fieldset>
                             </div>
-                            <div class="form__filter-wrap">
-                                <fieldset class="form__filter">
-                                    <legend class="form__filter-legend  form__filter-legend--center">С&nbsp;каким приложением путешествовали?</legend>
-                                    <input class="form__filter-radio" type="radio" name="app-ios" id="app-ios" checked>
-                                    <label class="form__filter-item  form__filter-item--radio" for="app-ios">Pink для iOS</label>
-                                    <input class="form__filter-radio" type="radio" name="app-android" id="app-android">
-                                    <label class="form__filter-item  form__filter-item--radio" for="app-android">Pink на Android</label>
-                                    <input class="form__filter-radio" type="radio" name="app-windows" id="app-windows">
-                                    <label class="form__filter-item  form__filter-item--radio" for="app-windows">Windows Phone</label>
+                            <div class="form__filter-wrap  form__filter-wrap--app">
+                                <fieldset class="form__filter  form__filter--app">
+                                    <legend class="form__filter-legend  form__filter-legend--center  form__filter-legend--app">С&nbsp;каким приложением путешествовали?</legend>
+                                    <input class="form__filter-radio" type="radio" name="mobile-app" id="app-ios" checked>
+                                    <label class="form__filter-label  form__filter-label--radio" for="app-ios">Pink для iOS</label>
+                                    <input class="form__filter-radio" type="radio" name="mobile-app" id="app-android">
+                                    <label class="form__filter-label  form__filter-label--radio" for="app-android">Pink на Android</label>
+                                    <input class="form__filter-radio" type="radio" name="mobile-app" id="app-windows">
+                                    <label class="form__filter-label  form__filter-label--radio" for="app-windows">Windows Phone</label>
                                 </fieldset>
                             </div>
-                            <div class="form__filter-wrap">
-                                <fieldset class="form__filter">
-                                    <legend class="form__filter-legend">Опишите свои эмоции</legend>
-                                    <textarea class="form__filter-text  form-filter__text--textarea" id="review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                            <div class="form__filter-wrap  form__filter-wrap--emotions">
+                                <fieldset class="form__filter  form__filter--emotions">
+                                    <legend class="form__filter-legend  form__filter-legend--emotions">Опишите свои эмоции</legend>
+                                    <textarea class="form__filter-textfield  form__filter-textfield--textarea  form__filter--required" id="review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
                                 </fieldset>
                             </div>
                             <button class="btn  btn--submit" type="submit">Отправить форму</button>
                             <div class="form__filter-hint">
-                                <sup class="form__filter-hint-highlight">*</sup> - обязательные <span class="form__filter-hint-hide">для заполнения</span> поля
+                                <span class="form__filter-hint-highlight">*</span> &#8212; обязательные <span class="form__filter-hint-hide">для заполнения</span> поля
                             </div>
                         </div>
                     </form>
@@ -136,24 +155,29 @@
         <!-- end page-footer -->
 
         <!-- begin popups -->
-        <div class="popup">
-            <p class="popup__title">Что-то пошло не&nbsp;так!</p>
-            <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли
-                                    их&nbsp;заполнить
-            </p>
-            <button class="btn  btn--popup" type="button">Закрыть окно</button>
+        <div class="popup  popup--failure">
+            <div class="popup__inner">
+                <p class="popup__title">Что-то пошло не&nbsp;так!</p>
+                <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли
+                                        их&nbsp;заполнить
+                </p>
+                <button class="btn  btn--popup  btn--failure" type="button">Закрыть окно</button>
+            </div>
         </div>
-        <div class="popup">
-            <p class="popup__title">Ваша заявка отправлена</p>
-            <p class="popup__text">Спасибо за&nbsp;ваше участие, ваша заявка уже поступила к&nbsp;нам.
-                                    В&nbsp;ближайшее время мы&nbsp;рассмотрим ее&nbsp;и&nbsp;оповестим вас.
-            </p>
+        <div class="popup  popup--accept">
+            <div class="popup__inner">
+                <p class="popup__title">Ваша заявка отправлена</p>
+                <p class="popup__text">Спасибо за&nbsp;ваше участие, ваша заявка уже поступила к&nbsp;нам.
+                                        В&nbsp;ближайшее время мы&nbsp;рассмотрим ее&nbsp;и оповестим вас.
+                </p>
+            </div>
             <div class="popup__wrap">
-                <button class="btn  btn--popup" type="button">Ок</button>
+                <button class="btn  btn--popup  btn--accept" type="button">Ок</button>
             </div>
         </div>
         <!-- end popups -->
 
         <!-- scripts -->
+        <script src="js/script.js"></script>
     </body>
 </html>

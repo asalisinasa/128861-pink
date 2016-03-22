@@ -35,20 +35,23 @@
             border: 3px solid #283645; // active
             border: 3px solid $gray;
             border-radius: 50%;
+            cursor: pointer;
             
             &:not(:last-child) {
                 margin-right: 12px;
             }
+
+            &:hover {
+            background-color: #7e868f;
+            }
+            
+            &:active {
+                background-color: $lightest-gray;
+            }
         }
 
-        &__toggle[id="price-1"]:checked ~ &__controls &__control[for~="price-1"] {
-            background-color: transparent;
-            border: 3px solid #283645;
-        }
-        &__toggle[id="price-2"]:checked ~ &__controls &__control[for~="price-2"] {
-            background-color: transparent;
-            border: 3px solid #283645;
-        }
+        &__toggle[id="price-1"]:checked ~ &__controls &__control[for~="price-1"],
+        &__toggle[id="price-2"]:checked ~ &__controls &__control[for~="price-2"],
         &__toggle[id="price-3"]:checked ~ &__controls &__control[for~="price-3"] {
             background-color: transparent;
             border: 3px solid #283645;

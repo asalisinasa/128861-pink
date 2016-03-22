@@ -1,6 +1,12 @@
 .page-nav {
     background-color: $blue;
+    animation: slip 0.4s ease-out;
     
+
+    &--active {
+        display: block;
+    }
+
     &--closed {
         display: none;
     }
@@ -28,11 +34,22 @@
             padding: 18px 0;
             @include link-reset;
         }
+
+        &:hover {
+            color: $pink;
+        }
+
+        &--current,
+        &--current:hover,
+        &:active {
+            color: rgba($pink, 0.3);
+        }
     }
 
     @media #{$desktop-width} {
         width: 68%;
         background-color: transparent;
+        animation: none;
         
         &--closed {
             display: block;
@@ -47,10 +64,24 @@
         }
 
         &__item {
+            height: 50px;
             border: none;
             line-height: 18px;
             font-weight: $norm;
             text-transform: none;
+            
+            &:hover {
+                color: white;
+                font-weight: $norm;
+                border-bottom: 2px solid white;
+            }
+
+            &--current,
+            &--current:hover,
+            &:active {
+                color: rgba(white, 0.3);
+                border-bottom: none;
+            }
         }
     }
 }

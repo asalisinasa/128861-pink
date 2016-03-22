@@ -17,3 +17,15 @@ body {
     color: $blue;
     background-color: white;
 }
+
+a {
+    color: $pink;
+    
+    &:hover {
+        color: black;
+    }
+
+    &:active {
+        color: #e5e5e5;
+    }
+}

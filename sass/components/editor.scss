@@ -8,7 +8,6 @@
         @include indent-reset;
         padding: 44px 4% 40px;
         text-align: center;
-        outline: 2px solid blue;
     }
 
     &__load-btn,
@@ -37,9 +36,20 @@
     }
 
     &__toolbar {
+        position: relative;
         display: flex;
         width: 100%;
-        padding: 40px 7.5% 38px;
+        padding: 32px 7.5% 0;
+        
+        &:after {
+           content: ""; 
+           position: absolute;
+           width: 115%;
+           height: 1px;
+           left: -7.5%;
+           bottom: 0;
+           background-color: #dddfe0;
+        }
     }
 
     &__tool {
@@ -47,16 +57,96 @@
         flex-direction: column;
         width: 100%;
         height: 121px;
-        padding-bottom: 22px;
-        border-bottom: 1px solid #dddfe0;
+        padding-bottom: 34px;
     }
-
 
     &__tool-icon {
         width: 44px;
         height: 44px;
         cursor: pointer;
         outline: 2px solid $pink;
+    }
+
+    &__buttons {
+        margin-top: 38px;
+    }
+
+    ////////////// Ползунок //////////////
+
+    &__tool-range {
+
+        -webkit-appearance: none;
+
+        &::-webkit-slider-runnable-track,
+        &::-webkit-slider-thumb  {
+            -webkit-appearance: none;
+        }
+
+
+        // Фоновая линия ползунка
+    
+        @mixin runnable-track {
+            width: 100%;
+            height: 2px;
+            background-color: $blue;
+        }
+
+        &::-webkit-slider-runnable-track {
+            @include runnable-track;
+        }
+          
+        &::-moz-range-track {
+            @include runnable-track;
+        }
+
+        &::-ms-track {
+            @include runnable-track;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+
+
+        // Смещающийся элемент ползунка
+
+        @mixin slider-thumb {
+            width: 14px;
+            height: 14px;
+            margin-top: -5px;
+            border: 2px solid $pink;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: none;
+            cursor: pointer;
+        }
+        
+        &::-webkit-slider-thumb {
+            @include slider-thumb;
+        }
+
+        &::-moz-range-thumb {
+            @include slider-thumb;
+          
+            &:active {
+                background-color: $pink;
+            }
+        }
+
+        &::-ms-thumb {
+            @include slider-thumb;
+        }
+
+        &::-ms-fill-lower,
+        &::-ms-tooltip {
+            display: none;
+        }
+
+        &:active {
+            &::-webkit-slider-thumb {
+                background-color: $pink;
+            }
+        } 
     }
 
     @media #{$mobile-width} {
@@ -119,6 +209,10 @@
             margin-top: -10px;
             margin-bottom: auto;
             padding: 0;
+            
+            &:after {
+               display: none;
+            }
         }
 
         &__tool {
@@ -126,6 +220,7 @@
             align-items: center;
             height: 69px;
             padding: 0;
+            border-bottom: 1px solid #dddfe0;
         }
 
         &__tool-icon {
@@ -148,13 +243,18 @@
             padding-top: 3px;
         }
 
+        &__form-wrap {
+            @include container ;
+        }
+
         &__form {
             justify-content: space-around;
+            width: 100%;
             padding: 53px 5%;
         }
 
         &__column {
-            width: 410px;
+            width: 388px;
             
             &:nth-child(1) {
                 width: 300px;
@@ -171,9 +271,7 @@
         &__buttons {
             display: flex;
             justify-content: space-between;
+            margin-bottom: 10px;
         }
     }
-
-    // для оформления сетки
-    outline: 2px solid red;
 }

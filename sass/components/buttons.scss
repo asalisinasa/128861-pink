@@ -1,9 +1,7 @@
 .btn {
-
-    &:disabled {
-        color: #e3e4e4;
-        border-color: #e3e4e4;
-    }
+	border: none;
+	outline: none;
+    transition: color 0.1s, background-color 0.3s, border-color 0.3s;
     
     &--download {
         display: block;
@@ -20,12 +18,42 @@
             font-size: 18px;
             font-weight: $bold;
         }
+
+        &:hover {
+            color: $pink;
+            background-color: white;
+        }
+        
+        &:active {
+            color: rgba($pink, 0.3);
+            background-color: white;
+        }
     }
 
     &--submit {
         width: 280px;
-        height: 60px;
-        margin: 0 auto 45px;
+        height: 63px;
+        margin: 0 auto 35px;
+        border-radius: 2px;
+        font-size: 18px;
+        line-height: 63px;
+        font-weight: $bold;
+        text-transform: uppercase;
+        background-color: $green;
+        color: white;
+        
+        &:hover {
+            background-color: $dark-green;
+        }
+
+        &:active {
+            color: rgba(white, 0.3);
+            background-color: $dark-green;
+        }
+
+        &:disabled {
+            background-color: #e5e5e5;
+        }
     }
 
     &--post,
@@ -37,14 +65,39 @@
         font-size: 18px;
         line-height: 47px;
         font-weight: $bold;
-        color: $pink;
-        background-color: transparent;
-        border: 3px solid $pink;
         border-radius: 25px;
+        background-color: transparent;
     }
 
     &--post {
         margin-bottom: 12px;
+        color: $pink;
+        border: 3px solid $pink;
+        
+        &:hover {
+            color: white;
+            background-color: $pink;
+        }
+
+        &:active {
+            color: rgba(white, 0.3);
+            background-color: $pink;
+        }
+    }
+
+    &--cancel {
+        margin-bottom: 12px;
+        color: #e3e4e4;
+        border: 3px solid #e3e4e4;
+        
+        &:hover {
+            color: #c4c6c8;
+            border-color: $darker-gray;
+        }
+        &:active {
+            color: rgba(white, 0.3);
+            background-color: $darker-gray;
+        }
     }
 
     @media #{$tablet-width} {
@@ -65,11 +118,11 @@
         }
 
         &--post {
-            margin-bottom: 26px;
+            margin-bottom: 24px;
         }
 
         &--cancel {
-            margin-bottom: 19px;
+            margin-bottom: 13px;
         }
     }
 

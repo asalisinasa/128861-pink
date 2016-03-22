@@ -1,14 +1,41 @@
 .popup {
     position: fixed;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     display: none;
-    width: 320px;
-    padding: 40px 50px 55px;
-    text-align: center;
     background-color: white;
-    // drop-shadow: 0 15px 7px rgba(0, 1, 1, 0.15);
+    box-shadow: 0 7px 15px 0px rgba(0, 1, 1, 0.15);
+
+    &--shown {
+        display: block;
+    }
+    
+    &__inner,
+    &__wrap {
+        width: 320px;
+        padding: 40px 25px 55px; 
+        text-align: center;
+    }
+
+    &__wrap {
+        padding: 45px 21px 16px; 
+        background-color: $gray;
+    }
+
+    &__title {
+        margin-bottom: 26px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: $bold;
+        color: black;
+    }
+
+    &__text {
+        margin-bottom: -21px;
+        font-size: 14px;
+        line-height: 24px;
+    }
     
     @media #{$tablet-width} {
         width: 465px;

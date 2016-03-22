@@ -1,5 +1,7 @@
 .reviews {
+    position: relative;
     text-align: center;
+    @include bg-diagonal($gray, transparent, 30px);
 
     &__container {
         position: relative;
@@ -39,9 +41,18 @@
         background-color: $dark-gray;
         border: 3px solid white;
         border-radius: 50%;
+        cursor: pointer;
         
         &:not(:last-child) {
             margin-right: 12px;
+        }
+
+        &:hover {
+            background-color: #7e868f;
+        }
+        
+        &:active {
+            background-color: $lightest-gray;
         }
     }
 
@@ -72,14 +83,8 @@
         display: none;
     }
 
-    &__toggle[id="review-1"]:checked ~ &__controls &__control[for~="review-1"] {
-        background-color: transparent;
-        border: 3px solid #283645;
-    }
-    &__toggle[id="review-2"]:checked ~ &__controls &__control[for~="review-2"] {
-        background-color: transparent;
-        border: 3px solid #283645;
-    }
+    &__toggle[id="review-1"]:checked ~ &__controls &__control[for~="review-1"],
+    &__toggle[id="review-2"]:checked ~ &__controls &__control[for~="review-2"],
     &__toggle[id="review-3"]:checked ~ &__controls &__control[for~="review-3"] {
         background-color: transparent;
         border: 3px solid #283645;
@@ -96,6 +101,8 @@
     }
 
     @media #{$tablet-width} {
+
+        @include bg-diagonal($gray, transparent, 52px);
 
         &__container {
         padding-top: 50px;
@@ -140,6 +147,8 @@
 
     @media #{$desktop-width} {
 
+        @include bg-diagonal($gray, transparent, 81px);
+
         &__container {
             padding-top: 163px;
             padding-bottom: 95px;
@@ -163,7 +172,7 @@
         }
 
         &__arrows {
-            position: relative; // привязать к обертке слайдов
+            position: relative;
         }
 
         &__arrow {
@@ -173,16 +182,50 @@
             width: 22px;
             height: 41px;
             padding: 0;
-        // background-color: transparent;
-        // border: none;
-        // outline: none;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                right: -5px;
+                width: 29px;
+                height: 2px;
+                background-color: $dark-gray;
+            }
+
+            &::after {
+                top: 27px;
+                transform: rotate(-45deg);
+            }
+            &::before {
+                top: 7px;
+                transform: rotate(45deg);
+            }
+
+            &:hover {
+                &::after,
+                &::before {
+                    background-color: #7e868f;
+                }  
+            }
+
+            &:active {
+                &::after,
+                &::before {
+                    background-color: $lightest-gray;
+                }  
+            }
         }
 
         &__arrow--next {
             right: 0;
         }
-    }
 
-    // для оформления сетки
-    outline: 2px solid red;
+        &__arrow--prev {
+            transform: rotate(180deg);
+        }
+    }
 }

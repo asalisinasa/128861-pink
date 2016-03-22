@@ -11,6 +11,14 @@
     &:not(:last-child) {
         margin-right: 12px;
     }
+
+    &:hover {
+        border-color: $blue;
+    }
+
+    &:active {
+        border-color: $lightest-gray;
+    }
     
     &--twitter {
         

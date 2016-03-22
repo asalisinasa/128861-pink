@@ -42,12 +42,24 @@
             line-height: 26px;
             font-weight: $light;
             color: $pink;
+            
+            &:hover {
+                color: black;
+                text-decoration: underline;
+            }
+
+            &:active {
+                color: #e5e5e5;
+                text-decoration: none;
+            }
         }
     }
 
     &__map {
+        position: relative;
         height: 200px;
         background: #f3f1ea url("../../img/bg-map.png") no-repeat center;
+        @include bg-triangle(20, 33px, transparent, white);
     }
 
     @media #{$tablet-width} {
@@ -80,6 +92,7 @@
 
         &__map {
             height: 375px;
+            @include bg-triangle(20, 72px, transparent, white);
         }
     }
 
@@ -116,6 +129,7 @@
         
         &__map {
             height: 510px;
+            @include bg-triangle(20, 102px, transparent, white);
         }
     }
 }
