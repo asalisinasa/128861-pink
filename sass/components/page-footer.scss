@@ -1,6 +1,6 @@
 .page-footer {
     color: $blue;
-    background-color: white;
+    background-color: #ffffff;
 
     &--hidden {
         display: none;
@@ -16,23 +16,18 @@
     }
 
     &__logo {
-        width: 150px;
-        outline: 2px solid green; // для оформления сетки
+        
     }
 
     &__social {
         text-align: center;
-        outline: 2px solid green; // для оформления сетки
     }
-
-    
 
     &__copyright {
         width: 150px;
         @include link-reset;
         font-size: 14px;
         line-height: 18px;
-        outline: 2px solid green; // для оформления сетки
     }
 
     @media #{$tablet-width} {

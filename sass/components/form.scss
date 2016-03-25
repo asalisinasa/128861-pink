@@ -154,11 +154,12 @@
             left: 0;
             width: 39px;
             height: 39px;
-            background-color: white;
+            background-color: #ffffff;
             border: 2px solid #e5e5e5;
         }  
         
-        &:hover::before {
+        &:hover::before,
+        &:focus::before {
             border-color: $blue;
         }
 
@@ -310,7 +311,7 @@
             
             &--progress {
                 padding: 45px 45px 47px;
-                background-color: white;
+                background-color: #ffffff;
             }
 
             &--app {

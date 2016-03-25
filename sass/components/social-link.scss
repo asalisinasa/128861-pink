@@ -12,7 +12,8 @@
         margin-right: 12px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         border-color: $blue;
     }
 

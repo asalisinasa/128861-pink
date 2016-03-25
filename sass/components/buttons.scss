@@ -1,6 +1,7 @@
 .btn {
 	border: none;
 	outline: none;
+    cursor: pointer;
     transition: color 0.1s, background-color 0.3s, border-color 0.3s;
     
     &--download {
@@ -8,25 +9,23 @@
         width: 280px;
         height: 55px;
         margin: 0 auto 32px;
-        color: white;
-        border: 3px solid white;
+        font-size: 18px;
+        line-height: 49px;
+        font-weight: $bold;
+        @include link-reset;
+        color: #ffffff;
+        border: 3px solid #ffffff;
         border-radius: 30px;
 
-        a {
-            line-height: 49px;
-            @include link-reset;
-            font-size: 18px;
-            font-weight: $bold;
-        }
-
-        &:hover {
+        &:hover,
+        &:focus {
             color: $pink;
-            background-color: white;
+            background-color: #ffffff;
         }
         
         &:active {
             color: rgba($pink, 0.3);
-            background-color: white;
+            background-color: #ffffff;
         }
     }
 
@@ -39,20 +38,22 @@
         line-height: 63px;
         font-weight: $bold;
         text-transform: uppercase;
+        color: #ffffff;
         background-color: $green;
-        color: white;
         
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $dark-green;
         }
 
         &:active {
-            color: rgba(white, 0.3);
+            color: rgba(#ffffff, 0.3);
             background-color: $dark-green;
         }
 
         &:disabled {
             background-color: #e5e5e5;
+            cursor: not-allowed;
         }
     }
 
@@ -74,13 +75,14 @@
         color: $pink;
         border: 3px solid $pink;
         
-        &:hover {
-            color: white;
+        &:hover,
+        &:focus {
+            color: #ffffff;
             background-color: $pink;
         }
 
         &:active {
-            color: rgba(white, 0.3);
+            color: rgba(#ffffff, 0.3);
             background-color: $pink;
         }
     }
@@ -90,12 +92,13 @@
         color: #e3e4e4;
         border: 3px solid #e3e4e4;
         
-        &:hover {
+        &:hover,
+        &:focus {
             color: #c4c6c8;
             border-color: $darker-gray;
         }
         &:active {
-            color: rgba(white, 0.3);
+            color: rgba(#ffffff, 0.3);
             background-color: $darker-gray;
         }
     }

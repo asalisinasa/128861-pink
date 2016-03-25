@@ -4,7 +4,7 @@
     min-width: 320px;
     min-height: 70px;
     background-color: rgba(0, 0, 0, 0.3);
-    color: white;
+    color: #ffffff;
     
     &--active {
         background-color: transparent;
@@ -32,7 +32,7 @@
         
         &--active {
             background-color: $blue;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid #000000;
         }
 
         &--closed {
@@ -44,6 +44,7 @@
     &__logo {
         width: 75px;
         height: 23px;
+        cursor: pointer;
         
         img {
             width: 100%;
@@ -63,8 +64,8 @@
         top: 10px;
         width: 50px;
         height: 4px;
-        background-color: white;
-        transition: transform .3s;
+        background-color: #ffffff;
+        transition: transform 0.3s;
         
         &::before,
         &::after {
@@ -72,12 +73,12 @@
             position: absolute;
             width: 50px;
             height: 4px;
-            background-color: white;
+            background-color: #ffffff;
         }
 
         &::before {
             top: -10px;
-            // box-shadow: 0 1px 0 1px rgba(white, 0.3);
+            // box-shadow: 0 1px 0 1px rgba(#ffffff, 0.3);
         }
 
         &::after {
@@ -91,7 +92,7 @@
         left: 25px;
         width: 28px;
         height: 4px;
-        background-color: white;
+        background-color: #ffffff;
         transform: rotate(45deg);
         
         &::after {

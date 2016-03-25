@@ -4,7 +4,7 @@
 
     &--main-page {
         min-height: 717px;
-        background-image: url("../../img/iphone-hand-mobile.png"), url("../../img/bg-back-mobile.jpg");
+        background-image: url("/img/iphone-hand-mobile.png"), url("/img/bg-back-mobile.jpg");
         background-position: 0 173px, center 0;
         background-repeat: no-repeat;
     }
@@ -18,7 +18,7 @@
         margin: 0 auto;
         padding: 97px 0 83px;
         text-align: center;
-        color: white;
+        color: #ffffff;
 
         &--main-page {
             display: none;
@@ -30,8 +30,6 @@
     }
 
     @media #{$tablet-width} {
-
-
 
         &--main-page {
             min-height: 730px;

@@ -1,5 +1,5 @@
 .contacts {
-    text-align: center;
+    text-align: center ;
 
     &__container {
         @include container;
@@ -43,8 +43,9 @@
             font-weight: $light;
             color: $pink;
             
-            &:hover {
-                color: black;
+            &:hover,
+            &:focus {
+                color: #000000;
                 text-decoration: underline;
             }
 
@@ -58,7 +59,7 @@
     &__map {
         position: relative;
         height: 200px;
-        background: #f3f1ea url("../../img/bg-map.png") no-repeat center;
+        background: #f3f1ea url("/img/bg-map.png") no-repeat center;
         @include bg-triangle(20, 33px, transparent, white);
     }
 
@@ -92,7 +93,7 @@
 
         &__map {
             height: 375px;
-            @include bg-triangle(20, 72px, transparent, white);
+            @include bg-triangle(20, 72px, transparent, #ffffff);
         }
     }
 
@@ -129,7 +130,7 @@
         
         &__map {
             height: 510px;
-            @include bg-triangle(20, 102px, transparent, white);
+            @include bg-triangle(20, 102px, transparent, #ffffff);
         }
     }
 }

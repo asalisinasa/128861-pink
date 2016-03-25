@@ -2,7 +2,7 @@
     padding-top: 458px;
 
     &__container {
-        color: white;
+        color: #ffffff;
         background-color: $dark-blue;
     }
 
@@ -21,7 +21,7 @@
 
     &__text {
         @include indent-reset;
-        color: white;
+        color: #ffffff;
         line-height: 24px;
         font-weight: $light;
     }

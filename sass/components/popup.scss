@@ -4,8 +4,8 @@
     left: 50%;
     transform: translateX(-50%);
     display: none;
-    background-color: white;
-    box-shadow: 0 7px 15px 0px rgba(0, 1, 1, 0.15);
+    background-color: #ffffff;
+    box-shadow: 0 7px 15px 0px rgba(#000000, 0.15);
 
     &--shown {
         display: block;
@@ -28,7 +28,7 @@
         font-size: 18px;
         line-height: 24px;
         font-weight: $bold;
-        color: black;
+        color: #000000;
     }
 
     &__text {

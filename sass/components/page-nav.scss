@@ -26,8 +26,8 @@
         font-weight: $bold;
         text-transform: uppercase;
         text-align: center;
-        border-top: 1px solid rgba(white, 0.15);
-        border-bottom: 1px solid black;
+        border-top: 1px solid rgba(#ffffff, 0.15);
+        border-bottom: 1px solid #000000;
         
         a {
             display: block;
@@ -35,12 +35,14 @@
             @include link-reset;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $pink;
         }
 
         &--current,
         &--current:hover,
+        &--current:focus,
         &:active {
             color: rgba($pink, 0.3);
         }
@@ -70,16 +72,18 @@
             font-weight: $norm;
             text-transform: none;
             
-            &:hover {
-                color: white;
+            &:hover,
+            &:focus {
+                color: #ffffff;
                 font-weight: $norm;
-                border-bottom: 2px solid white;
+                border-bottom: 2px solid #ffffff;
             }
 
             &--current,
             &--current:hover,
+            &--current:focus,
             &:active {
-                color: rgba(white, 0.3);
+                color: rgba(#ffffff, 0.3);
                 border-bottom: none;
             }
         }

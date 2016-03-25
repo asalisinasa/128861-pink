@@ -3,7 +3,7 @@
 
     @media #{$tablet-width} {
         display: block;
-        background-color: white;
+        background-color: #ffffff;
 
         &__container {
             display: flex;
@@ -30,7 +30,7 @@
             font-size: 30px;
             line-height: 36px;
             font-weight: $bold;
-            color: black;
+            color: #000000;
         }
 
         &__text {

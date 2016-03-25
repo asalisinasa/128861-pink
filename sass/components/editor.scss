@@ -20,6 +20,8 @@
         height: auto;
         min-height: 375px;
         overflow: hidden;
+        cursor: pointer;
+        background: linear-gradient(45deg, $dark-gray, $gray);
         
         img {
            width: 100%; 
@@ -115,7 +117,7 @@
             height: 14px;
             margin-top: -5px;
             border: 2px solid $pink;
-            background-color: white;
+            background-color: #ffffff;
             border-radius: 50%;
             box-shadow: none;
             cursor: pointer;
