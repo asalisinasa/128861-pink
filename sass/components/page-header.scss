@@ -2,30 +2,49 @@
     position: absolute;
     width: 100%;
     min-width: 320px;
-    min-height: 65px;
-    background-color: rgba(29, 38, 50, 0.3);
-    color: white;
+    min-height: 70px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    
+    &--active {
+        background-color: transparent;
+    }
 
     &__container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 0 auto 20px;
+        margin: 0 auto;
     }
     
     &__mini {
+        position: relative;
+        z-index: 100;
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        min-height: 65px;
+        min-height: 70px;
         padding: 0 6.3%;
+        background-color: transparent;
+        border: none;
+        transition: background-color 0.25s;
+        
+        &--active {
+            background-color: $blue;
+            border-bottom: 1px solid #000000;
+        }
+
+        &--closed {
+            background-color: transparent;
+            border: none;
+        }
     }
 
     &__logo {
         width: 75px;
         height: 23px;
-        outline: 2px solid yellow; // для оформления сетки
+        cursor: pointer;
         
         img {
             width: 100%;
@@ -34,17 +53,82 @@
     }
 
     &__hamburger {
+        position: relative;
         width: 50px;
         height: 25px;
-        outline: 2px solid yellow; // для оформления сетки
+        cursor: pointer;
+    }
+
+    &__hamburger-lines {
+        position: absolute;
+        top: 10px;
+        width: 50px;
+        height: 4px;
+        background-color: #ffffff;
+        transition: transform 0.3s;
+        
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            background-color: #ffffff;
+        }
+
+        &::before {
+            top: -10px;
+            // box-shadow: 0 1px 0 1px rgba(#ffffff, 0.3);
+        }
+
+        &::after {
+            bottom: -10px;
+        }
+    }
+
+    &__hamburger-lines--cross {
+        position: absolute;
+        top: 9px;
+        left: 25px;
+        width: 28px;
+        height: 4px;
+        background-color: #ffffff;
+        transform: rotate(45deg);
+        
+        &::after {
+            top: 0;
+            left: 0;
+            width: 28px;
+            transform: rotate(90deg);
+        }
+
+        &::before {
+            display: none;
+        }
     }
     
+    &__hamburger:hover &__hamburger-lines,
+    &__hamburger:hover &__hamburger-lines::after,
+    &__hamburger:hover &__hamburger-lines::before,
+    &__hamburger:hover .hamburger-liness--cross,
+    &__hamburger:hover .hamburger-liness--cross::after {
+        background-color: $pink; 
+    }
+
+    &__hamburger:active &__hamburger-lines,
+    &__hamburger:active &__hamburger-lines::after,
+    &__hamburger:active &__hamburger-lines::before,
+    &__hamburger:active .hamburger-liness--cross,
+    &__hamburger:active .hamburger-liness--cross::after {
+        background-color: rgba($pink, 0.3); 
+    }
 
     @media #{$tablet-width} {
         min-height: 110px;
 
         &__mini {
-        padding: 0 5.8%;
+            min-height: 110px;
+            padding: 0 5.8%;
         }
 
         &__logo {
@@ -59,6 +143,10 @@
     }
 
     @media #{$desktop-width} {
+
+        &--active {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
 
         &__container {
             flex-direction: row;
@@ -75,7 +163,4 @@
             display: none;
         }
     }
-
-    // для оформления сетки
-    outline: 2px solid green;
 }

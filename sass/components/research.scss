@@ -3,40 +3,81 @@
 
     @media #{$tablet-width} {
         display: block;
-        background-color: white;
+        background-color: #ffffff;
 
         &__container {
-            @include clearfix;
-            @include container;
-            padding: 55px 6.3% 30px;
-        }
-
-        &__img,
-        &__content {
-            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            width: 88.6%;
+            margin: 0 auto;
+            padding-top: 57px;
+            padding-bottom: 30px;
         }
 
         &__img {
-            float: left;
-            height: 300px;
-            outline: 2px solid green; // для оформления сетки
+            position: relative;
+            width: 39%;
+            min-height: 280px;
         }
         
         &__content {
-            float: right;
-            outline: 2px solid green; // для оформления сетки
+            width: 50%;
+            padding-top: 40px;
+        }
+
+        &__title {
+            margin: 0 40% 10px 0;
+            font-size: 30px;
+            line-height: 36px;
+            font-weight: $bold;
+            color: #000000;
+        }
+
+        &__text {
+            margin-bottom: 7px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        &__link {
+            color: $pink;
         }
     }
 
     @media #{$desktop-width} {
         background-color: $gray;
+        
+        &__container {
+            width: 78.3%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 26px 0px 70px;
+        }
 
-        &__img {}
+        &__img {
+            width: 32%;
+            height: 345px;
+            margin-right: 65px;
+        }
+
         &__content {
-            float: right;
+            width: 61%;
+            padding-top: 90px;
+        }
+        
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        &__link {
+            font-size: 18px;
+            line-height: 30px;
         }
     }
-
-    // для оформления сетки
-    outline: 2px solid red;
 }

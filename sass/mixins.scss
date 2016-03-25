@@ -5,17 +5,17 @@
     padding: 0 6.3%;
 
     @media #{$tablet-width} {
-        width: 88.6%; // 940/1200
+        width: 88.6%;
         padding: 0;
     }
 
     @media #{$desktop-width} {
-        width: 78.3%; // 620/700
+        width: 78.3%;
         max-width: 1200px;
     }
 
     // для оформления сетки
-    outline: 2px solid red;
+    // outline: 2px solid red;
 }
 
 @mixin clearfix {
@@ -36,4 +36,54 @@
 @mixin indent-reset {
     margin: 0;
     padding: 0;
+}
+
+
+////////////////////// Diagonal background
+
+@mixin bg-diagonal($first-color, $second-color, $diagonal-height) {
+
+    &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 0;
+        // width: 100%;
+        height: $diagonal-height;
+        background:
+            $second-color
+            linear-gradient(
+                to left top,
+                $first-color 0%,
+                $first-color 50%,
+                $second-color 50%,
+                $second-color 100%
+            )
+            top
+            no-repeat;
+        background-size: 100% $diagonal-height;
+    }
+}
+
+@mixin bg-triangle($zi-triangle, $triangle-height, $first-color, $second-color) {
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $zi-triangle;
+    height: $triangle-height;
+    background-color: transparent;
+    background-image:
+      // этот градиент нужен для того, чтобы убрать микроскопический разрыв
+      linear-gradient($second-color 0%, $second-color 100%),
+      linear-gradient(to top right, $first-color 0%, $first-color 50%, $second-color 50%, $second-color 100%),
+      linear-gradient(to bottom right, $second-color 0%, $second-color 50%, $first-color 50%, $first-color 100%);
+    background-size: 2px $triangle-height, 50% $triangle-height, 50% $triangle-height;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center, top left, top right;
+  }
 }

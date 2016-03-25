@@ -1,0 +1,10 @@
+@keyframes slip {
+  0% {
+    -webkit-transform: translateY(-700px);
+            transform: translateY(-700px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}

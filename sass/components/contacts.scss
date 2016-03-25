@@ -1,54 +1,136 @@
 .contacts {
-    text-align: center;
+    text-align: center ;
 
     &__container {
         @include container;
         padding-top: 45px;
+        padding-bottom: 20px;
     }
 
     &__title {
         @include indent-reset;
-        outline: 2px solid blue; // для оформления сетки
+        margin-bottom: 29px;
+        font-size: 24px;
+        font-weight: $light;
+    }
+    
+    &__coordinates {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__coordinate {
+        margin: 0 auto 20px;
+    }
+
+    &__text {
+        @include indent-reset;
+        font-size: 18px;
+        font-weight: $bold;
+    }
+
+    &__contact {
+        @include indent-reset;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: $light;
+        color: $pink;
+        
+        a{
+            @include link-reset;
+            font-size: 24px;
+            line-height: 26px;
+            font-weight: $light;
+            color: $pink;
+            
+            &:hover,
+            &:focus {
+                color: #000000;
+                text-decoration: underline;
+            }
+
+            &:active {
+                color: #e5e5e5;
+                text-decoration: none;
+            }
+        }
     }
 
     &__map {
+        position: relative;
         height: 200px;
-        background-color: rgba(yellow, 0.2);
+        background: #f3f1ea url("/img/bg-map.png") no-repeat center;
+        @include bg-triangle(20, 33px, transparent, white);
     }
 
     @media #{$tablet-width} {
 
         &__container {
-            padding-top: 55px;
+            padding-top: 43px;
+            padding-bottom: 25px;
+        }
+
+        &__title {
+            margin-bottom: 38px;
+            padding: 0 10%;
+            font-size: 40px;
+            line-height: 50px;
         }
 
         &__coordinate {
-            display: inline-block;
-            vertical-align: top;
-            width: 45%;
-            outline: 2px solid green; // для оформления сетки
+            width: 50%;
+            margin-bottom: 45px;
+            
+            &:nth-of-type(3) {
+                padding: 0 3%;
+                margin-bottom: 0;
+            }
+        }
+
+        &__text {
+            margin-bottom: 2px;
         }
 
         &__map {
             height: 375px;
+            @include bg-triangle(20, 72px, transparent, #ffffff);
         }
     }
 
     @media #{$desktop-width} {
 
         &__container {
-            padding-top: 75px;
+            flex-wrap: no-wrap;
+            padding: 75px 0 10px;
+        }
+
+        &__title {
+            margin-bottom: 52px;
+            padding: 0 20%;
+            font-size: 50px;
+            line-height: 60px;
         }
 
         &__coordinate {
             width: 33%;
+            
+            &:nth-of-type(2) {
+                order: 3;
+            }
+
+            &:nth-of-type(3) {
+                order: 2;
+            }
         }
+        
+        &__text {
+            margin-bottom: 20px;
+        }
+
         
         &__map {
             height: 510px;
+            @include bg-triangle(20, 102px, transparent, #ffffff);
         }
     }
-
-    // для оформления сетки
-    outline: 2px solid red;
 }

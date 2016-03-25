@@ -1,6 +1,6 @@
 .page-footer {
     color: $blue;
-    background-color: white;
+    background-color: #ffffff;
 
     &--hidden {
         display: none;
@@ -16,18 +16,18 @@
     }
 
     &__logo {
-        width: 150px;
-        outline: 2px solid green; // для оформления сетки
+        
     }
 
     &__social {
         text-align: center;
-        outline: 2px solid green; // для оформления сетки
     }
 
     &__copyright {
         width: 150px;
-        outline: 2px solid green; // для оформления сетки
+        @include link-reset;
+        font-size: 14px;
+        line-height: 18px;
     }
 
     @media #{$tablet-width} {
@@ -38,6 +38,7 @@
 
         &__container {
             flex-direction: row;
+            justify-content: space-between;
             min-height: 125px;
         }
 
@@ -53,8 +54,9 @@
         &__container {
             min-height: 200px;
         }
-    }
 
-    // для оформления сетки
-    outline: 2px solid red;
+        &__copyright {
+            font-size: 18px;
+        }
+    }
 }

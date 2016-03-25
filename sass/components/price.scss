@@ -4,28 +4,75 @@
 
     &__container {
         position: relative;
-        @include container;
-        padding: 65px 6.3% 100px;
+        margin: 0 auto;
+        padding: 62px 1.3% 100px;
     }
 
     &__toggle {
         display: none;
     }
 
-    &__controls {
+    
+
+    @media #{$mobile-width} {
+
+        &__controls {
         position: absolute;
         left: 50%;
-        bottom: 45px;
+        bottom: 48px;
+        transform: translate(-50%);
         width: 65px;
         height: 15px;
-        margin-left: -32px;
-        outline: 2px solid green; // для оформления сетки
+        margin: 0 auto;
+        font-size: 0;
+        }
+
+        &__control {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: $dark-gray;
+            border: 3px solid $gray;
+            border-radius: 50%;
+            cursor: pointer;
+            
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
+
+            &:hover,
+            &:focus {
+            background-color: #7e868f;
+            }
+            
+            &:active {
+                background-color: $lightest-gray;
+            }
+        }
+
+        &__toggle[id="price-1"]:checked ~ &__controls &__control[for~="price-1"],
+        &__toggle[id="price-2"]:checked ~ &__controls &__control[for~="price-2"],
+        &__toggle[id="price-3"]:checked ~ &__controls &__control[for~="price-3"] {
+            background-color: transparent;
+            border: 3px solid #283645;
+        }
+
+        &__toggle[id="price-1"]:checked ~ .price-table {
+            transform: translateX(0);
+        }
+        &__toggle[id="price-2"]:checked ~ .price-table {
+            transform: translateX(-31%);
+        }
+        &__toggle[id="price-3"]:checked ~ .price-table {
+            transform: translateX(-63%);
+        }
     }
 
     @media #{$tablet-width} {
 
         &__container {
-            padding: 35px 0 68px;
+            width: 88.6%;
+            padding: 40px 0 72px;
         }
 
         &__controls {
@@ -36,42 +83,8 @@
     @media #{$desktop-width} {
 
         &__container {
-            padding: 65px 0 95px;
-        }
-    }
-
-    // для оформления сетки
-    outline: 2px solid red;
-}
-
-// в отдельный файл положить?
-.price-table {
-    width: 262.5%; // 87.5% * 4
-    transform: translateX(-31%);
-    
-    &__row {
-        width: 400%;
-    }
-
-    &__cell,
-    &__heading {
-
-        &:first-child {
-            display: none;
-        }
-        outline: 2px solid yellow; // для оформления сетки
-    }
-
-    @media #{$tablet-width} {
-        width: 100%;
-        transform: translateX(0);
-        
-        &__cell,
-        &__heading {
-
-            &:first-child {
-                display: block;
-            }
+            width: 78.3%;
+            padding: 65px 0 83px;
         }
     }
 }

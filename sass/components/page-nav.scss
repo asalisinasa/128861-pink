@@ -1,4 +1,15 @@
 .page-nav {
+    background-color: $blue;
+    animation: slip 0.4s ease-out;
+    
+
+    &--active {
+        display: block;
+    }
+
+    &--closed {
+        display: none;
+    }
     
     &__list {
         display: flex;
@@ -9,19 +20,42 @@
     }
 
     &__item {
+        height: 64px;
         font-size: 18px;
         line-height: 32px;
         font-weight: $bold;
         text-transform: uppercase;
         text-align: center;
+        border-top: 1px solid rgba(#ffffff, 0.15);
+        border-bottom: 1px solid #000000;
         
         a {
+            display: block;
+            padding: 18px 0;
             @include link-reset;
+        }
+
+        &:hover,
+        &:focus {
+            color: $pink;
+        }
+
+        &--current,
+        &--current:hover,
+        &--current:focus,
+        &:active {
+            color: rgba($pink, 0.3);
         }
     }
 
     @media #{$desktop-width} {
         width: 68%;
+        background-color: transparent;
+        animation: none;
+        
+        &--closed {
+            display: block;
+        }
         
         &__list {
             flex-direction: row;
@@ -32,12 +66,26 @@
         }
 
         &__item {
+            height: 50px;
+            border: none;
             line-height: 18px;
             font-weight: $norm;
             text-transform: none;
+            
+            &:hover,
+            &:focus {
+                color: #ffffff;
+                font-weight: $norm;
+                border-bottom: 2px solid #ffffff;
+            }
+
+            &--current,
+            &--current:hover,
+            &--current:focus,
+            &:active {
+                color: rgba(#ffffff, 0.3);
+                border-bottom: none;
+            }
         }
     }
-
-    // для оформления сетки
-    outline: 2px solid blue;
 }

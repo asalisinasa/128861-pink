@@ -1,26 +1,113 @@
 .btn {
+	border: none;
+	outline: none;
+    cursor: pointer;
+    transition: color 0.1s, background-color 0.3s, border-color 0.3s;
     
     &--download {
+        display: block;
+        width: 280px;
+        height: 55px;
+        margin: 0 auto 32px;
+        font-size: 18px;
+        line-height: 49px;
+        font-weight: $bold;
+        @include link-reset;
+        color: #ffffff;
+        border: 3px solid #ffffff;
+        border-radius: 30px;
+
+        &:hover,
+        &:focus {
+            color: $pink;
+            background-color: #ffffff;
+        }
         
+        &:active {
+            color: rgba($pink, 0.3);
+            background-color: #ffffff;
+        }
     }
 
     &--submit {
         width: 280px;
-        height: 60px;
-        margin: 0 auto 45px;
+        height: 63px;
+        margin: 0 auto 35px;
+        border-radius: 2px;
+        font-size: 18px;
+        line-height: 63px;
+        font-weight: $bold;
+        text-transform: uppercase;
+        color: #ffffff;
+        background-color: $green;
+        
+        &:hover,
+        &:focus {
+            background-color: $dark-green;
+        }
+
+        &:active {
+            color: rgba(#ffffff, 0.3);
+            background-color: $dark-green;
+        }
+
+        &:disabled {
+            background-color: #e5e5e5;
+            cursor: not-allowed;
+        }
     }
 
     &--post,
     &--cancel {
         display: block;
         width: 280px;
+        height: 55px;
         margin: 0 auto;
+        font-size: 18px;
+        line-height: 47px;
+        font-weight: $bold;
+        border-radius: 25px;
+        background-color: transparent;
+    }
+
+    &--post {
+        margin-bottom: 12px;
+        color: $pink;
+        border: 3px solid $pink;
+        
+        &:hover,
+        &:focus {
+            color: #ffffff;
+            background-color: $pink;
+        }
+
+        &:active {
+            color: rgba(#ffffff, 0.3);
+            background-color: $pink;
+        }
+    }
+
+    &--cancel {
+        margin-bottom: 12px;
+        color: #e3e4e4;
+        border: 3px solid #e3e4e4;
+        
+        &:hover,
+        &:focus {
+            color: #c4c6c8;
+            border-color: $darker-gray;
+        }
+        &:active {
+            color: rgba(#ffffff, 0.3);
+            background-color: $darker-gray;
+        }
     }
 
     @media #{$tablet-width} {
 
         &--download {
-            width: 100%;
+            width: 300px;
+            margin: 0 auto 46px;
         }
 
         &--submit {
@@ -32,14 +119,30 @@
         &--cancel {
             width: 260px;
         }
+
+        &--post {
+            margin-bottom: 24px;
+        }
+
+        &--cancel {
+            margin-bottom: 13px;
+        }
     }
 
     @media #{$desktop-width} {
+        
+        &--download {
+            margin-bottom: 68px;
+            
+            a {
+                font-size: 21px; 
+            }
+        }
 
         &--post,
         &--cancel {
-            display: inline-block;
             width: 183px;
+            margin: 0;
         }
     }
 }
