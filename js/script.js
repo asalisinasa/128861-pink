@@ -1,4 +1,4 @@
-(function() {
+window.onload = function() {
 
     //////////////// Navigation ////////////////
 
@@ -42,7 +42,7 @@
             event.preventDefault();
             for (i = 0; i < inputRequired.length; i++) {
                 if (!inputRequired[i].value) {
-                    popupFalse.classList.add("popup--shown");
+                    popupFailure.classList.add("popup--shown");
                     return;
                 }
             }
@@ -59,9 +59,11 @@
 
         window.addEventListener("keydown", function(event) {
             if (event.keyCode === 27) {
-                if (popup.classList.contains("popup--shown")) {
-                    popup.classList.remove("popup--shown");
-                }
+                for (var i = 0; i < popup.length; i++) {
+                    if (popup[i].classList.contains("popup--shown")) {
+                        popup[i].classList.remove("popup--shown");
+                    }
+                };
             }
         });
     }
@@ -76,4 +78,6 @@
         });
     }
 
-})();
+    initMap();
+
+};
