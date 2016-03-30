@@ -26,7 +26,7 @@
         font-weight: $bold;
         text-transform: uppercase;
         text-align: center;
-        border-top: 1px solid rgba(#ffffff, 0.15);
+        border-top: 1px solid rgba(#fff, 0.15);
         border-bottom: 1px solid #000000;
         
         a {
@@ -74,16 +74,16 @@
             
             &:hover,
             &:focus {
-                color: #ffffff;
+                color: #fff;
                 font-weight: $norm;
-                border-bottom: 2px solid #ffffff;
+                border-bottom: 2px solid #fff;
             }
 
             &--current,
             &--current:hover,
             &--current:focus,
             &:active {
-                color: rgba(#ffffff, 0.3);
+                color: rgba(#fff, 0.3);
                 border-bottom: none;
             }
         }

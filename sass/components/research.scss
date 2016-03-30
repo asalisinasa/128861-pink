@@ -3,7 +3,7 @@
 
     @media #{$tablet-width} {
         display: block;
-        background-color: #ffffff;
+        background-color: #fff;
 
         &__container {
             display: flex;
@@ -18,6 +18,26 @@
             position: relative;
             width: 39%;
             min-height: 280px;
+            background-image: url(/img/icon-timer.svg);
+            background-size: 238px 277px;
+            background-repeat: no-repeat;
+            
+            &::after {
+                content: "24";
+                position: absolute;
+                top: 59px;
+                left: 18px;
+                width: 203px;
+                height: 203px;
+                font-size: 96px;
+                line-height: 164px;
+                font-weight: $bold;
+                text-align: center;
+                color: $pink;
+                background-color: #fff;
+                border: 14px solid $pink;
+                border-radius: 50%;
+            }
         }
         
         &__content {
@@ -30,7 +50,7 @@
             font-size: 30px;
             line-height: 36px;
             font-weight: $bold;
-            color: #000000;
+            color: #000;
         }
 
         &__text {
@@ -51,13 +71,26 @@
             width: 78.3%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 26px 0px 70px;
+            padding: 23px 0px 67px;
         }
 
         &__img {
             width: 32%;
             height: 345px;
             margin-right: 65px;
+            
+            background-size: 298px 345px;
+            background-repeat: no-repeat;
+            
+            &::after {
+                top: 68px;
+                left: 23px;
+                width: 253px;
+                height: 253px;
+                font-size: 120px;
+                line-height: 205px;
+                border-width: 17px;        
+            }
         }
 
         &__content {

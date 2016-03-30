@@ -154,7 +154,7 @@
             left: 0;
             width: 39px;
             height: 39px;
-            background-color: #ffffff;
+            background-color: #fff;
             border: 2px solid #e5e5e5;
         }  
         
@@ -311,7 +311,7 @@
             
             &--progress {
                 padding: 45px 45px 47px;
-                background-color: #ffffff;
+                background-color: #fff;
             }
 
             &--app {
@@ -366,6 +366,22 @@
             &--contacts {
                 margin-bottom: 10px;
             }
+
+            &--contacts[id="tel"],
+            &--contacts[id="email"] {
+                background-repeat: no-repeat;
+                background-position: right 20px center;
+            }
+
+
+            &--contacts[id="tel"] {
+                background-image: url(/img/icon-phone.svg);
+            }
+
+            &--contacts[id="email"] {
+                background-image: url(/img/icon-mail.svg);
+            }
+
 
             &--textarea {
                 height: 194px;
@@ -459,10 +475,11 @@
         }
         
         &__filter-legend {
-            padding: 0 10px;
+            padding: 0 30px;
             
             &--app {
                 display: block;
+                padding: 0 10px;
             }
         }
 
@@ -486,6 +503,34 @@
             &--checkbox {
                 width: 32%;
             }
+        }
+
+        &__filter-label[for="shark"] {
+            order: 1;
+        }
+
+        &__filter-label[for="burned"] {
+            order: 4;
+        }
+
+        &__filter-label[for="norris"] {
+            order: 2;
+            margin-left: 10px;
+        }
+
+        &__filter-label[for="souvenirs"] {
+            order: 5;
+            margin-left: 10px;
+        }
+
+        &__filter-label[for="tower"] {
+            order: 3;
+            flex-basis: 222px;
+        }
+
+        &__filter-label[for="destroy"] {
+            order: 6;
+            flex-basis: 222px;
         }
 
         &__filter-title {

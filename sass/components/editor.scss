@@ -63,10 +63,12 @@
     }
 
     &__tool-icon {
+        cursor: pointer;
+    }
+
+    &__tool-icon--svg {
         width: 44px;
         height: 44px;
-        cursor: pointer;
-        outline: 2px solid $pink;
     }
 
     &__buttons {
@@ -117,7 +119,7 @@
             height: 14px;
             margin-top: -5px;
             border: 2px solid $pink;
-            background-color: #ffffff;
+            background-color: #fff;
             border-radius: 50%;
             box-shadow: none;
             cursor: pointer;
@@ -155,6 +157,17 @@
         
         &__tool-icon {
             margin: 0 auto;
+            color: #b5b9be;
+            
+            &:hover {
+                color: #8d949b;
+            }
+        }
+
+        &__tool-btn[id="crop"]:checked ~ &__tool-icon[for~="crop"],
+        &__tool-btn[id="color"]:checked ~ &__tool-icon[for~="color"],
+        &__tool-btn[id="contrast"]:checked ~ &__tool-icon[for~="contrast"] {
+            color: $pink;
         }
 
         &__tool-range {
@@ -230,6 +243,13 @@
             height: 22px;
             margin: 0;
             margin-right: 25px;
+            color: $pink;
+            cursor: auto;
+        }
+
+        &__tool-icon-svg {
+            width: 22px;
+            height: 22px;
         }
 
         &__tool-range {
@@ -268,6 +288,11 @@
             width: 44px;
             height: 44px;
             margin-right: 48px;
+        }
+
+        &__tool-icon-svg {
+            width: 44px;
+            height: 44px;
         }
 
         &__buttons {

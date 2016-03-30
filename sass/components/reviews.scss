@@ -7,7 +7,7 @@
         position: relative;
         @include container;
         padding-top: 50px;
-        padding-bottom: 70px;
+        padding-bottom: 55px;
     }
     
     &__slides-wrap {
@@ -39,7 +39,7 @@
         width: 12px;
         height: 12px;
         background-color: $dark-gray;
-        border: 3px solid #ffffff;
+        border: 3px solid #fff;
         border-radius: 50%;
         cursor: pointer;
         
@@ -66,7 +66,7 @@
         font-size: 18px;
         line-height: 10px;
         font-weight: $bold;
-        color: #000000;
+        color: #000;
     }
 
     &__author-info {
@@ -110,7 +110,7 @@
         }
 
         &__slides-wrap {
-            width: 70%;
+            width: 100%;
         }
 
         &__controls {
@@ -150,8 +150,9 @@
         @include bg-diagonal($gray, transparent, 81px);
 
         &__container {
-            padding-top: 163px;
+            padding-top: 167px;
             padding-bottom: 95px;
+            background: url(/img/icon-quotes.svg) no-repeat 50% 70px;
         }
         
         &__quote {

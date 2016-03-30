@@ -13,23 +13,24 @@
         line-height: 49px;
         font-weight: $bold;
         @include link-reset;
-        color: #ffffff;
-        border: 3px solid #ffffff;
+        color: #fff;
+        border: 3px solid #fff;
         border-radius: 30px;
 
         &:hover,
         &:focus {
             color: $pink;
-            background-color: #ffffff;
+            background-color: #fff;
         }
         
         &:active {
             color: rgba($pink, 0.3);
-            background-color: #ffffff;
+            background-color: #fff;
         }
     }
 
-    &--submit {
+    &--submit,
+    &--popup {
         width: 280px;
         height: 63px;
         margin: 0 auto 35px;
@@ -38,7 +39,7 @@
         line-height: 63px;
         font-weight: $bold;
         text-transform: uppercase;
-        color: #ffffff;
+        color: #fff;
         background-color: $green;
         
         &:hover,
@@ -47,7 +48,7 @@
         }
 
         &:active {
-            color: rgba(#ffffff, 0.3);
+            color: rgba(#fff, 0.3);
             background-color: $dark-green;
         }
 
@@ -55,6 +56,14 @@
             background-color: #e5e5e5;
             cursor: not-allowed;
         }
+    }
+
+    &--popup {
+        margin-top: 60px;
+    }
+
+    &--accept {
+        margin-top: 0;
     }
 
     &--post,
@@ -77,12 +86,12 @@
         
         &:hover,
         &:focus {
-            color: #ffffff;
+            color: #fff;
             background-color: $pink;
         }
 
         &:active {
-            color: rgba(#ffffff, 0.3);
+            color: rgba(#fff, 0.3);
             background-color: $pink;
         }
     }
@@ -98,7 +107,7 @@
             border-color: $darker-gray;
         }
         &:active {
-            color: rgba(#ffffff, 0.3);
+            color: rgba(#fff, 0.3);
             background-color: $darker-gray;
         }
     }
@@ -113,6 +122,10 @@
         &--submit {
             width: 300px;
             margin: 0;
+        }
+
+        &--accept {
+            width: 300px;
         }
 
         &--post,
@@ -133,10 +146,11 @@
         
         &--download {
             margin-bottom: 68px;
-            
-            a {
-                font-size: 21px; 
-            }
+            font-size: 21px;
+        }
+
+        &--accept {
+            width: 100%;
         }
 
         &--post,

@@ -10,9 +10,7 @@
 
     &__toggle {
         display: none;
-    }
-
-    
+    } 
 
     @media #{$mobile-width} {
 
@@ -84,7 +82,7 @@
 
         &__container {
             width: 78.3%;
-            padding: 65px 0 83px;
+            padding: 65px 0 94px;
         }
     }
 }

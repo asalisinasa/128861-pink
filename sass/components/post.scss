@@ -13,8 +13,8 @@
 
     &__hint {
         position: absolute;
-        top: -138px;
-        right: 6.5%;
+        bottom: -36px;
+        right: 0;
         width: 140px;
         height: 35px;
         font-size: 12px;
@@ -23,24 +23,21 @@
         text-align: center;
         text-transform: uppercase;
         background-color: $pink;
-        color: #ffffff;
+        color: #fff;
     }
 
     &__container {
-        position: relative;
         @include container;
     }
 
     &__photo {
         display: block;
         width: 100%;
-        height: 180px;
         overflow: hidden;
         background: linear-gradient(45deg, $dark-gray, $gray);
     }
 
     &__photo--favourite {
-        height: 137px;
         min-height: 0;
     }
 
@@ -54,8 +51,6 @@
         background-color: $gray;
     }
 
-    &__inform {
-    }
     &__author {
         font-weight: $bold;
     }
@@ -92,13 +87,11 @@
     }
 
     &__likes-icon {
-        content: "";
         position: absolute;
-        top: 8px;
+        top: 0;
         left: -5px;
         width: 14px;
         height: 12px;
-        background-color: $pink;
         cursor: pointer;
     }
 
@@ -113,17 +106,11 @@
 
         &__photo {
             width: 100%;
-            height: auto;
             min-height: 295px;
         }
 
-        &__photo--favourite {
-            height: 510px;
-        }
-
         &__hint {
-            top: -454px;
-            right: 0;
+            bottom: -93px;
         }
 
         &__descript {
@@ -178,7 +165,6 @@
         }
 
         &__likes-icon {
-            top: 8px;
             left: auto;
             right: 0;
         }  
@@ -194,16 +180,8 @@
             margin-bottom: 50px; 
         }
 
-        &__photo {
-            height: 400px;
-        }
-
-        &__photo--favourite {
-            height: 506px;
-        }
-
         &__hint {
-            top: -452px;
+            bottom: -90px;
         }
 
         &__descript--favourite {
