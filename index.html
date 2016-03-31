@@ -393,7 +393,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="features__img"></div>
+                    <div class="features__img">
+                        <picture>
+                            <source media="(min-width: 700px)" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x.png 2x">
+                            <img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Розовый фильтр">
+                        </picture>
+                    </div>
                 </div>
             </section>
             <!-- end features -->
@@ -469,7 +474,7 @@
                     </div>
                     <div class="reviews__arrows">
                         <button class="reviews__arrow  reviews__arrow--next" type="button"></button>
-                        <button class="reviews__arrow  reviews__arrow--prev" type="button"></button>
+                        <button class="reviews__arrow  reviews__arrow--prev  reviews__arrow--disabled" type="button"></button>
                     </div>
                 </div>
             </section>

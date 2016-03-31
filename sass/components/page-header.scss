@@ -45,9 +45,9 @@
         width: 75px;
         height: 23px;
         color: #fff;
+        cursor: pointer;
         
-        &:hover,
-        &:focus {
+        &:hover {
           color: $pink;  
         }
 

@@ -69,15 +69,17 @@
         &__title {
             width: 585px;
             padding: 180px 0 140px;
-            font-size: 40px;
+            font-size: 50px;
 
             &--main-page {
                 width: 48.4%;
                 margin-left: 0;
                 padding: 203px 7.7% 3px;
+                font-size: 40px;
             }
 
             &--form {
+                width: 500px;
                 padding-bottom: 81px;
             }
         }
@@ -109,11 +111,11 @@
 
         &__title {
             padding: 170px 8.7% 100px;
-            font-size: 50px;
 
             &--main-page {
                 width: 32%;
                 padding: 218px 0 24px;
+                font-size: 50px;
             }
 
             &--form {

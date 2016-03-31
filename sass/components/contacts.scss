@@ -63,6 +63,9 @@
         background-repeat: no-repeat;
         background-position: center;
         background-image: url("/img/bg-map.png");
+        -webkit-background-size: 100% auto;
+             -o-background-size: 100% auto;
+                background-size: 100% auto;
         @include bg-triangle(20, 33px, transparent, white);
     }
 

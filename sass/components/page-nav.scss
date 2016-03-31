@@ -40,11 +40,14 @@
             color: $pink;
         }
 
-        &--current,
-        &--current:hover,
-        &--current:focus,
         &:active {
             color: rgba($pink, 0.3);
+        }
+
+        &--current,
+        &--current:hover,
+        &--current:focus {
+            color: rgba(#fff, 0.3);
         }
     }
 

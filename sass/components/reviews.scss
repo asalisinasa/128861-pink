@@ -81,23 +81,26 @@
     &__toggle,
     &__arrow {
         display: none;
-    }
+    }  
 
-    &__toggle[id="review-1"]:checked ~ &__controls &__control[for~="review-1"],
-    &__toggle[id="review-2"]:checked ~ &__controls &__control[for~="review-2"],
-    &__toggle[id="review-3"]:checked ~ &__controls &__control[for~="review-3"] {
-        background-color: transparent;
-        border: 3px solid #283645;
-    }
+    @media #{$small-screen} {
+        
+        &__toggle[id="review-1"]:checked ~ &__controls &__control[for~="review-1"],
+        &__toggle[id="review-2"]:checked ~ &__controls &__control[for~="review-2"],
+        &__toggle[id="review-3"]:checked ~ &__controls &__control[for~="review-3"] {
+            background-color: transparent;
+            border: 3px solid #283645;
+        }
 
-    &__toggle[id="review-1"]:checked ~ &__slides-wrap &__slides {
-        transform: translateX(0);
-    }
-    &__toggle[id="review-2"]:checked ~ &__slides-wrap &__slides {
-        transform: translateX(-33%);
-    }
-    &__toggle[id="review-3"]:checked ~ &__slides-wrap &__slides {
-        transform: translateX(-67%);
+        &__toggle[id="review-1"]:checked ~ &__slides-wrap &__slides {
+            transform: translateX(0);
+        }
+        &__toggle[id="review-2"]:checked ~ &__slides-wrap &__slides {
+            transform: translateX(-33%);
+        }
+        &__toggle[id="review-3"]:checked ~ &__slides-wrap &__slides {
+            transform: translateX(-67%);
+        }
     }
 
     @media #{$tablet-width} {
@@ -219,6 +222,29 @@
                     background-color: $lightest-gray;
                 }  
             }
+
+            &--disabled {
+                cursor: auto;
+
+                &::after,
+                &::before {
+                    background-color: $lightest-gray;
+                }
+
+                &:hover {
+                    &::after,
+                    &::before {
+                        background-color: $lightest-gray;
+                    }  
+                }
+
+                &:active {
+                    &::after,
+                    &::before {
+                        background-color: $lightest-gray;
+                    }  
+                }
+            }
         }
 
         &__arrow--next {
@@ -228,5 +254,21 @@
         &__arrow--prev {
             transform: rotate(180deg);
         }
+
+
+        &__slides {
+
+            &--show-first {
+                transform: translateX(0);
+            }
+
+            &--show-second {
+                transform: translateX(-33%);
+            }
+
+            &--show-third {
+                transform: translateX(-67%);
+            }
+        } 
     }
 }
