@@ -16,28 +16,26 @@
         flex-basis: 100%;
         padding-top: 36px;
         padding-bottom: 49px;
+    }
 
-        &--name {
-            padding-top: 0;  
-            padding-bottom: 30px;
-        }
+    &__filter-wrap--name {
+        padding-top: 0;  
+        padding-bottom: 30px;
+    }
 
-        &--progress {
-        }
-        &--contacts {
-            padding-top: 29px;
-            padding-bottom: 43px;
-        }
+    &__filter-wrap--contacts {
+        padding-top: 29px;
+        padding-bottom: 43px;
+    }
 
-        &--app {
-            padding-top: 30px;
-            padding-bottom: 42px;
-        }
+    &__filter-wrap--app {
+        padding-top: 30px;
+        padding-bottom: 42px;
+    }
 
-        &--emotions {
-            padding-top: 58px;
-            padding-bottom: 31px;
-        }
+    &__filter-wrap--emotions {
+        padding-top: 58px;
+        padding-bottom: 31px;
     }
 
     &__filter {
@@ -55,13 +53,14 @@
         text-align: center;
         text-transform: uppercase;
         color: $pink;
+    }
 
-        &--app {
-            margin-bottom: 37px;
-        }
-        &--emotions {
-            margin-bottom: 12px;
-        }
+    &__filter-legend--app {
+        margin-bottom: 37px;
+    }
+
+    &__filter-legend--emotions {
+        margin-bottom: 12px;
     }
 
 
@@ -93,12 +92,6 @@
         border-radius: 1px;
         outline: none;
 
-        &--textarea {
-            width: 100%;
-            height: 200px;
-            resize: none;
-        }
-
         &::-webkit-input-placeholder {
             color: $blue;
         }
@@ -114,6 +107,12 @@
         &:focus {
             border-color: $pink;
         }
+    }
+
+    &__filter-textfield--textarea {
+        width: 100%;
+        height: 200px;
+        resize: none;
     }
 
 
@@ -274,57 +273,57 @@
         &__filter-wrap {
             width: auto;
             margin: 0;
-
-            &--name {
-               order: -3; 
-               padding: 45px 0 10px;
-            }
-
-            &--app {
-               order: -2; 
-               padding-bottom: 29px;
-            }
-
-            &--contacts {
-                order: -1;
-                padding-bottom: 22px;
-            }
-
-            &--progress {
-                padding-bottom: 57px;
-            }  
-            
-            &--emotions {
-                padding-top: 0;
-                padding-bottom: 65px;
-            }  
         }
+
+        &__filter-wrap--name {
+           order: -3; 
+           padding: 45px 0 10px;
+        }
+
+        &__filter-wrap--app {
+           order: -2; 
+           padding-bottom: 29px;
+        }
+
+        &__filter-wrap--contacts {
+            order: -1;
+            padding-bottom: 22px;
+        }
+
+        &__filter-wrap--progress {
+            padding-bottom: 57px;
+        } 
+
+        &__filter-wrap--emotions {
+            padding-top: 0;
+            padding-bottom: 65px;
+        } 
 
         &__filter {
             border: 2px solid #e5e5e5;
             border-radius: 2px;
-            
-            &--name {
-                display: flex;
-                border: none;
-            }
-            
-            &--progress {
-                padding: 45px 45px 47px;
-                background-color: #fff;
-            }
+        }
 
-            &--app {
-                padding: 45px 45px 55px;
-            }
+        &__filter--name {
+            display: flex;
+            border: none;
+        }
 
-            &--contacts {
-                padding: 32px 56px 0;
-            }
+        &__filter--progress {
+            padding: 45px 45px 47px;
+            background-color: #fff;
+        }
 
-            &--emotions {
-                padding: 32px 56px 34px;
-            }
+        &__filter--app {
+            padding: 45px 45px 55px;
+        }
+
+        &__filter--contacts {
+            padding: 32px 56px 0;
+        }
+
+        &__filter--emotions {
+            padding: 32px 56px 34px;
         }
 
         &__filter-legend {
@@ -353,39 +352,34 @@
             margin-bottom: 12px;
             padding-right: 17px;
             padding-left: 0;
-            
-            &--contacts {
-                margin-bottom: 25px;
-                padding: 0;
-                padding-left: 20px;
-            }
         }
 
-        &__filter-textfield {
-            
-            &--contacts {
-                margin-bottom: 10px;
-            }
+        &__filter-title--contacts {
+            margin-bottom: 25px;
+            padding: 0;
+            padding-left: 20px;
+        }
 
-            &--contacts[id="tel"],
-            &--contacts[id="email"] {
-                background-repeat: no-repeat;
-                background-position: right 20px center;
-            }
+        &__filter-textfield--contacts[id="tel"],
+        &__filter-textfield--contacts[id="email"] {
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+        }
 
+        &__filter-textfield--contacts {
+            margin-bottom: 10px;
+        }
 
-            &--contacts[id="tel"] {
-                background-image: url(/img/icon-phone.svg);
-            }
+        &__filter-textfield--contacts[id="tel"] {
+            background-image: url(/img/icon-phone.svg);
+        }
 
-            &--contacts[id="email"] {
-                background-image: url(/img/icon-mail.svg);
-            }
+        &__filter-textfield--contacts[id="email"] {
+            background-image: url(/img/icon-mail.svg);
+        }
 
-
-            &--textarea {
-                height: 194px;
-            }
+        &__filter-textfield--textarea {
+            height: 194px;
         }
 
         &__filter-label--radio {
@@ -433,54 +427,48 @@
             padding: 0;
         }
 
-        &__filter-wrap {
+        &__filter-wrap--name,
+        &__filter-wrap--app {
+            flex-basis: 46.5%;
+        }
 
-            &--name,
-            &--app {
-                flex-basis: 46.5%;
-            }
+        &__filter-wrap--name {
+            margin-right: auto;
+            padding-top: 44px;
+        }
 
-            &--name {
-                margin-right: auto;
-                padding-top: 44px;
-            }
-
-            &--app {
-                padding-top: 35px;
-            }
+        &__filter-wrap--app {
+            padding-top: 35px;
         }
         
         &__filters {
             flex-direction: row;
             flex-wrap: wrap;
-    
-            &--app {
-                border: none;
-            }
         }
 
-        &__filter {
-            
-            &--progress {
-                padding: 43px 45px 12px;
-            }
+        &__filters--app {
+            border: none;
+        }
 
-            &--contacts {
-                padding: 29px 56px 14px;
-            }
+        &__filter--progress {
+            padding: 43px 45px 12px;
+        }
 
-            &--emotions {
-                padding: 29px 56px 25px;
-            }
+        &__filter--contacts {
+            padding: 29px 56px 14px;
+        }
+
+        &__filter--emotions {
+            padding: 29px 56px 25px;
         }
         
         &__filter-legend {
             padding: 0 30px;
-            
-            &--app {
-                display: block;
-                padding: 0 10px;
-            }
+        }
+
+        &__filter-legend--app {
+            display: block;
+            padding: 0 10px;
         }
 
         &__filter-inner {
@@ -494,15 +482,12 @@
             justify-content: space-between;
         }
 
-        &__filter-label {
-            
-            &--radio {
-                margin-left: 18px;
-            }
+        &__filter-label--radio {
+            margin-left: 18px;
+        }
 
-            &--checkbox {
-                width: 32%;
-            }
+        &__filter-label--checkbox {
+            width: 32%;
         }
 
         &__filter-label[for="shark"] {
@@ -533,18 +518,12 @@
             flex-basis: 222px;
         }
 
-        &__filter-title {
-
-            &--contacts {
-                margin-bottom: 0;
-            }
+        &__filter-title--contacts {
+            margin-bottom: 0;
         }
 
-        &__filter-textfield {
-            
-            &--textarea {
-                height: 128px;
-            }
+        &__filter-textfield--textarea {
+            height: 128px;
         }
 
          &__filter-hint {

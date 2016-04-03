@@ -8,6 +8,7 @@ window.onload = function() {
     var headerMini = document.querySelector(".page-header__mini");
     var header = document.querySelector(".page-header");
 
+    header.classList.remove("page-header__no-js");
     navIcon.classList.remove("page-header__hamburger-lines--cross");
     navWrapper.classList.add("page-nav--closed");
     headerMini.classList.add("page-header__mini--closed");
@@ -26,6 +27,7 @@ window.onload = function() {
             header.classList.add("page-header--active");
         }
     });
+
 
     //////////////// Popups ////////////////
 

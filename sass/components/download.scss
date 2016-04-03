@@ -33,17 +33,6 @@
         }
     }
 
-    &__option-svg {
-
-        // &--android {
-        //     margin-top: 5px;
-        // }
-
-        // &--microsoft {
-        //     margin-top: 5px;
-        // }
-    }
-
     &__text {
         @include indent-reset;
         color: #fff;
@@ -74,13 +63,6 @@
 
         &__options {
             margin-bottom: 36px;
-        }
-
-        &__option-svg {
-
-            &--android {
-                color: rgba(#a4c639, 0.4);
-            }
         }
     }
 

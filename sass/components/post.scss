@@ -13,8 +13,8 @@
 
     &__hint {
         position: absolute;
-        bottom: -36px;
-        right: 0;
+        bottom: -35px;
+        right: 20px;
         width: 140px;
         height: 35px;
         font-size: 12px;
@@ -34,6 +34,8 @@
         display: block;
         width: 100%;
         overflow: hidden;
+        font-size: 0;
+        line-height: 0;
         background: linear-gradient(45deg, $dark-gray, $gray);
     }
 
@@ -79,7 +81,7 @@
     }
 
     &__likes-text {
-        padding-left: 16px;
+        padding-left: 33px;
     }
 
     &__likes-btn {
@@ -89,7 +91,7 @@
     &__likes-icon {
         position: absolute;
         top: 0;
-        left: -5px;
+        left: 0;
         width: 14px;
         height: 12px;
         cursor: pointer;
@@ -97,7 +99,7 @@
 
     @media #{$tablet-width} {
         width: 48.3%;
-        margin: 0 0 25px;
+        margin: 0 0 18px;
 
         &--favourite {
             width: 100%;  
@@ -110,6 +112,7 @@
         }
 
         &__hint {
+            right: 0;
             bottom: -93px;
         }
 
@@ -118,14 +121,14 @@
             justify-content: space-between;
             flex-direction: column;
             min-height: 155px;
-            padding: 23px 9.5% 17px;
+            padding: 20px 9.5%;
         }
 
         &__descript--favourite {
             flex-direction: row;
             flex-wrap: wrap;
             min-height: 121px;
-            padding: 20px 4.5% 16px;
+            padding: 31px 4.5% 16px;
         }
         
         &__likes {
@@ -156,7 +159,7 @@
         }
 
         &__likes-count--favourite {
-            padding-right: 25px;
+            padding-right: 31px;
         }
 
         &__likes-btn {
@@ -171,6 +174,7 @@
     }
 
     @media #{$desktop-width} {
+
         width: 30%;
         min-width: 300px;
         margin-bottom: 55px;
@@ -178,6 +182,10 @@
         &--favourite {
             width: 100%;  
             margin-bottom: 50px; 
+        }
+
+        &__photo--favourite {
+            height: 41.5vw;
         }
 
         &__hint {
@@ -194,7 +202,7 @@
         }
 
         &__likes-count--favourite {
-            padding-right: 0;
+            padding-right: 9px;
         }
     }
 }

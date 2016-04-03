@@ -17,7 +17,6 @@
 
     &__logo {
         transform: translateY(28px);
-        cursor: pointer;
     }
 
     &__logo-word,
@@ -38,27 +37,21 @@
     }
 
     &__logo-svg:hover,
-    &__logo-svg:focus {
-        
-        .page-footer__logo-word,
-        .page-footer__logo-stars {
-            color: $pink;
-        }
-
-        &:active {
-          color: rgba(#fff, 0.3);  
-        }
+    &__logo-svg:active {
+        color: rgba(#fff, 0.3);  
     }
 
-    &__logo-svg:active {
-        
-        .page-footer__logo-word,
-        .page-footer__logo-stars,
-        .page-footer__logo-glasses-unbroken,
-        .page-footer__logo-glasses-broken,
-        .page-footer__logo-stars-letter {
-            opacity: 0.3;
-        }
+    &__logo-svg:hover &__logo-word,
+    &__logo-svg:hover &__logo-stars {
+        color: $pink;
+    }
+
+    &__logo-svg:active &__logo-word,
+    &__logo-svg:active &__logo-stars,
+    &__logo-svg:active &__logo-glasses-unbroken,
+    &__logo-svg:active &__logo-glasses-broken,
+    &__logo-svg:active &__logo-stars-letter {
+        opacity: 0.3;
     }
 
     &__social {
@@ -80,8 +73,7 @@
         left: 8px;
         fill: $pink;
         
-        &:hover,
-        &:focus {
+        &:hover {
             fill: #000;
         }
 
@@ -122,6 +114,7 @@
     }
 
     @media #{$desktop-width} {
+
         min-height: 200px;
 
         &__container {

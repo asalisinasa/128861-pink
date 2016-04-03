@@ -21,11 +21,13 @@
         min-height: 375px;
         overflow: hidden;
         cursor: pointer;
+        font-size: 0;
+        line-height: 0;
         background: linear-gradient(45deg, $dark-gray, $gray);
-        
-        img {
-           width: 100%; 
-        }
+    }
+
+    &__photo img {
+        width: 100%;
     }
 
     &__form-wrap {
@@ -34,7 +36,7 @@
 
     &__form {
         @include container;
-        padding: 20px 6.3% 40px;
+        padding: 20px 6.3% 30px;
     }
 
     &__toolbar {
@@ -72,7 +74,7 @@
     }
 
     &__buttons {
-        margin-top: 38px;
+        margin-top: 40px;
     }
 
     ////////////// Ползунок //////////////
@@ -164,24 +166,32 @@
             }
         }
 
-        &__tool-btn[id="crop"]:checked ~ &__tool-icon[for~="crop"],
-        &__tool-btn[id="color"]:checked ~ &__tool-icon[for~="color"],
-        &__tool-btn[id="contrast"]:checked ~ &__tool-icon[for~="contrast"] {
-            color: $pink;
+        &__tool-icon--contrast {
+            margin-top: 9px;
+        }
+
+        &__tool-icon--color {
+            margin-top: 4px;
         }
 
         &__tool-range {
             display: none;
             width: 300%;
             margin-top: auto;
+        }
 
-            &--color {
-                transform: translateX(-33.3%);
-            }
+        &__tool-range--color {
+            transform: translateX(-33.3%);
+        }
 
-            &--contrast {
-                transform: translateX(-66.6%);
-            }
+        &__tool-range--contrast {
+            transform: translateX(-66.6%);
+        }
+
+        &__tool-btn[id="crop"]:checked ~ &__tool-icon[for~="crop"],
+        &__tool-btn[id="color"]:checked ~ &__tool-icon[for~="color"],
+        &__tool-btn[id="contrast"]:checked ~ &__tool-icon[for~="contrast"] {
+            color: $pink;
         }
 
         &__tool-btn:checked ~ &__tool-range {

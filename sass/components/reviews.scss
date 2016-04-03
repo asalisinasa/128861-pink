@@ -7,7 +7,7 @@
         position: relative;
         @include container;
         padding-top: 50px;
-        padding-bottom: 55px;
+        padding-bottom: 69px;
     }
     
     &__slides-wrap {
@@ -30,7 +30,7 @@
     &__controls {
         width: 65px;
         height: 15px;
-        margin: 0 auto;
+        margin: -12px auto 0;
         font-size: 0;
     }
 
@@ -108,8 +108,8 @@
         @include bg-diagonal($gray, transparent, 52px);
 
         &__container {
-        padding-top: 50px;
-        padding-bottom: 70px;
+            padding-top: 50px;
+            padding-bottom: 70px;
         }
 
         &__slides-wrap {
@@ -118,6 +118,7 @@
 
         &__controls {
             bottom: 20px;
+            margin-top: 0;     
         }
 
         &__quote {
@@ -208,43 +209,35 @@
                 top: 7px;
                 transform: rotate(45deg);
             }
+        }
 
-            &:hover {
-                &::after,
-                &::before {
-                    background-color: #7e868f;
-                }  
+        &__arrow:hover::after,
+        &__arrow:hover::before {
+            background-color: #7e868f;
+        }
+
+        &__arrow:active::after,
+        &__arrow:active::before {
+            background-color: $lightest-gray;
+        }
+
+        &__arrow--disabled {
+            cursor: auto;
+
+            &::after,
+            &::before {
+                background-color: $lightest-gray;
             }
+        }
 
-            &:active {
-                &::after,
-                &::before {
-                    background-color: $lightest-gray;
-                }  
-            }
+        &__arrow--disabled:hover::after,
+        &__arrow--disabled:hover::before {
+            background-color: $lightest-gray;
+        }
 
-            &--disabled {
-                cursor: auto;
-
-                &::after,
-                &::before {
-                    background-color: $lightest-gray;
-                }
-
-                &:hover {
-                    &::after,
-                    &::before {
-                        background-color: $lightest-gray;
-                    }  
-                }
-
-                &:active {
-                    &::after,
-                    &::before {
-                        background-color: $lightest-gray;
-                    }  
-                }
-            }
+        &__arrow--disabled:active::after,
+        &__arrow--disabled:active::before {
+            background-color: $lightest-gray;
         }
 
         &__arrow--next {
@@ -255,20 +248,16 @@
             transform: rotate(180deg);
         }
 
+        &__slides--show-first {
+            transform: translateX(0);
+        }
 
-        &__slides {
+        &__slides--show-second {
+            transform: translateX(-33%);
+        }
 
-            &--show-first {
-                transform: translateX(0);
-            }
-
-            &--show-second {
-                transform: translateX(-33%);
-            }
-
-            &--show-third {
-                transform: translateX(-67%);
-            }
-        } 
+        &__slides--show-third {
+            transform: translateX(-67%);
+        }
     }
 }

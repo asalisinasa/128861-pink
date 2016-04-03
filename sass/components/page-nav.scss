@@ -1,7 +1,6 @@
 .page-nav {
     background-color: $blue;
-    animation: slip 0.4s ease-out;
-    
+    animation: 0.5s slip ease-out;
 
     &--active {
         display: block;
@@ -43,15 +42,16 @@
         &:active {
             color: rgba($pink, 0.3);
         }
+    }
 
-        &--current,
-        &--current:hover,
-        &--current:focus {
-            color: rgba(#fff, 0.3);
-        }
+    &__item--current,
+    &__item--current:hover,
+    &__item--current:focus {
+        color: rgba(#fff, 0.3);
     }
 
     @media #{$desktop-width} {
+
         width: 68%;
         background-color: transparent;
         animation: none;
@@ -74,21 +74,23 @@
             line-height: 18px;
             font-weight: $norm;
             text-transform: none;
-            
-            &:hover,
-            &:focus {
-                color: #fff;
-                font-weight: $norm;
-                border-bottom: 2px solid #fff;
-            }
+        }
+        
+        &__item a:hover {
+           color: #fff; 
+           border-bottom: 2px solid #fff;
+        }
 
-            &--current,
-            &--current:hover,
-            &--current:focus,
-            &:active {
-                color: rgba(#fff, 0.3);
-                border-bottom: none;
-            }
+        &__item a:active {
+            color: rgba(#fff, 0.3);
+            border-bottom: none;
+        }
+
+        &__item--current a,
+        &__item--current a:hover,
+        &__item--current a:active {
+            color: rgba(#fff, 0.3);
+            border-bottom: none;
         }
     }
 }

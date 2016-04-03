@@ -13,7 +13,7 @@
     &__heading {
         position: relative;
         z-index: 5;
-        padding: 44px 0 65px;
+        padding: 42px 0 65px;
         background-color: #fff;
         @include bg-diagonal($gray, transparent, 30px);
     }
@@ -61,6 +61,7 @@
     }
 
     @media #{$tablet-width} {
+
         text-align: left;
         
         &__container {
@@ -122,12 +123,9 @@
         }
 
         &__title {
+            width: 65%;
             font-size: 50px;
             line-height: 60px;
-            
-            &__title {
-                width: 65%;
-            }
         }
 
         &__img {
@@ -166,6 +164,7 @@
                 background-size: 294px 301px;
                 background-position: center;
                 background-repeat: no-repeat;
+                background-size: 292px 302px;
             }
 
             &:first-child:before {
@@ -179,8 +178,10 @@
             &:last-child:before {
                 background-image: url("/img/iphone-screen-desktop-3@1x.png");
             }
+            
 
-            @media (min-resolution: 1.5dppx) {
+            @media (min-resolution: 144dpi), (min-resolution: 1.5dppx)  {
+
                 &:first-child:before {
                     background-image: url("/img/iphone-screen-desktop-1@2x.png");
                 }

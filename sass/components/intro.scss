@@ -4,26 +4,14 @@
     background-image: url("/img/bg-back-mobile.jpg");
     background-position: center 0;
     background-repeat: no-repeat;
-    
-    @media (min-resolution: 1.5ppx) {
-
-        .intro {
-            background-image: url("/img/bg-back-mobile@2x.jpg");
-        }
-    }
+    background-size: 700px 462px;
 
     &--main-page {
         min-height: 717px;
         background-image: url("/img/iphone-hand-mobile.png"), url("/img/bg-back-mobile.jpg");
         background-position: 0 173px, center 0;
         background-repeat: no-repeat;
-    }
-
-    @media (min-resolution: 1.5ppx) {
-
-        &--main-page {
-            background-image: url("/img/iphone-hand-mobile@2x.png"), url("/img/bg-back-mobile@2x.jpg");
-        }
+        background-size: 258px 286px, 700px 462px;
     }
 
     &__container {
@@ -36,20 +24,35 @@
         padding: 97px 0 83px;
         text-align: center;
         color: #fff;
+    }
 
-        &--form {
-            padding-bottom: 55px;
+    &__title--form {
+        padding-bottom: 55px;
+    }
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+
+        .intro {
+            background-image: url("/img/bg-back-mobile@2x.jpg");
+            background-size: 700px 462px;
+        }
+
+        &--main-page {
+            background-image: url("/img/iphone-hand-mobile@2x.png"), url("/img/bg-back-mobile@2x.jpg");
+            background-size: 258px 286px, 700px 462px;
         }
     }
 
     @media #{$tablet-width} {
 
         background-image: url("/img/bg-back-tablet@1x.jpg");
+        background-size: 1200px 729px;
     
-        @media (min-resolution: 1.5ppx) {
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
 
             .intro {
                 background-image: url("/img/bg-back-tablet@2x.jpg");
+                background-size: 1200px 729px;
             }
         }
 
@@ -57,12 +60,14 @@
             min-height: 730px;
             background-image: url("/img/iphone-hand-tablet@1x.png"), url("/img/bg-back-tablet@1x.jpg");
             background-position: 100% 185px, center 0;
+            background-size: 700px 545px, 1200px 729px;
         }
 
         @media (min-resolution: 1.5ppx) {
 
             &--main-page {
                 background-image: url("/img/iphone-hand-tablet@2x.png"), url("/img/bg-back-tablet@2x.jpg");
+                background-size: 700px 545px, 1200px 729px;
             }
         }
 
@@ -70,58 +75,54 @@
             width: 585px;
             padding: 180px 0 140px;
             font-size: 50px;
+        }
 
-            &--main-page {
-                width: 48.4%;
-                margin-left: 0;
-                padding: 203px 7.7% 3px;
-                font-size: 40px;
-            }
+        &__title--main-page {
+            width: 48.4%;
+            margin-left: 0;
+            padding: 203px 7.7% 3px;
+            font-size: 40px;
+        }
 
-            &--form {
-                width: 500px;
-                padding-bottom: 81px;
-            }
+        &__title--form {
+            width: 500px;
+            padding-bottom: 81px;
         }
     }
 
     @media #{$desktop-width} {
 
         background-image: url("/img/bg-back-desktop.jpg");
-    
-        @media (min-resolution: 1.5ppx) {
-
-            .intro {
-                background-image: url("/img/bg-back-desktop@2x.jpg");
-            }
-        }
+        background-size: 2560px 853px;
 
         &--main-page {
             min-height: 852px;
             background-image: url("/img/iphone-hand-desktop@1x.png"), url("/img/bg-back-desktop.jpg");
             background-position: 97% 209px, center 0;
+            background-size: 1050px 645px, 2560px 853px;
         }
 
-        @media (min-resolution: 1.5ppx) {
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
 
             &--main-page {
-                background-image: url("/img/iphone-hand-desktop@2x.png"), url("/img/bg-back-desktop@2x.jpg");
+                background-image: url("/img/iphone-hand-desktop@2x.png"), url("/img/bg-back-desktop.jpg");
+                background-size: 1050px 645px, 2560px 853px;
             }
         }
 
         &__title {
             padding: 170px 8.7% 100px;
+        }
 
-            &--main-page {
-                width: 32%;
-                padding: 218px 0 24px;
-                font-size: 50px;
-            }
+        &__title--main-page {
+            width: 32%;
+            padding: 218px 0 24px;
+            font-size: 50px;
+        }
 
-            &--form {
-                width: 100%;
-                padding: 175px 6.7% 100px;
-            }
+        &__title--form {
+            width: 100%;
+            padding: 175px 6.7% 100px;
         }
     }
 }

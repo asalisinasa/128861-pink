@@ -15,14 +15,14 @@
     @media #{$mobile-width} {
 
         &__controls {
-        position: absolute;
-        left: 50%;
-        bottom: 48px;
-        transform: translate(-50%);
-        width: 65px;
-        height: 15px;
-        margin: 0 auto;
-        font-size: 0;
+            position: absolute;
+            left: 50%;
+            bottom: 48px;
+            transform: translate(-50%);
+            width: 65px;
+            height: 15px;
+            margin: 0 auto;
+            font-size: 0;
         }
 
         &__control {
