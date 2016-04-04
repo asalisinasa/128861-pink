@@ -63,7 +63,7 @@
             background-size: 700px 545px, 1200px 729px;
         }
 
-        @media (min-resolution: 1.5ppx) {
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
 
             &--main-page {
                 background-image: url("/img/iphone-hand-tablet@2x.png"), url("/img/bg-back-tablet@2x.jpg");

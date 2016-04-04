@@ -8,10 +8,11 @@
     
     &__no-js {
         position: relative;
+        background-color: $blue;
     }
 
     &--active {
-        background-color: transparent;
+        background-color: $blue;
     }
 
     &__container {
@@ -32,7 +33,6 @@
         padding: 0 6.3%;
         background-color: transparent;
         border: none;
-        transition: background-color 0.25s;
     }
 
     &__mini--active {
