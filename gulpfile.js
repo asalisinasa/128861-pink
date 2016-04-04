@@ -90,7 +90,7 @@ gulp.task('build', ['clean'], function() {
     'style',
     'fonts',
     'html',
-    'js',
+    'script',
     'images',
     'symbols'
   );
