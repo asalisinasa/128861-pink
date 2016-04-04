@@ -93,7 +93,7 @@ window.onload = function() {
                 lng: 30.321302
             },
             map: map,
-            icon: "/img/icon-map-marker.svg"
+            icon: "../img/icon-map-marker.svg"
         });
     }
 

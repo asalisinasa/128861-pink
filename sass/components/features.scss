@@ -168,30 +168,30 @@
             }
 
             &:first-child:before {
-                background-image: url("/img/iphone-screen-desktop-1@1x.png");
+                background-image: url("../img/iphone-screen-desktop-1@1x.png");
             }
 
             &:nth-child(2):before {
-                background-image: url("/img/iphone-screen-desktop-2@1x.png");
+                background-image: url("../img/iphone-screen-desktop-2@1x.png");
             }
 
             &:last-child:before {
-                background-image: url("/img/iphone-screen-desktop-3@1x.png");
+                background-image: url("../img/iphone-screen-desktop-3@1x.png");
             }
             
 
             @media (min-resolution: 144dpi), (min-resolution: 1.5dppx)  {
 
                 &:first-child:before {
-                    background-image: url("/img/iphone-screen-desktop-1@2x.png");
+                    background-image: url("../img/iphone-screen-desktop-1@2x.png");
                 }
 
                 &:nth-child(2):before {
-                    background-image: url("/img/iphone-screen-desktop-2@2x.png");
+                    background-image: url("../img/iphone-screen-desktop-2@2x.png");
                 }
 
                 &:last-child:before {
-                    background-image: url("/img/iphone-screen-desktop-3@2x.png");
+                    background-image: url("../img/iphone-screen-desktop-3@2x.png");
                 }
             }
         }
