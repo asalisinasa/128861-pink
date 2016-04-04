@@ -4,7 +4,7 @@
     left: 50%;
     transform: translateX(-50%);
     display: none;
-    background-color: #ffffff;
+    background-color: #fff;
     box-shadow: 0 7px 15px 0px rgba(#000000, 0.15);
 
     &--shown {
@@ -14,12 +14,19 @@
     &__inner,
     &__wrap {
         width: 320px;
-        padding: 40px 25px 55px; 
         text-align: center;
     }
 
+    &__inner--failure {
+        padding: 20px; 
+    }
+
+    &__inner--accept {
+        padding: 32px 25px 17px;
+    }
+
     &__wrap {
-        padding: 45px 21px 16px; 
+        padding: 48px 21px 16px; 
         background-color: $gray;
     }
 
@@ -28,22 +35,80 @@
         font-size: 18px;
         line-height: 24px;
         font-weight: $bold;
-        color: #000000;
+        color: #000;
     }
 
     &__text {
-        margin-bottom: -21px;
         font-size: 14px;
         line-height: 24px;
     }
     
     @media #{$tablet-width} {
-        width: 465px;
-        padding: 40px 75px 55px;
+        
+        &--failure,
+        &--accept {
+            width: 460px;
+        }
+        
+        &__inner,
+        &__wrap {
+            width: 100%;
+        }
+
+        &__wrap {
+            padding-top: 50px;
+        }
+        
+        &__inner--failure {
+            padding: 20px; 
+        }
+
+        &__inner--accept {
+            padding: 3px 68px 52px;
+        }
+
+        &__title {
+            margin-bottom: 22px;
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        &__text {
+            margin-bottom: -21px;
+            font-size: 18px;
+        }
     }
 
     @media #{$desktop-width} {
-        width: 790px;
-        padding: 40px 80px 55px;
+        
+        &__inner,
+        &__wrap {
+            width: 100%;
+        }
+
+        &__wrap {
+            padding: 56px 160px 16px;
+        }
+        
+        &--failure {
+            width: 460px;
+        }
+
+        &--accept {
+           width: 780px;
+        }
+
+        &__inner--accept {
+            padding: 3px 160px 52px;
+        }
+
+        &__title {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
     }
 }

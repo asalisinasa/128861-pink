@@ -7,7 +7,7 @@
         position: relative;
         @include container;
         padding-top: 50px;
-        padding-bottom: 70px;
+        padding-bottom: 69px;
     }
     
     &__slides-wrap {
@@ -30,7 +30,7 @@
     &__controls {
         width: 65px;
         height: 15px;
-        margin: 0 auto;
+        margin: -12px auto 0;
         font-size: 0;
     }
 
@@ -39,7 +39,7 @@
         width: 12px;
         height: 12px;
         background-color: $dark-gray;
-        border: 3px solid #ffffff;
+        border: 3px solid #fff;
         border-radius: 50%;
         cursor: pointer;
         
@@ -66,7 +66,7 @@
         font-size: 18px;
         line-height: 10px;
         font-weight: $bold;
-        color: #000000;
+        color: #000;
     }
 
     &__author-info {
@@ -81,23 +81,26 @@
     &__toggle,
     &__arrow {
         display: none;
-    }
+    }  
 
-    &__toggle[id="review-1"]:checked ~ &__controls &__control[for~="review-1"],
-    &__toggle[id="review-2"]:checked ~ &__controls &__control[for~="review-2"],
-    &__toggle[id="review-3"]:checked ~ &__controls &__control[for~="review-3"] {
-        background-color: transparent;
-        border: 3px solid #283645;
-    }
+    @media #{$small-screen} {
+        
+        &__toggle[id="review-1"]:checked ~ &__controls &__control[for~="review-1"],
+        &__toggle[id="review-2"]:checked ~ &__controls &__control[for~="review-2"],
+        &__toggle[id="review-3"]:checked ~ &__controls &__control[for~="review-3"] {
+            background-color: transparent;
+            border: 3px solid #283645;
+        }
 
-    &__toggle[id="review-1"]:checked ~ &__slides-wrap &__slides {
-        transform: translateX(0);
-    }
-    &__toggle[id="review-2"]:checked ~ &__slides-wrap &__slides {
-        transform: translateX(-33%);
-    }
-    &__toggle[id="review-3"]:checked ~ &__slides-wrap &__slides {
-        transform: translateX(-67%);
+        &__toggle[id="review-1"]:checked ~ &__slides-wrap &__slides {
+            transform: translateX(0);
+        }
+        &__toggle[id="review-2"]:checked ~ &__slides-wrap &__slides {
+            transform: translateX(-33%);
+        }
+        &__toggle[id="review-3"]:checked ~ &__slides-wrap &__slides {
+            transform: translateX(-67%);
+        }
     }
 
     @media #{$tablet-width} {
@@ -105,16 +108,17 @@
         @include bg-diagonal($gray, transparent, 52px);
 
         &__container {
-        padding-top: 50px;
-        padding-bottom: 70px;
+            padding-top: 50px;
+            padding-bottom: 70px;
         }
 
         &__slides-wrap {
-            width: 70%;
+            width: 100%;
         }
 
         &__controls {
             bottom: 20px;
+            margin-top: 0;     
         }
 
         &__quote {
@@ -150,8 +154,9 @@
         @include bg-diagonal($gray, transparent, 81px);
 
         &__container {
-            padding-top: 163px;
+            padding-top: 167px;
             padding-bottom: 95px;
+            background: url(/img/icon-quotes.svg) no-repeat 50% 70px;
         }
         
         &__quote {
@@ -204,20 +209,35 @@
                 top: 7px;
                 transform: rotate(45deg);
             }
+        }
 
-            &:hover {
-                &::after,
-                &::before {
-                    background-color: #7e868f;
-                }  
-            }
+        &__arrow:hover::after,
+        &__arrow:hover::before {
+            background-color: #7e868f;
+        }
 
-            &:active {
-                &::after,
-                &::before {
-                    background-color: $lightest-gray;
-                }  
+        &__arrow:active::after,
+        &__arrow:active::before {
+            background-color: $lightest-gray;
+        }
+
+        &__arrow--disabled {
+            cursor: auto;
+
+            &::after,
+            &::before {
+                background-color: $lightest-gray;
             }
+        }
+
+        &__arrow--disabled:hover::after,
+        &__arrow--disabled:hover::before {
+            background-color: $lightest-gray;
+        }
+
+        &__arrow--disabled:active::after,
+        &__arrow--disabled:active::before {
+            background-color: $lightest-gray;
         }
 
         &__arrow--next {
@@ -226,6 +246,18 @@
 
         &__arrow--prev {
             transform: rotate(180deg);
+        }
+
+        &__slides--show-first {
+            transform: translateX(0);
+        }
+
+        &__slides--show-second {
+            transform: translateX(-33.3%);
+        }
+
+        &__slides--show-third {
+            transform: translateX(-66.6%);
         }
     }
 }

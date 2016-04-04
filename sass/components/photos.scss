@@ -1,6 +1,7 @@
 .photos {
 
     &__container {
+        position: relative;
         @include container;
     }
 

@@ -2,12 +2,17 @@
     position: absolute;
     width: 100%;
     min-width: 320px;
-    min-height: 70px;
+    min-height: 66px;
     background-color: rgba(0, 0, 0, 0.3);
-    color: #ffffff;
+    color: #fff;
     
+    &__no-js {
+        position: relative;
+        background-color: $blue;
+    }
+
     &--active {
-        background-color: transparent;
+        background-color: $blue;
     }
 
     &__container {
@@ -24,32 +29,44 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        min-height: 70px;
+        min-height: 66px;
         padding: 0 6.3%;
         background-color: transparent;
         border: none;
-        transition: background-color 0.25s;
-        
-        &--active {
-            background-color: $blue;
-            border-bottom: 1px solid #000000;
-        }
+    }
 
-        &--closed {
-            background-color: transparent;
-            border: none;
-        }
+    &__mini--active {
+        background-color: $blue;
+        border-bottom: 1px solid #000;
+    }
+
+    &__mini--closed {
+        background-color: transparent;
+        border: none;
     }
 
     &__logo {
         width: 75px;
         height: 23px;
-        cursor: pointer;
+        color: #fff;
         
-        img {
-            width: 100%;
-            height: auto;
+        &:hover {
+          color: $pink;  
         }
+
+        &:active {
+          color: rgba(#fff, 0.3);
+        }
+    }
+
+    &__logo-svg {
+        width: 75px;
+        height: 23px;
+    }
+
+    &__logo-svg--tablet,
+    &__logo-svg--desktop {
+        display: none;
     }
 
     &__hamburger {
@@ -64,7 +81,7 @@
         top: 10px;
         width: 50px;
         height: 4px;
-        background-color: #ffffff;
+        background-color: #fff;
         transition: transform 0.3s;
         
         &::before,
@@ -73,12 +90,11 @@
             position: absolute;
             width: 50px;
             height: 4px;
-            background-color: #ffffff;
+            background-color: #fff;
         }
 
         &::before {
             top: -10px;
-            // box-shadow: 0 1px 0 1px rgba(#ffffff, 0.3);
         }
 
         &::after {
@@ -92,7 +108,7 @@
         left: 25px;
         width: 28px;
         height: 4px;
-        background-color: #ffffff;
+        background-color: #fff;
         transform: rotate(45deg);
         
         &::after {
@@ -124,6 +140,7 @@
     }
 
     @media #{$tablet-width} {
+
         min-height: 110px;
 
         &__mini {
@@ -132,13 +149,23 @@
         }
 
         &__logo {
-            width: 150px;
+            width: 147px;
             height: 40px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
 
-            img {
-            width: 100%;
-            height: auto;
-            }
+        &__logo-svg {
+            width: 147px;
+            height: 40px;
+        }
+
+        &__logo-svg--mobile {
+            display: none;
+        }
+
+        &__logo-svg--tablet {
+            display: inline;
         }
     }
 
@@ -155,8 +182,20 @@
         
         &__mini {
             width: 150px;
-            margin-right: 10%;
+            margin-right: 18%;
             padding: 0;
+        }
+
+        &__mini--active {
+            background-color: transparent;
+        }
+
+        &__logo-svg--tablet {
+            display: none;
+        }
+
+        &__logo-svg--desktop {
+            display: inline;
         }
 
         &__hamburger {

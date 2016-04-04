@@ -9,27 +9,31 @@
     color: $pink;
     
     &:not(:last-child) {
-        margin-right: 12px;
+        margin-right: 10px;
     }
-
+    
     &:hover,
     &:focus {
+        color: $pink;
         border-color: $blue;
     }
 
     &:active {
+        color: rgba($pink, 0.3);
         border-color: $lightest-gray;
-    }
+    } 
     
-    &--twitter {
-        
+    &__svg--twitter {
+        margin-top: 15px;
+        margin-left: 2px;
     }
 
-    &--fb {
-        
+    &__svg--facebook {
+        margin-top: 10px;
     }
 
-    &--youtube {
-        
+    &__svg--youtube {
+        margin-top: 13px;
+        margin-left: 2px;
     }
 }
