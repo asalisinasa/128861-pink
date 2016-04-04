@@ -57,7 +57,7 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('build/fonts'));
 });
 
-gulp.task('js', function() {
+gulp.task('script', function() {
   gulp.src('js/**/*.js')
     .pipe(gulp.dest('build/js'))
     .pipe(server.reload({stream: true}));
