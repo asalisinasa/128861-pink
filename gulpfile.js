@@ -105,7 +105,6 @@ gulp.task('serve', ['style'], function() {
   });
 
   gulp.watch('sass/**/*.{scss,sass}', ['style']);
-  // gulp.watch("*.html").on("change", server.reload);
   gulp.watch('*.html', ['html']).on("change", server.reload);
   gulp.watch('js/**/*.js', ['script']).on("change", server.reload);
   gulp.watch('img/!**!/!*.{png,jpg,gif,svg}', ['images']).on("change", server.reload);

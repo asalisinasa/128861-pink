@@ -54,8 +54,10 @@
     }
 
     &__author {
+        margin-right: -2px;
         font-weight: $bold;
     }
+
     &__date {
         font-size: 12px;
         font-weight: $light;
@@ -81,6 +83,7 @@
     }
 
     &__likes-text {
+        margin-right: -4px;
         padding-left: 33px;
     }
 
@@ -95,6 +98,10 @@
         width: 14px;
         height: 12px;
         cursor: pointer;
+    }
+
+    &__likes-icon-svg {
+        fill: $pink;
     }
 
     @media #{$tablet-width} {
@@ -121,14 +128,14 @@
             justify-content: space-between;
             flex-direction: column;
             min-height: 155px;
-            padding: 20px 9.5%;
+            padding: 21px 9.5%;
         }
 
         &__descript--favourite {
             flex-direction: row;
             flex-wrap: wrap;
             min-height: 121px;
-            padding: 31px 4.5% 16px;
+            padding: 21px 4.5% 16px;
         }
         
         &__likes {
@@ -151,10 +158,16 @@
         }
 
         &__comment {
+            margin-bottom: 10px;
             font-size: 14px;
         }
 
+        &__author {
+            margin: 0;
+        }
+
         &__likes-text {
+            margin-right: 3px;
             padding-left: 0;
         }
 
@@ -177,11 +190,11 @@
 
         width: 30%;
         min-width: 300px;
-        margin-bottom: 55px;
+        margin-bottom: 53px;
 
         &--favourite {
             width: 100%;  
-            margin-bottom: 50px; 
+            margin-bottom: 48px; 
         }
 
         &__photo--favourite {
@@ -194,7 +207,7 @@
 
         &__descript--favourite {
             min-height: 96px;
-            padding: 20px 3% 16px;
+            padding: 29px 3% 16px;
         }
 
         &__likes--favourite {

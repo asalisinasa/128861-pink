@@ -13,7 +13,6 @@
     }
 
     &__filter-wrap {
-        flex-basis: 100%;
         padding-top: 36px;
         padding-bottom: 49px;
     }
@@ -40,6 +39,7 @@
 
     &__filter {
         display: flex;
+        flex-direction: column;
         padding: 0; 
         border: none;
     }
@@ -226,6 +226,7 @@
         &__container {
             width: auto;
             margin: 0;
+            margin-bottom: 28px;
         }
 
         &__text--hidden {
@@ -254,7 +255,7 @@
         
         &__container {
             @include container;
-            margin-bottom: 65px;
+            margin-bottom: 60px;
         }
 
         &__text {
@@ -282,16 +283,17 @@
 
         &__filter-wrap--app {
            order: -2; 
-           padding-bottom: 29px;
+           padding-top: 37px;
+           padding-bottom: 36px;
         }
 
         &__filter-wrap--contacts {
             order: -1;
-            padding-bottom: 22px;
+            padding-bottom: 29px;
         }
 
         &__filter-wrap--progress {
-            padding-bottom: 57px;
+            padding-bottom: 66px;
         } 
 
         &__filter-wrap--emotions {
@@ -300,6 +302,8 @@
         } 
 
         &__filter {
+            position: relative;
+            flex-direction: column;
             border: 2px solid #e5e5e5;
             border-radius: 2px;
         }
@@ -310,27 +314,49 @@
         }
 
         &__filter--progress {
-            padding: 45px 45px 47px;
+            padding: 53px 45px 47px;
             background-color: #fff;
         }
 
         &__filter--app {
-            padding: 45px 45px 55px;
+            flex-direction: column;
+            padding: 54px 45px 55px;
         }
 
         &__filter--contacts {
-            padding: 32px 56px 0;
+            padding: 41px 56px 0;
         }
 
         &__filter--emotions {
-            padding: 32px 56px 34px;
+            padding: 41px 56px 34px;
         }
 
         &__filter-legend {
+            position: absolute;
+            top: -9px;
             margin-bottom: 0;
-            &--contacts {
-                
-            }
+            background-color: #fff;
+        }
+
+        &__filter-legend--progress {
+            left: 14%;
+            right: 14%; 
+        }
+
+        &__filter-legend--contacts {
+            left: 28%;
+            right: 28%; 
+        }
+
+        &__filter-legend--app {
+            left: 20%;
+            right: 20%;
+            padding: 0 10px;
+        }
+
+        &__filter-legend--emotions {
+            left: 29%;
+            right: 29%;   
         }
 
         &__filter-item {
@@ -427,6 +453,10 @@
             padding: 0;
         }
 
+        &__filter-wrap {
+            flex-basis: 100%;
+        }
+
         &__filter-wrap--name,
         &__filter-wrap--app {
             flex-basis: 46.5%;
@@ -438,7 +468,21 @@
         }
 
         &__filter-wrap--app {
+            padding-top: 42px;
+            padding-bottom: 29px;
+        }
+
+        &__filter-wrap--contacts {
             padding-top: 35px;
+            padding-bottom: 28px;
+        }
+
+        &__filter-wrap--progress {
+            padding-bottom: 65px;
+        }
+
+        &__filter--name {
+            flex-direction: column;
         }
         
         &__filters {
@@ -446,29 +490,47 @@
             flex-wrap: wrap;
         }
 
-        &__filters--app {
-            border: none;
+        &__filter--app {
+            padding: 55px 45px 55px;
         }
 
         &__filter--progress {
-            padding: 43px 45px 12px;
+            padding: 32px 25px 35px;
         }
 
         &__filter--contacts {
-            padding: 29px 56px 14px;
+            padding: 38px 56px 14px;
         }
 
         &__filter--emotions {
-            padding: 29px 56px 25px;
+            padding: 38px 56px 25px;
         }
         
         &__filter-legend {
             padding: 0 30px;
+            background-color: #fff;
         }
 
         &__filter-legend--app {
+            left: 7%;
+            right: 7%;
             display: block;
-            padding: 0 10px;
+            padding: 0 23px;
+        }
+
+        &__filter-legend--progress {
+            left: 26.7%;
+            right: 26.7%;
+        }
+
+        &__filter-legend--contacts {
+            left: 36%;  
+            right: 36%;  
+        }
+
+        &__filter-legend--emotions {
+            left: 36%;
+            right: 36%;  
         }
 
         &__filter-inner {
@@ -482,40 +544,51 @@
             justify-content: space-between;
         }
 
+        &__filter-items-wrap--progress {
+            padding: 20px;
+        }
+
         &__filter-label--radio {
             margin-left: 18px;
         }
 
         &__filter-label--checkbox {
-            width: 32%;
+            box-sizing: initial;
         }
 
         &__filter-label[for="shark"] {
+            flex-basis: 200px;
             order: 1;
         }
 
         &__filter-label[for="burned"] {
+            flex-basis: 200px;
+            margin-bottom: 0;
             order: 4;
         }
 
         &__filter-label[for="norris"] {
+            flex-basis: 200px;
             order: 2;
-            margin-left: 10px;
+            transform: translateX(4px);
         }
 
         &__filter-label[for="souvenirs"] {
+            flex-basis: 200px;
+            margin-bottom: 0;
             order: 5;
-            margin-left: 10px;
+            transform: translateX(4px);
         }
 
         &__filter-label[for="tower"] {
+            flex-basis: 150px;
             order: 3;
-            flex-basis: 222px;
         }
 
         &__filter-label[for="destroy"] {
+            flex-basis: 150px;
+            margin-bottom: 0;
             order: 6;
-            flex-basis: 222px;
         }
 
         &__filter-title--contacts {
