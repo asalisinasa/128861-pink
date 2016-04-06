@@ -172,10 +172,12 @@
             }
 
             &:nth-child(2):before {
+                margin-left: 4px;
                 background-image: url("../img/iphone-screen-desktop-2@1x.png");
             }
 
             &:last-child:before {
+                margin-left: 4px;
                 background-image: url("../img/iphone-screen-desktop-3@1x.png");
             }
             

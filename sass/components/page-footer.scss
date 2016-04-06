@@ -8,11 +8,9 @@
 
     &__container {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        @include container;
-        min-height: 300px;
+        margin: 0 auto;
+        // padding: 10px 6.3% 0;
+        min-height: 256px;
     }
 
     &__logo {
@@ -53,7 +51,7 @@
     &__logo-svg:active &__logo-stars-letter {
         opacity: 0.3;
     }
-
+    
     &__social {
         text-align: center;
     }
@@ -70,7 +68,7 @@
     &__logo-academy--svg {
         position: relative;
         top: 14px;
-        left: 8px;
+        left: 10px;
         fill: $pink;
         
         &:hover {
@@ -79,6 +77,31 @@
 
         &:active {
             fill: $dark-gray;
+        }
+    }
+
+    @media #{$mobile-width} {
+        
+        &__container {
+            display: block;
+            // padding: 10px 6.3% 0;
+        }
+
+        &__logo,
+        &__social,
+        &__copyright {
+            display: block;
+            margin-bottom: 53px;
+            text-align: center;
+        }
+
+        &__logo {}
+
+        &__social {}
+
+        &__copyright {
+            margin: 0 auto;
+            transform: translate(-7px,-28px);
         }
     }
 
@@ -92,12 +115,7 @@
             flex-direction: row;
             justify-content: space-between;
             min-height: 125px;
-        }
-
-        &__logo,
-        &__social,
-        &__copyright {
-            margin: 0;
+            padding: 40px 6.3% 0;
         }
 
         &__logo {
@@ -109,7 +127,11 @@
         }
 
         &__copyright {
-            transform: translate(21px, -9px);
+            transform: translate(26px, -0px);
+        }
+
+        &__logo-academy--svg {
+            left: 8px;
         }
     }
 
@@ -118,12 +140,17 @@
         min-height: 200px;
 
         &__container {
+            flex-wrap: wrap;
             min-height: 200px;
+            padding: 71px 10.9%;
         }
 
-        &__logo {
-            margin-top: -5px;
-            margin-left: 2px;
+        &__container--main {
+            padding: 70px 10.7%;
+        }
+
+        &__logo--main {
+            transform: translateX(2px);
         }
 
         &__logo-glasses-unbroken {
@@ -137,11 +164,17 @@
         }
 
         &__social {
-            transform: translate(3px, 0px);
+            min-width: 200px;
+            transform: translate(4px, 2px);
+        }
+
+        &__social--main {
+            transform: translate(0, 3px);
         }
 
         &__copyright {
-            transform: translate(-4px, -10px);
+            min-width: 150px;
+            transform: translate(-4px, 0);
             font-size: 18px;
         }
     }
